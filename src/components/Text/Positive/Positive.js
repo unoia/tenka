@@ -1,4 +1,4 @@
-import styles from "./Positive.module.scss";
+import styles from "./Positive.module.css";
 import React from "react";
 import cx from "classnames";
 

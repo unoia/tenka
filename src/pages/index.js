@@ -43,13 +43,13 @@ const Home = () => {
           This is tenka small body text
         </Text>
         <Text display1 as="p">
-          This is tenka display1 body text
+          This is tenka display1 text and it's big!
         </Text>
         <Text display2 as="p">
-          This is tenka display2 body text
+          This is tenka display2 text and it's big!
         </Text>
         <Text display3 as="p">
-          This is tenka display3 body text
+          This is tenka display3 text and it's big!
         </Text>
       </main>
     </div>

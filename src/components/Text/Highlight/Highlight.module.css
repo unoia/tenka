@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+}
+
+.root::after {
+  content: " ";
+  position: absolute;
+  background-color: var(--bg-verdant-200);
+  top: -var(--tenka-space-s);
+  left: -var(--tenka-space-s);
+  bottom: -var(--tenka-space-s);
+  right: -var(--tenka-space-s);
+  z-index: -1;
+}

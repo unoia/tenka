@@ -44,8 +44,8 @@
 // Heading Text
 .heading1 {
   font-size: var(--tenka-font-size-heading-1, 3rem);
-  line-height: var(--line-height-reset, 1);
-  // line-height: 52px;
+  // line-height: var(--line-height-reset, 1);
+  line-height: 3.5rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-700, 700);
   // &.rf {
@@ -58,8 +58,8 @@
 
 .heading2 {
   font-size: var(--tenka-font-size-heading-2, 2rem);
-  line-height: var(--tenka-line-height-cozy, 1.125);
-  // line-height: 36px;
+  // line-height: var(--tenka-line-height-cozy, 1.125);
+  line-height: 2.5rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-700, 700);
   // &.rf {
@@ -71,8 +71,8 @@
 }
 .heading3 {
   font-size: var(--tenka-font-size-heading-3, 1.5rem);
-  line-height: var(--tenka-line-height-cozy, 1.125);
-  // line-height: 30px;
+  // line-height: var(--tenka-line-height-cozy, 1.125);
+  line-height: 2rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-700, 700);
   // &.rf {
@@ -85,8 +85,8 @@
 
 .heading4 {
   font-size: var(--tenka-font-size-heading-4, 1.125rem);
-  line-height: var(--tenka-line-height-cozy, 1.125);
-  // line-height: 26px;
+  // line-height: var(--tenka-line-height-cozy, 1.125);
+  line-height: 1.525rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-500, 500);
   // &.rf {
@@ -98,8 +98,8 @@
 }
 .heading5 {
   font-size: var(--tenka-font-size-heading-5, 1rem);
-  line-height: var(--tenka-line-height-cozy, 1.125);
-  // line-height: 22px;
+  // line-height: var(--tenka-line-height-cozy, 1.125);
+  line-height: 1.375rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-500, 500);
   // &.rf {
@@ -108,8 +108,8 @@
 }
 .heading6 {
   font-size: var(--tenka-font-size-heading-6, 0.875rem);
-  line-height: var(--tenka-line-height-cozy, 1.125);
-  // line-height: 18px;
+  // line-height: var(--tenka-line-height-cozy, 1.125);
+  line-height: 1.125rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-500, 500);
   // &.rf {
@@ -123,29 +123,29 @@
 // Body Text
 .xlarge {
   font-size: var(--tenka-font-size-body-1, 1.25rem);
-  line-height: var(--tenka-line-height-comfortable, 1.5);
-  // line-height: 28px;
+  // line-height: var(--tenka-line-height-comfortable, 1.5);
+  line-height: 1.75rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-400, 400);
 }
 .large {
   font-size: var(--tenka-font-size-body-2, 1.125rem);
-  line-height: var(--tenka-line-height-comfortable, 1.5);
-  // line-height: 26px;
+  // line-height: var(--tenka-line-height-comfortable, 1.5);
+  line-height: 1.625rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-400, 400);
 }
 .medium {
   font-size: var(--tenka-font-size-body-3, 1rem);
-  line-height: var(--tenka-line-height-comfortable, 1.5);
-  // line-height: 22px;
+  // line-height: var(--tenka-line-height-comfortable, 1.5);
+  line-height: 1.5rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-400, 400);
 }
 .small {
   font-size: var(--tenka-font-size-body-4, 0.875rem);
-  line-height: var(--tenka-line-height-comfortable, 1.5);
-  // line-height: 18px;
+  // line-height: var(--tenka-line-height-comfortable, 1.5);
+  line-height: 1.135rem;
   letter-spacing: -0.024em;
   font-weight: var(--tenka-font-weight-400, 400);
 }
@@ -162,12 +162,12 @@
 // Label
 .label {
   font-size: var(--tenka-size-heading5, 1rem);
-  line-height: 22px;
+  line-height: 1.375rem;
   font-weight: var(--tenka-font-weight-500, 500);
 }
 .labelSmall {
   font-size: var(--tenka-size-heading6, 0.875rem);
-  line-height: 18px;
+  line-height: 1.125rem;
   font-weight: var(--tenka-font-weight-500, 500);
 }
 

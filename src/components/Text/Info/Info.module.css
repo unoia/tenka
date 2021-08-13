@@ -1,5 +1,3 @@
-@import "src/tokens";
-
 .root {
   color: var(--brand-maroon-100);
 }

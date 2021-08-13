@@ -5,6 +5,17 @@
   --reach-dialog: 1;
   --reach-tabs: 1;
 
+  /* SPACES */
+  --tenka-space-xs: 4px;
+  --tenka-space-s: 8px;
+  --tenka-space-sm: 12px;
+  --tenka-space-m: 16px;
+  --tenka-space-ml: 20px;
+  --tenka-space-l: 24px;
+  --tenka-space-xl: 32px;
+  --tenka-space-xxl: 48px;
+  --tenka-space-xxxl: 64px;
+
   /* TYPOGRAPHY */
   /* Font Stack */
   --font-primary: "Masbul", "SF Pro Display", -apple-system, BlinkMacSystemFont,

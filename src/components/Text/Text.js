@@ -14,19 +14,19 @@ import {
   withTextModifierProps,
 } from "./_libs";
 
-import stylesStrong from "./Strong/Strong.module.scss";
-import stylesRegular from "./Regular/Regular.module.scss";
-import stylesLight from "./Light/Light.module.scss";
+import stylesStrong from "./Strong/Strong.module.css";
+import stylesRegular from "./Regular/Regular.module.css";
+import stylesLight from "./Light/Light.module.css";
 
-import { root as stylesSecondary } from "./Secondary/Secondary.module.scss";
-import { root as stylesPositive } from "./Positive/Positive.module.scss";
-import { root as stylesCritical } from "./Critical/Critical.module.scss";
-import { root as stylesHighlight } from "./Highlight/Highlight.module.scss";
-import { root as stylesInfo } from "./Info/Info.module.scss";
-import { root as stylesWhite } from "./White/White.module.scss";
-import { root as stylesWhiteSecondary } from "./WhiteSecondary/WhiteSecondary.module.scss";
-import { root as stylesAccent } from "./Accent/Accent.module.scss";
-import { root as stylesAccentSecondary } from "./AccentSecondary/AccentSecondary.module.scss";
+import { root as stylesSecondary } from "./Secondary/Secondary.module.css";
+import { root as stylesPositive } from "./Positive/Positive.module.css";
+import { root as stylesCritical } from "./Critical/Critical.module.css";
+import { root as stylesHighlight } from "./Highlight/Highlight.module.css";
+import { root as stylesInfo } from "./Info/Info.module.css";
+import { root as stylesWhite } from "./White/White.module.css";
+import { root as stylesWhiteSecondary } from "./WhiteSecondary/WhiteSecondary.module.css";
+import { root as stylesAccent } from "./Accent/Accent.module.css";
+import { root as stylesAccentSecondary } from "./AccentSecondary/AccentSecondary.module.css";
 
 const textStyleModifier = {
   link: styles.link,

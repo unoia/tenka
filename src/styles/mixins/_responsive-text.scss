@@ -1,9 +1,5 @@
 @use "sass:math";
 
-$page-width: 1290px;
-$container-gutter-desktop-wide: 64px;
-$page-limit: $page-width + ($container-gutter-desktop * 2);
-
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number

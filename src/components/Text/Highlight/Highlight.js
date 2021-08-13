@@ -1,4 +1,4 @@
-import styles from "./Highlight.module.scss";
+import styles from "./Highlight.module.css";
 import React from "react";
 import cx from "classnames";
 

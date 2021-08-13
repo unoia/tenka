@@ -1,0 +1,3 @@
+.root {
+  color: var(--tone-critical-200, hsl(10, 100%, 45%));
+}
