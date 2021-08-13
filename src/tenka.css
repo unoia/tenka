@@ -1,13 +1,60 @@
+@import "./assets/fonts/masbul/stylesheet.css";
+@import "./styles/reset.css";
+
 :root {
   --reach-dialog: 1;
   --reach-tabs: 1;
 
-  --brand-primary-200: rgba(255, 4, 50, 1);
+  /* TYPOGRAPHY */
+  /* Font Stack */
+  --font-primary: "Masbul", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    sans-serif;
+  --font-secondary: "Masbul", "IBM Plex Serif", "SF Pro Display", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  --font-monospace: "Roboto Mono", "Operator Mono", monospace;
+  --font-display: "Masbul", serif;
 
+  /* Text Sizes */
+  --tenka-font-size-display-1: 128px;
+  --tenka-font-size-display-2: 96px;
+  --tenka-font-size-display-3: 64px;
+  --tenka-font-size-heading-1: 48px;
+  --tenka-font-size-heading-2: 32px;
+  --tenka-font-size-heading-3: 24px;
+  --tenka-font-size-heading-4: 18px;
+  --tenka-font-size-heading-5: 16px;
+  --tenka-font-size-heading-6: 14px;
+  --tenka-font-size-body-1: 20px;
+  --tenka-font-size-body-2: 18px;
+  --tenka-font-size-body-3: 16px;
+  --tenka-font-size-body-4: 14px;
+  --tenka-font-size-caption-1: 14px;
+  --tenka-font-size-caption-2: 12px;
+
+  /* Text Weight */
+  --tenka-font-weight-100: 100;
+  --tenka-font-weight-200: 200;
+  --tenka-font-weight-300: 300;
+  --tenka-font-weight-400: 400;
+  --tenka-font-weight-500: 500;
+  --tenka-font-weight-600: 600;
+  --tenka-font-weight-700: 700;
+  --tenka-font-weight-800: 800;
+  --tenka-font-weight-900: 900;
+
+  /* Line Height */
+  --tenka-line-height-compact: 1.25;
+  --tenka-line-height-cozy: 1.125;
+  --tenka-line-height-comfortable: 1.5;
+  --tenka-line-height-reset: 1;
+
+  /* --brand-primary-200: rgba(255, 4, 50, 1); */
   /* document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR'); */
   /* document.documentElement.style.getPropertyValue('--your-variable'); */
 
-  --brand-primary-100: hsl(358, 100%, 68%); /* #ff5a60 */
+  --brand-primary-10: hsl(358, 100%, 68%); /* #ff5a60 */
   --brand-primary-100: hsl(349, 100%, 61%); /* #ff385d */
   --brand-primary-200: hsl(358, 83%, 64%); /* #ef585d */
   --brand-primary-300: hsl(358, 75%, 58%); /* #E44449 */
@@ -51,46 +98,46 @@
 
   /* DARK */
   /* ALPHA */
-  --dark-alpha-100: rgba(0, 0, 0, 1);
-  --dark-alpha-90: rgba(0, 0, 0, 0.94);
-  --dark-alpha-80: rgba(0, 0, 0, 0.84);
-  --dark-alpha-70: rgba(0, 0, 0, 0.72);
-  --dark-alpha-60: rgba(0, 0, 0, 0.54);
-  --dark-alpha-50: rgba(0, 0, 0, 0.44);
-  --dark-alpha-40: rgba(0, 0, 0, 0.2);
-  --dark-alpha-30: rgba(0, 0, 0, 0.12);
-  --dark-alpha-20: rgba(0, 0, 0, 0.08);
-  --dark-alpha-10: rgba(0, 0, 0, 0.04);
+  --tenka-dark-100: rgba(0, 0, 0, 1);
+  --tenka-dark-90: rgba(0, 0, 0, 0.94);
+  --tenka-dark-80: rgba(0, 0, 0, 0.84);
+  --tenka-dark-70: rgba(0, 0, 0, 0.72);
+  --tenka-dark-60: rgba(0, 0, 0, 0.54);
+  --tenka-dark-50: rgba(0, 0, 0, 0.44);
+  --tenka-dark-40: rgba(0, 0, 0, 0.2);
+  --tenka-dark-30: rgba(0, 0, 0, 0.12);
+  --tenka-dark-20: rgba(0, 0, 0, 0.08);
+  --tenka-dark-10: rgba(0, 0, 0, 0.04);
 
   /* Hex */
-  --dark-hex-100: #000000; /* Heading */
-  --dark-hex-90: #000100; /* Heading */
-  --dark-hex-80: #272727; /* Heading and Body text in text-heavy page such as blog post */
-  --dark-hex-70: #484848; /*Body text */
-  --dark-hex-60: #767676; /* Caption and subtitle */
-  --dark-hex-50: #8f8f8f;
-  --dark-hex-40: #cccccc;
-  --dark-hex-30: #e0e0e0;
-  --dark-hex-20: #ebebeb;
-  --dark-hex-10: #f5f5f5;
+  --tenka-dark-hex-100: #000000; /* Heading */
+  --tenka-dark-hex-90: #000100; /* Heading */
+  --tenka-dark-hex-80: #272727; /* Heading and Body text in text-heavy page such as blog post */
+  --tenka-dark-hex-70: #484848; /*Body text */
+  --tenka-dark-hex-60: #767676; /* Caption and subtitle */
+  --tenka-dark-hex-50: #8f8f8f;
+  --tenka-dark-hex-40: #cccccc;
+  --tenka-dark-hex-30: #e0e0e0;
+  --tenka-dark-hex-20: #ebebeb;
+  --tenka-dark-hex-10: #f5f5f5;
 
   /* LIGHT */
   /* Alpha */
-  --light-alpha-100: rgba(255, 255, 255, 1);
-  --light-alpha-90: rgba(255, 255, 255, 0.84);
-  --light-alpha-80: rgba(255, 255, 255, 0.71);
-  --light-alpha-70: rgba(255, 255, 255, 0.54);
-  --light-alpha-60: rgba(255, 255, 255, 0.4);
-  --light-alpha-50: rgba(255, 255, 255, 0.2);
-  --light-alpha-40: rgba(255, 255, 255, 0.16);
-  --light-alpha-30: rgba(255, 255, 255, 0.1);
-  --light-alpha-20: rgba(255, 255, 255, 0.06);
-  --light-alpha-10: rgba(255, 255, 255, 0.02);
+  --tenka-light-100: rgba(255, 255, 255, 1);
+  --tenka-light-90: rgba(255, 255, 255, 0.84);
+  --tenka-light-80: rgba(255, 255, 255, 0.71);
+  --tenka-light-70: rgba(255, 255, 255, 0.54);
+  --tenka-light-60: rgba(255, 255, 255, 0.4);
+  --tenka-light-50: rgba(255, 255, 255, 0.2);
+  --tenka-light-40: rgba(255, 255, 255, 0.16);
+  --tenka-light-30: rgba(255, 255, 255, 0.1);
+  --tenka-light-20: rgba(255, 255, 255, 0.06);
+  --tenka-light-10: rgba(255, 255, 255, 0.02);
   /* Hex */
-  --light-hex-100: #ffffff;
-  --light-hex-90: #dcdcdc;
-  --light-hex-80: #c0c0c0;
-  --light-hex-70: #9c9c9c;
+  --tenka-light-hex-100: #ffffff;
+  --tenka-light-hex-90: #dcdcdc;
+  --tenka-light-hex-80: #c0c0c0;
+  --tenka-light-hex-70: #9c9c9c;
 
   /* Tone colors */
   --tone-critical-10: rgba(255, 93, 61, 0.11);

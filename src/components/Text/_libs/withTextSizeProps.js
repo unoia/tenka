@@ -18,9 +18,10 @@ export const sizes = [
   "heading5",
   "heading6",
 
-  "small",
-  "medium",
+  "xlarge",
   "large",
+  "medium",
+  "small",
 
   "labelSmall",
   "label",

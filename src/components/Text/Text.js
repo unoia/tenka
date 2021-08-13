@@ -3,19 +3,16 @@
 
 import styles from "./Text.module.scss";
 import React from "react";
-import {
-  bool,
-  node,
-  object,
-  string,
-  oneOf,
-  oneOfType,
-  shape,
-} from "prop-types";
+import { bool, node, object, string, oneOf, oneOfType } from "prop-types";
 import cx from "classnames";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
-import { withTextSizeProps, withTextModifierProps } from "./_libs";
+import {
+  withTextSizeProps,
+  sizes,
+  modifiers,
+  withTextModifierProps,
+} from "./_libs";
 
 import stylesStrong from "./Strong/Strong.module.scss";
 import stylesRegular from "./Regular/Regular.module.scss";
@@ -66,17 +63,17 @@ export const TextNoModifier = React.forwardRef(
     },
     forwardedRef
   ) => {
-    const Component = motion[as] || motion.span;
+    const Component = as || "span";
 
     return (
       <Component
         ref={forwardedRef}
         className={cx({
           [styles[size]]: size,
-          [styles.truncate]: truncate,
-          [styles.breakWord]: breakWord,
           [styles[align]]: align,
           [textStyleModifier[modifier]]: modifier,
+          [styles.truncate]: truncate,
+          [styles.breakWord]: breakWord,
           [stylesLight.root]: light,
           [stylesStrong.root]: strong,
           [stylesRegular.root]: regular,
@@ -127,44 +124,13 @@ TextNoModifier.propTypes = {
    * Size of text
    * Use directly as a prop
    */
-  size: oneOf([
-    "display1",
-    "display2",
-    "display3",
-
-    "heading1",
-    "heading2",
-    "heading3",
-    "heading4",
-    "heading5",
-    "heading6",
-
-    "small",
-    "medium",
-    "large",
-
-    "label",
-    "labelSmall",
-
-    "caption",
-  ]),
+  size: oneOf(sizes),
   // size: oneOf([...modifiedSizes]),
   /**
    * Modifiers of text styles
    * Use directly as a prop
    */
-  modifier: oneOf([
-    "link",
-    "positive",
-    "critical",
-    "secondary",
-    "highlight",
-    "info",
-    "white",
-    "whiteSecondary",
-    "accent",
-    "accentSecondary",
-  ]),
+  modifier: oneOf(modifiers),
 
   /**
    * Apply designated strong font-weight to text

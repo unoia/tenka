@@ -1,8 +1,5 @@
 @use "sass:math";
-
-$page-width: 1290px;
-$container-gutter-desktop-wide: 64px;
-$page-limit: $page-width + ($container-gutter-desktop * 2);
+@import "./layouts";
 
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
@@ -64,6 +61,6 @@ $page-limit: $page-width + ($container-gutter-desktop * 2);
 }
 
 // Alias for responsive-font mixin
-@mixin rf($args...) {
+@mixin responsive-size($args...) {
   @include responsive-font($args...);
 }
