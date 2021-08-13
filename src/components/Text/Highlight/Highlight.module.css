@@ -7,10 +7,10 @@
 .root::after {
   content: " ";
   position: absolute;
-  background-color: var(--bg-verdant-200);
-  top: -var(--tenka-space-s);
-  left: -var(--tenka-space-s);
-  bottom: -var(--tenka-space-s);
-  right: -var(--tenka-space-s);
+  background-color: var(--brand-maroon-10, hsla(335, 70%, 38%, 0.1));
+  top: calc(var(--tenka-space-xxs, 2px) * -1);
+  left: calc(var(--tenka-space-xxs, 2px) * -1);
+  bottom: calc(var(--tenka-space-xxs, 2px) * -1);
+  right: calc(var(--tenka-space-xxs, 2px) * -1);
   z-index: -1;
 }

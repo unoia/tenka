@@ -7,8 +7,6 @@ import PropTypes from "prop-types";
 import { omit, has, some, includes, forEach } from "lodash";
 
 export const modifiers = [
-  // false,
-  "link",
   "positive",
   "critical",
   "secondary",

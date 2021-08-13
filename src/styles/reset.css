@@ -19,9 +19,9 @@ html {
 
 body {
   position: relative;
-  color: var(--tenka-dark-80);
+  color: var(--tenka-dark-80, rgba(0, 0, 0, 0.87));
   font-family: var(--font-primary, sans-serif);
-  background-color: var(--tenka-light-hex-100);
+  background-color: var(--tenka-light-hex-100, #ffffff);
 }
 
 /* Render the `main` element consistently in IE. */

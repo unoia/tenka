@@ -1,11 +1,18 @@
 // This code taken and modified from SEEK OSS Styleguide
 // source: https://github.com/seek-oss/seek-style-guide
 
-import styles from "./Text.module.scss";
-import React from "react";
-import { bool, node, object, string, oneOf, oneOfType } from "prop-types";
+import styles from "./Text.module.css";
+import React, { useEffect } from "react";
+import {
+  bool,
+  node,
+  object,
+  string,
+  oneOf,
+  oneOfType,
+  number,
+} from "prop-types";
 import cx from "classnames";
-// import { motion } from "framer-motion";
 
 import {
   withTextSizeProps,
@@ -29,7 +36,6 @@ import { root as stylesAccent } from "./Accent/Accent.module.css";
 import { root as stylesAccentSecondary } from "./AccentSecondary/AccentSecondary.module.css";
 
 const textStyleModifier = {
-  link: styles.link,
   secondary: stylesSecondary,
   positive: stylesPositive,
   critical: stylesCritical,
@@ -65,6 +71,12 @@ export const TextNoModifier = React.forwardRef(
   ) => {
     const Component = as || "span";
 
+    useEffect(() => {
+      if (truncate && typeof truncate === "number") {
+        document.documentElement.style.setProperty("--text-clamp", truncate);
+      }
+    }, [truncate]);
+
     return (
       <Component
         ref={forwardedRef}
@@ -72,7 +84,8 @@ export const TextNoModifier = React.forwardRef(
           [styles[size]]: size,
           [styles[align]]: align,
           [textStyleModifier[modifier]]: modifier,
-          [styles.truncate]: truncate,
+          [styles.truncate]: typeof truncate === "boolean" && truncate,
+          [styles.clamp]: typeof truncate === "number" && truncate,
           [styles.breakWord]: breakWord,
           [stylesLight.root]: light,
           [stylesStrong.root]: strong,
@@ -112,7 +125,7 @@ TextNoModifier.propTypes = {
    */
   className: oneOfType([string, object]),
   /** Indicating whether the Text should truncate with ellipsis when overflow */
-  truncate: bool,
+  truncate: oneOfType([bool, number]),
   /** Indicating whether the Text should move to new line and break word when overflow */
   breakWord: bool,
   /**
