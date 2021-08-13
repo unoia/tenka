@@ -1,0 +1,36 @@
+// Load All The Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+@import "./assets/fonts/masbul/stylesheet.scss";
+
+// Reset User-Agent Stylesheet
+@import "./styles/reset";
+
+// Modules
+@import "./styles/nprogress";
+@import "./styles/rc-slider";
+@import "./styles/table";
+
+:root {
+  @if global-variable-exists(scale) {
+    --scale-element: 1;
+    --scale-font: 1;
+
+    // Check the $scale in tokens/layouts.scss
+    @each $size in $scale {
+      @media (max-height: nth($size, 1)) {
+        --scale-element: #{nth($size, 2)};
+        --scale-font: #{nth($size, 2)};
+      }
+    }
+  }
+}
+
+.hidden {
+  position: absolute;
+  left: -99999px;
+  width: 0;
+  height: 0;
+  z-index: -999999;
+  visibility: hidden;
+  opacity: 0;
+}

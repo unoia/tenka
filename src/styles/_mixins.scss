@@ -1,0 +1,52 @@
+// Mixins
+@import "./mixins/flexbox";
+@import "./mixins/media-queries";
+@import "./mixins/container";
+@import "./mixins/fit";
+@import "./mixins/grid";
+@import "./mixins/link-animation";
+@import "./mixins/responsive-text";
+@import "./mixins/text-crop";
+@import "./mixins/text-shadow";
+@import "./mixins/to-rem";
+@import "./mixins/type";
+
+@function upperSize($number) {
+  @return $number * 1.618;
+}
+
+@function lowerSize($number) {
+  @return $number / 1.618;
+}
+
+@mixin clearfix {
+  &::before {
+    display: table;
+    content: "";
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin fieldInput {
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: $dark-alpha-30;
+  transition: all 0.4s ease-in;
+  box-shadow: none;
+
+  &::placeholder {
+    color: $dark-alpha-60;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $brand-primary-100;
+    box-shadow: 0px 0px 0px 1.5px $brand-primary-100;
+    transition: all 0.28s ease-in;
+  }
+}
