@@ -2,6 +2,7 @@
   "name": "tenka",
   "version": "0.1.0",
   "private": true,
+  "main": "src/components/index.ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.37.5"
   },
   "devDependencies": {
     "@types/react": "17.0.17",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "typescript": "4.3.5"
-  }
+  },
+  "author": "unoia",
+  "license": "MIT"
 }
