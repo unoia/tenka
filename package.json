@@ -1,6 +1,6 @@
 {
   "name": "tenka",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "unoia",
   "license": "MIT",
   "main": "lib/index.js",
