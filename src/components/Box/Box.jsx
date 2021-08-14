@@ -3,9 +3,18 @@ import React from "react";
 import cx from "classnames";
 import { bool, node, object, string, oneOf, oneOfType } from "prop-types";
 
-import { withBoxPaddingProps } from "./_libs";
+// import { withBoxPaddingProps } from "./_libs";
+import {
+  padding as vanilla,
+  paddingHorizontal,
+  paddingVertical,
+  paddingTop,
+  paddingRight,
+  paddingBottom,
+  paddingLeft,
+} from "../../style.css.js";
 
-const BoxNoModifier = ({
+export const Box = ({
   inline,
   as,
   padding,
@@ -23,9 +32,9 @@ const BoxNoModifier = ({
 
   return (
     <Component
-      className={cx({
+      className={cx(vanilla[padding], {
         [styles.inline]: inline,
-        [styles[padding]]: padding,
+        // [styles[padding]]: padding,
         [styles[`py-${py}`]]: py,
         [styles[`px-${px}`]]: px,
         [styles[`pt-${pt}`]]: pt,
@@ -41,13 +50,13 @@ const BoxNoModifier = ({
   );
 };
 
-BoxNoModifier.displayName = "Box";
+Box.displayName = "Box";
 
-BoxNoModifier.defaultProps = {
+Box.defaultProps = {
   as: "div",
 };
 
-BoxNoModifier.propTypes = {
+Box.propTypes = {
   children: node.isRequired,
   className: oneOfType([string, object]),
   as: string,
@@ -61,6 +70,6 @@ BoxNoModifier.propTypes = {
   pl: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
 };
 
-export const Box = withBoxPaddingProps(BoxNoModifier);
+// export const Box = withBoxPaddingProps(Box);
 
 export default Box;

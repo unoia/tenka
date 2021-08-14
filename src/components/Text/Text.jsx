@@ -19,32 +19,32 @@ import {
   sizes,
   modifiers,
   withTextModifierProps,
-} from "./_libs";
+} from "./libs";
 
 import stylesStrong from "./Strong/Strong.module.css";
 import stylesRegular from "./Regular/Regular.module.css";
 import stylesLight from "./Light/Light.module.css";
 
-import { root as stylesSecondary } from "./Secondary/Secondary.module.css";
-import { root as stylesPositive } from "./Positive/Positive.module.css";
-import { root as stylesCritical } from "./Critical/Critical.module.css";
-import { root as stylesHighlight } from "./Highlight/Highlight.module.css";
-import { root as stylesInfo } from "./Info/Info.module.css";
-import { root as stylesWhite } from "./White/White.module.css";
-import { root as stylesWhiteSecondary } from "./WhiteSecondary/WhiteSecondary.module.css";
-import { root as stylesAccent } from "./Accent/Accent.module.css";
-import { root as stylesAccentSecondary } from "./AccentSecondary/AccentSecondary.module.css";
+import stylesSecondary from "./Secondary/Secondary.module.css";
+import stylesPositive from "./Positive/Positive.module.css";
+import stylesCritical from "./Critical/Critical.module.css";
+import stylesHighlight from "./Highlight/Highlight.module.css";
+import stylesInfo from "./Info/Info.module.css";
+import stylesWhite from "./White/White.module.css";
+import stylesWhiteSecondary from "./WhiteSecondary/WhiteSecondary.module.css";
+import stylesAccent from "./Accent/Accent.module.css";
+import stylesAccentSecondary from "./AccentSecondary/AccentSecondary.module.css";
 
 const textStyleModifier = {
-  secondary: stylesSecondary,
-  positive: stylesPositive,
-  critical: stylesCritical,
-  highlight: stylesHighlight,
-  info: stylesInfo,
-  white: stylesWhite,
-  whiteSecondary: stylesWhiteSecondary,
-  accent: stylesAccent,
-  accentSecondary: stylesAccentSecondary,
+  secondary: stylesSecondary?.root,
+  positive: stylesPositive?.root,
+  critical: stylesCritical?.root,
+  highlight: stylesHighlight?.root,
+  info: stylesInfo?.root,
+  white: stylesWhite?.root,
+  whiteSecondary: stylesWhiteSecondary?.root,
+  accent: stylesAccent?.root,
+  accentSecondary: stylesAccentSecondary?.root,
 };
 
 export const TextNoModifier = React.forwardRef(

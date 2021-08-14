@@ -2,8 +2,8 @@ import styles from "./Inline.module.css";
 import React, { Children, useEffect } from "react";
 import cx from "classnames";
 import flattenChildren from "react-keyed-flatten-children";
-import { Box } from "./../";
-import { withGapProps } from "./_libs";
+import { Box } from "./../Box/Box";
+import { withGapProps } from "./libs";
 
 const orderChildren = (children, reverse) => {
   const childrenArray = Children.toArray(children);
@@ -33,7 +33,10 @@ const InlineNoModifier = ({
   return (
     <Box
       as={as}
-      className={cx(styles.root, { [styles[gap]]: gap })}
+      className={cx(styles.root, {
+        [styles[gap]]: gap,
+        [className]: className,
+      })}
       {...restProps}
     >
       {Children.map(

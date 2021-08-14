@@ -2,8 +2,8 @@ import styles from "./Stack.module.css";
 import React from "react";
 import cx from "classnames";
 
-import { withGapProps } from "./_libs";
-import { Box } from "./../";
+import { withGapProps } from "./libs";
+import { Box } from "./../Box/Box";
 
 const StackNoModifier = React.forwardRef(
   ({ as, gap, children, className, ...restProps }, forwardedRef) => {

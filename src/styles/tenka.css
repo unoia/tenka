@@ -1,6 +1,4 @@
-@import "./assets/fonts/masbul/stylesheet.css";
-
-@import "./styles/reset.css";
+@import "./../assets/fonts/masbul/stylesheet.css";
 
 :root {
   /* --brand-primary-200: rgba(255, 4, 50, 1); */
@@ -10,6 +8,30 @@
 
   --reach-dialog: 1;
   --reach-tabs: 1;
+
+  /* RESPONSIVE BREAKPOINTS */
+  --tenka-max-420: 419px;
+  --tenka-min-420: 420px;
+  --tenka-max-720: 719px;
+  --tenka-min-720: 720px;
+  --tenka-max-840: 839px;
+  --tenka-min-840: 840px;
+  --tenka-max-1024: 1023px;
+  --tenka-min-1024: 1024px;
+  --tenka-max-1280: 1279px;
+  --tenka-min-1280: 1280px;
+  --tenka-max-1536: 1535px;
+  --tenka-min-1536: 1536px;
+  --tenka-max-sphone: var(--tenka-max-420);
+  --tenka-min-phone: var(--tenka-min-420);
+  --tenka-max-phone: var(--tenka-max-720);
+  --tenka-min-tablet: var(--tenka-min-720);
+  --tenka-max-tablet: var(--tenka-max-840);
+  --tenka-min-ltablet: var(--tenka-min-840);
+  --tenka-max-ltablet: var(--tenka-max-1024);
+  --tenka-min-desktop: var(--tenka-min-1024);
+  --tenka-max-desktop: var(--tenka-max-1536);
+  --tenka-min-wide: var(--tenka-min-1536);
 
   /* SPACES */
   --tenka-base: 16px;
