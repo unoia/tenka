@@ -72,6 +72,7 @@ export const TextNoModifier = React.forwardRef(
     const Component = as || "span";
 
     useEffect(() => {
+      console.log(typeof truncate === "number");
       if (truncate && typeof truncate === "number") {
         document.documentElement.style.setProperty("--text-clamp", truncate);
       }
@@ -108,7 +109,6 @@ TextNoModifier.defaultProps = {
   size: "medium",
   // align: 'left',
   // modifier: false,
-  truncate: false,
   breakWord: false,
   regular: false,
   light: false,

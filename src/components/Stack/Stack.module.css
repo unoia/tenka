@@ -1,0 +1,35 @@
+.root {
+  display: grid;
+}
+
+/* Gap */
+.xxs {
+  row-gap: var(--tenka-space-xxs);
+}
+.xs {
+  row-gap: var(--tenka-space-xs);
+}
+.s {
+  row-gap: var(--tenka-space-s);
+}
+.sm {
+  row-gap: var(--tenka-space-sm);
+}
+.m {
+  row-gap: var(--tenka-space-m);
+}
+.ml {
+  row-gap: var(--tenka-space-ml);
+}
+.l {
+  row-gap: var(--tenka-space-l);
+}
+.xl {
+  row-gap: var(--tenka-space-xl);
+}
+.xxl {
+  row-gap: var(--tenka-space-xxl);
+}
+.xxxl {
+  row-gap: var(--tenka-space-xxxl);
+}
