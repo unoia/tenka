@@ -3,7 +3,7 @@ import React from "react";
 import cx from "classnames";
 import { bool, node, object, string, oneOf, oneOfType } from "prop-types";
 
-import { withBoxPaddingProps } from "./libs";
+import { withBoxPaddingProps, sizes } from "./libs";
 
 const BoxNoModifier = ({
   inline,
@@ -23,9 +23,9 @@ const BoxNoModifier = ({
 
   return (
     <Component
-      className={cx(vanilla[padding], {
+      className={cx({
         [styles.inline]: inline,
-        // [styles[padding]]: padding,
+        [styles[padding]]: padding,
         [styles[`py-${py}`]]: py,
         [styles[`px-${px}`]]: px,
         [styles[`pt-${pt}`]]: pt,
@@ -52,13 +52,13 @@ BoxNoModifier.propTypes = {
   className: oneOfType([string, object]),
   as: string,
   inline: bool,
-  padding: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
-  py: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
-  px: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
-  pt: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
-  pr: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
-  pb: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
-  pl: oneOf(["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"]),
+  padding: oneOf(sizes),
+  py: oneOf(sizes),
+  px: oneOf(sizes),
+  pt: oneOf(sizes),
+  pr: oneOf(sizes),
+  pb: oneOf(sizes),
+  pl: oneOf(sizes),
 };
 
 export const Box = withBoxPaddingProps(BoxNoModifier);

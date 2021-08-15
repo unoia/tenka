@@ -2,7 +2,7 @@
 // source: https://github.com/seek-oss/seek-style-guide
 
 import styles from "./Text.module.css";
-import React, { useEffect } from "react";
+import React from "react";
 import {
   bool,
   node,
@@ -47,6 +47,13 @@ const textStyleModifier = {
   accentSecondary: stylesAccentSecondary?.root,
 };
 
+const combineStyleProps = (truncate, style) => {
+  console.log("Calculating styles...")
+  return typeof truncate === "number" && truncate ? ({
+      WebkitLineClamp: truncate,
+      ...style
+    }) : style}
+
 export const TextNoModifier = React.forwardRef(
   (
     {
@@ -65,18 +72,14 @@ export const TextNoModifier = React.forwardRef(
       childInitial,
       childAnimate,
       prewrap,
+      style,
       ...restProps
     },
     forwardedRef
   ) => {
-    const Component = as || "span";
 
-    useEffect(() => {
-      console.log(typeof truncate === "number");
-      if (truncate && typeof truncate === "number") {
-        document.documentElement.style.setProperty("--text-clamp", truncate);
-      }
-    }, [truncate]);
+    const Component = as || "span";
+    const styleProps = React.useMemo(() => combineStyleProps(truncate, style), [truncate, style])
 
     return (
       <Component
@@ -94,6 +97,7 @@ export const TextNoModifier = React.forwardRef(
           [styles.prewrap]: prewrap,
           [className]: className,
         })}
+        style={styleProps}
         {...restProps}
       >
         {children}
@@ -107,8 +111,6 @@ TextNoModifier.displayName = "Text";
 TextNoModifier.defaultProps = {
   as: "span",
   size: "medium",
-  // align: 'left',
-  // modifier: false,
   breakWord: false,
   regular: false,
   light: false,

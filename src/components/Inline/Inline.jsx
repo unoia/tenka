@@ -34,7 +34,6 @@ const InlineNoModifier = ({
     <Box
       as={as}
       className={cx(styles.root, {
-        [styles[gap]]: gap,
         [className]: className,
       })}
       {...restProps}

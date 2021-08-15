@@ -4,7 +4,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { omit, has, some, includes } from "lodash";
+import omit from 'lodash.omit'
+import has from 'lodash.has'
+import some from 'lodash.some'
+import includes from 'lodash.includes'
 
 export const sizes = ["xs", "s", "sm", "m", "ml", "l", "xl", "xxl", "xxxl"];
 
