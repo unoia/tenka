@@ -5,10 +5,10 @@
   "license": "MIT",
   "files": [
     "lib",
-    "src/styles"
+    "src"
   ],
-  "main": "./lib/dist/index.umd.js",
-  "module": "./lib/dist/index.es.js",
+  "main": "./lib/index.umd.js",
+  "module": "./lib/index.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
