@@ -1,5 +1,13 @@
-// This code taken and modified from SEEK OSS Styleguide
-// source: https://github.com/seek-oss/seek-style-guide
+/**
+ * Display text on the page using well-defined typographic styles.
+ *
+ * @component
+ * @example
+ * <Text heading1 as="h1" align="center" info />
+ *
+ * This code heavily-inspired and modified from SEEK OSS Styleguide
+ * Source: https://github.com/seek-oss/seek-style-guide
+ */
 
 import styles from "./Text.module.css";
 import React from "react";
