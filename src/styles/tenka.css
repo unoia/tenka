@@ -6,9 +6,6 @@
   /* document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR'); */
   /* document.documentElement.style.getPropertyValue('--your-variable'); */
 
-  --reach-dialog: 1;
-  --reach-tabs: 1;
-
   /* RESPONSIVE BREAKPOINTS */
   --tenka-max-420: 419px;
   --tenka-min-420: 420px;

@@ -56,7 +56,6 @@ const textStyleModifier = {
 };
 
 const combineStyleProps = (truncate, style) => {
-  console.log("Calculating styles...")
   return typeof truncate === "number" && truncate ? ({
       WebkitLineClamp: truncate,
       ...style
