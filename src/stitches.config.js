@@ -35,43 +35,9 @@ export const { styled, css, global, keyframes, getCssString, theme } =
       },
     },
     media: {
-      "max-sphone": "(max-width: 419px)",
-      sphone: "(min-width: 320px)",
-      "max-phone": "(max-width: 419px)",
-      "only-phone": "(min-width: 420px) and (max-width: 719px)",
-      phone: "(min-width: 420px)",
-      "max-tablet": "(max-width: 719px)",
-      "only-tablet": "(min-width: 720px) and (max-width: 839px)",
-      tablet: "(min-width: 720px)",
-      "max-ltablet": "(max-width: 839px)",
-      "only-ltablet": "(min-width: 840px) and (max-width: 1023px)",
-      ltablet: "(min-width: 840px)",
-      "max-desktop": "(max-width: 1023px)",
-      "only-desktop": "(min-width: 1024px) and (max-width: 1535px)",
-      desktop: "(min-width: 1024px)",
-      "max-wide": "(max-width: 1535px)",
-      wide: "(min-width: 1536px)",
-    },
-    utils: {
-      px: (config) => (value) => ({
-        paddingLeft: value,
-        paddingRight: value,
-      }),
-      py: (config) => (value) => ({
-        paddingTop: value,
-        paddingBottom: value,
-      }),
-      pt: (config) => (value) => ({
-        paddingTop: value,
-      }),
-      pr: (config) => (value) => ({
-        paddingRight: value,
-      }),
-      pb: (config) => (value) => ({
-        paddingBottom: value,
-      }),
-      pl: (config) => (value) => ({
-        paddingLeft: value,
-      }),
+      phone: `(min-width: 420px)`,
+      tablet: `(min-width: 720px)`,
+      desktop: `(min-width: 1024px)`,
+      wide: `(min-width: 1536px)`,
     },
   });

@@ -13,10 +13,10 @@ const Homepage = () => {
       <Text display2 info as="h1">{counter}</Text>
       <button onClick={() => setCounter(c => c + 1)}>Click!</button>
 
-      <Flex padding="ml" justify={{ "@initial": "start", '@xs': 'start', '@s': 'end', '@m': 'start', '@ml': 'end' }} wrap="wrap">
-        <Text display3 as="p">item-1</Text>
-        <Text display3 as="p">item-2</Text>
-        <Text display3 as="p">item-3</Text>
+      <Flex justify={{ "@initial": "start", '@phone': 'center', '@tablet': 'end', '@desktop': 'start', '@wide': 'end'}}>
+        <Text heading6 as="p">item-1</Text>
+        <Text heading6 as="p">item-2</Text>
+        <Text heading6 as="p">item-3</Text>
       </Flex>
     </div>
   )
