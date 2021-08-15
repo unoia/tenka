@@ -1,9 +1,11 @@
 {
   "name": "tenka",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "Ongki Herlambang <ongki@herlambang.design>",
   "license": "MIT",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "main": "./src/components/index.js",
   "scripts": {
     "dev": "vite",
@@ -94,7 +96,7 @@
         "presets": [
           "react-app"
         ]
-     }
-   }
+      }
+    }
   }
 }
