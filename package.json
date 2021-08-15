@@ -1,10 +1,11 @@
 {
   "name": "tenka",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "Ongki Herlambang <ongki@herlambang.design>",
   "license": "MIT",
   "files": [
-    "lib", "src/styles"
+    "lib",
+    "src/styles"
   ],
   "main": "./lib/dist/index.umd.js",
   "module": "./lib/dist/index.es.js",
