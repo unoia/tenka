@@ -71,7 +71,6 @@
   --tenka-font-size-large: 19px;
   --tenka-font-size-medium: 17px;
   --tenka-font-size-small: 15px;
-
   --tenka-font-size-caption-1: 14px;
   --tenka-font-size-caption-2: 12px;
 
@@ -155,7 +154,7 @@
 
   /* DARK */
   /* ALPHA */
-  --tenka-dark-100: rgba(0, 0, 0, 1);
+  --tenka-dark-100: rgba(0, 0, 0, 0.99);
   --tenka-dark-90: rgba(0, 0, 0, 0.94);
   --tenka-dark-80: rgba(0, 0, 0, 0.84);
   --tenka-dark-70: rgba(0, 0, 0, 0.72);
