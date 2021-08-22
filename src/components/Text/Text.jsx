@@ -9,8 +9,8 @@
  * Source: https://github.com/seek-oss/seek-style-guide
  */
 
-import styles from "./Text.module.css";
-import React from "react";
+import styles from './Text.module.css'
+import React from 'react'
 import {
   bool,
   node,
@@ -19,29 +19,29 @@ import {
   oneOf,
   oneOfType,
   number,
-} from "prop-types";
-import cx from "classnames";
+} from 'prop-types'
+import cx from 'clsx'
 
 import {
   withTextSizeProps,
   sizes,
   modifiers,
   withTextModifierProps,
-} from "./libs";
+} from './libs'
 
-import stylesStrong from "./Strong/Strong.module.css";
-import stylesRegular from "./Regular/Regular.module.css";
-import stylesLight from "./Light/Light.module.css";
+import stylesStrong from './Strong/Strong.module.css'
+import stylesRegular from './Regular/Regular.module.css'
+import stylesLight from './Light/Light.module.css'
 
-import stylesSecondary from "./Secondary/Secondary.module.css";
-import stylesPositive from "./Positive/Positive.module.css";
-import stylesCritical from "./Critical/Critical.module.css";
-import stylesHighlight from "./Highlight/Highlight.module.css";
-import stylesInfo from "./Info/Info.module.css";
-import stylesWhite from "./White/White.module.css";
-import stylesWhiteSecondary from "./WhiteSecondary/WhiteSecondary.module.css";
-import stylesAccent from "./Accent/Accent.module.css";
-import stylesAccentSecondary from "./AccentSecondary/AccentSecondary.module.css";
+import stylesSecondary from './Secondary/Secondary.module.css'
+import stylesPositive from './Positive/Positive.module.css'
+import stylesCritical from './Critical/Critical.module.css'
+import stylesHighlight from './Highlight/Highlight.module.css'
+import stylesInfo from './Info/Info.module.css'
+import stylesWhite from './White/White.module.css'
+import stylesWhiteSecondary from './WhiteSecondary/WhiteSecondary.module.css'
+import stylesAccent from './Accent/Accent.module.css'
+import stylesAccentSecondary from './AccentSecondary/AccentSecondary.module.css'
 
 const textStyleModifier = {
   secondary: stylesSecondary?.root,
@@ -53,13 +53,16 @@ const textStyleModifier = {
   whiteSecondary: stylesWhiteSecondary?.root,
   accent: stylesAccent?.root,
   accentSecondary: stylesAccentSecondary?.root,
-};
+}
 
 const combineStyleProps = (truncate, style) => {
-  return typeof truncate === "number" && truncate ? ({
-      WebkitLineClamp: truncate,
-      ...style
-    }) : style}
+  return typeof truncate === 'number' && truncate
+    ? {
+        WebkitLineClamp: truncate,
+        ...style,
+      }
+    : style
+}
 
 export const TextNoModifier = React.forwardRef(
   (
@@ -84,9 +87,11 @@ export const TextNoModifier = React.forwardRef(
     },
     forwardedRef
   ) => {
-
-    const Component = as || "span";
-    const styleProps = React.useMemo(() => combineStyleProps(truncate, style), [truncate, style])
+    const Component = as || 'span'
+    const styleProps = React.useMemo(
+      () => combineStyleProps(truncate, style),
+      [truncate, style]
+    )
 
     return (
       <Component
@@ -95,8 +100,8 @@ export const TextNoModifier = React.forwardRef(
           [styles[size]]: size,
           [styles[align]]: align,
           [textStyleModifier[modifier]]: modifier,
-          [styles.truncate]: typeof truncate === "boolean" && truncate,
-          [styles.clamp]: typeof truncate === "number" && truncate,
+          [styles.truncate]: typeof truncate === 'boolean' && truncate,
+          [styles.clamp]: typeof truncate === 'number' && truncate,
           [styles.breakWord]: breakWord,
           [stylesLight.root]: light,
           [stylesStrong.root]: strong,
@@ -109,21 +114,21 @@ export const TextNoModifier = React.forwardRef(
       >
         {children}
       </Component>
-    );
+    )
   }
-);
+)
 
-TextNoModifier.displayName = "Text";
+TextNoModifier.displayName = 'Text'
 
 TextNoModifier.defaultProps = {
-  as: "span",
-  size: "medium",
+  as: 'span',
+  size: 'medium',
   breakWord: false,
   regular: false,
   light: false,
   strong: false,
   prewrap: false,
-};
+}
 
 TextNoModifier.propTypes = {
   children: node.isRequired,
@@ -141,7 +146,7 @@ TextNoModifier.propTypes = {
    * Alignment of text
    * Use directly as a prop
    */
-  align: oneOf(["left", "right", "center", "justify"]),
+  align: oneOf(['left', 'right', 'center', 'justify']),
   /**
    * Size of text
    * Use directly as a prop
@@ -167,8 +172,8 @@ TextNoModifier.propTypes = {
    */
   light: bool,
   prewrap: bool,
-};
+}
 
-export const Text = withTextSizeProps(withTextModifierProps(TextNoModifier));
+export const Text = withTextSizeProps(withTextModifierProps(TextNoModifier))
 
-export default Text;
+export default Text

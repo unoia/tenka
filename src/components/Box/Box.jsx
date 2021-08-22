@@ -1,9 +1,9 @@
-import styles from "./Box.module.css";
-import React from "react";
-import cx from "classnames";
-import { bool, node, object, string, oneOf, oneOfType } from "prop-types";
+import styles from './Box.module.css'
+import React from 'react'
+import cx from 'clsx'
+import { bool, node, object, string, oneOf, oneOfType } from 'prop-types'
 
-import { withBoxPaddingProps, sizes } from "./libs";
+import { withBoxPaddingProps, sizes } from './libs'
 
 const BoxNoModifier = ({
   inline,
@@ -19,7 +19,7 @@ const BoxNoModifier = ({
   className,
   ...restProps
 }) => {
-  const Component = as ? as : "div";
+  const Component = as ? as : 'div'
 
   return (
     <Component
@@ -38,14 +38,14 @@ const BoxNoModifier = ({
     >
       {children}
     </Component>
-  );
-};
+  )
+}
 
-BoxNoModifier.displayName = "Box";
+BoxNoModifier.displayName = 'Box'
 
 BoxNoModifier.defaultProps = {
-  as: "div",
-};
+  as: 'div',
+}
 
 BoxNoModifier.propTypes = {
   children: node.isRequired,
@@ -59,8 +59,8 @@ BoxNoModifier.propTypes = {
   pr: oneOf(sizes),
   pb: oneOf(sizes),
   pl: oneOf(sizes),
-};
+}
 
-export const Box = withBoxPaddingProps(BoxNoModifier);
+export const Box = withBoxPaddingProps(BoxNoModifier)
 
-export default Box;
+export default Box

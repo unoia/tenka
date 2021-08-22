@@ -1,4 +1,4 @@
-@import "./../assets/fonts/masbul/stylesheet.css";
+@import './../assets/fonts/masbul/stylesheet.css';
 
 :root {
   /* --brand-primary-200: rgba(255, 4, 50, 1); */
@@ -31,8 +31,8 @@
   --tenka-min-wide: var(--tenka-min-1536);
 
   /* SPACES */
-  --tenka-base: 16px;
-  --tenka-space-0: 0rem;
+  --tenka-space-base: 16px;
+  --tenka-space-none: 0;
   --tenka-space-xxs: 0.125rem;
   --tenka-space-xs: 0.25rem;
   --tenka-space-s: 0.5rem;
@@ -44,35 +44,36 @@
   --tenka-space-xxl: 3rem;
   --tenka-space-xxxl: 4rem;
   --tenka-space-huge: 6rem;
+  --tenka-space-extra: 9rem;
   --tenka-space-field: 1.25rem;
 
   /* TYPOGRAPHY */
   /* Font Stack */
-  --font-primary: "Masbul", "SF Pro Display", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+  --font-primary: 'Masbul', 'SF Pro Display', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
     sans-serif;
-  --font-secondary: "Masbul", "IBM Plex Serif", "SF Pro Display", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-    "Helvetica Neue", sans-serif;
-  --font-monospace: "Roboto Mono", "Operator Mono", monospace;
-  --font-display: "Masbul", serif;
+  --font-secondary: 'Masbul', 'IBM Plex Serif', 'SF Pro Display', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+  --font-monospace: 'Roboto Mono', 'Operator Mono', monospace;
+  --font-display: 'Masbul', serif;
 
   /* font-sizes */
-  --tenka-font-size-display-1: 128px;
-  --tenka-font-size-display-2: 96px;
-  --tenka-font-size-display-3: 64px;
-  --tenka-font-size-heading-1: 48px;
-  --tenka-font-size-heading-2: 32px;
-  --tenka-font-size-heading-3: 24px;
-  --tenka-font-size-heading-4: 19px;
-  --tenka-font-size-heading-5: 17px;
-  --tenka-font-size-heading-6: 15px;
-  --tenka-font-size-xlarge: 22px;
-  --tenka-font-size-large: 19px;
-  --tenka-font-size-medium: 17px;
-  --tenka-font-size-small: 15px;
-  --tenka-font-size-caption-1: 14px;
-  --tenka-font-size-caption-2: 12px;
+  --tenka-size-display-1: 128px;
+  --tenka-size-display-2: 96px;
+  --tenka-size-display-3: 64px;
+  --tenka-size-heading-1: 48px;
+  --tenka-size-heading-2: 32px;
+  --tenka-size-heading-3: 24px;
+  --tenka-size-heading-4: 19px;
+  --tenka-size-heading-5: 17px;
+  --tenka-size-heading-6: 15px;
+  --tenka-size-xlarge: 22px;
+  --tenka-size-large: 19px;
+  --tenka-size-medium: 17px;
+  --tenka-size-small: 15px;
+  --tenka-size-caption-1: 14px;
+  --tenka-size-caption-2: 12px;
 
   /* line-heights */
   --tenka-line-height-display-1: 1.09375em;
@@ -93,15 +94,15 @@
   --tenka-line-height-label-small: 1.125rem;
 
   /* font-weights */
-  --tenka-font-weight-100: 100;
-  --tenka-font-weight-200: 200;
-  --tenka-font-weight-300: 300;
-  --tenka-font-weight-400: 400;
-  --tenka-font-weight-500: 500;
-  --tenka-font-weight-600: 600;
-  --tenka-font-weight-700: 700;
-  --tenka-font-weight-800: 800;
-  --tenka-font-weight-900: 900;
+  --tenka-weight-100: 100;
+  --tenka-weight-200: 200;
+  --tenka-weight-300: 300;
+  --tenka-weight-400: 400;
+  --tenka-weight-500: 500;
+  --tenka-weight-600: 600;
+  --tenka-weight-700: 700;
+  --tenka-weight-800: 800;
+  --tenka-weight-900: 900;
 
   /* Line Height */
   --tenka-line-height-compact: 1.25;
@@ -110,47 +111,47 @@
   --tenka-line-height-reset: 1;
 
   /* COLORS */
-  /* --brand-primary-10: hsl(358, 100%, 68%); #ff5a60 */
-  --brand-primary-100: hsl(349, 100%, 61%); /* #ff385d */
-  --brand-primary-200: hsl(358, 83%, 64%); /* #ef585d */
-  --brand-primary-300: hsl(358, 75%, 58%); /* #E44449 */
-  --brand-primary-10: hsla(358, 100%, 68%, 0.1);
-  --brand-primary-20: hsla(358, 100%, 68%, 0.2);
-  --brand-primary-30: hsla(358, 100%, 68%, 0.3);
-  --brand-primary-40: hsla(358, 100%, 68%, 0.4);
-  --brand-primary-50: hsla(358, 100%, 68%, 0.5);
-  --brand-primary-60: hsla(358, 100%, 68%, 0.6);
-  --brand-primary-70: hsla(358, 100%, 68%, 0.7);
-  --brand-primary-80: hsla(358, 100%, 68%, 0.8);
-  --brand-primary-90: hsla(358, 100%, 68%, 0.9);
+  /* --tenka-color-primary-10: hsl(358, 100%, 68%); /*#ff5a60 */
+  --tenka-color-primary-100: hsl(349, 100%, 61%); /* #ff385d */
+  --tenka-color-primary-200: hsl(358, 83%, 64%); /* #ef585d */
+  --tenka-color-primary-300: hsl(358, 75%, 58%); /* #E44449 */
+  --tenka-color-primary-10: hsla(358, 100%, 68%, 0.1);
+  --tenka-color-primary-20: hsla(358, 100%, 68%, 0.2);
+  --tenka-color-primary-30: hsla(358, 100%, 68%, 0.3);
+  --tenka-color-primary-40: hsla(358, 100%, 68%, 0.4);
+  --tenka-color-primary-50: hsla(358, 100%, 68%, 0.5);
+  --tenka-color-primary-60: hsla(358, 100%, 68%, 0.6);
+  --tenka-color-primary-70: hsla(358, 100%, 68%, 0.7);
+  --tenka-color-primary-80: hsla(358, 100%, 68%, 0.8);
+  --tenka-color-primary-90: hsla(358, 100%, 68%, 0.9);
 
   /* BRAND SECONDARY */
-  --brand-secondary-100: hsl(181, 100%, 27%); /* #008689 */
-  --brand-secondary-200: hsl(186, 100%, 26%); /* #007986 */
-  --brand-secondary-300: hsl(182, 100%, 22%); /* #006c6f */
-  --brand-secondary-10: hsla(181, 100%, 27%, 0.1);
-  --brand-secondary-20: hsla(181, 100%, 27%, 0.2);
-  --brand-secondary-30: hsla(181, 100%, 27%, 0.3);
-  --brand-secondary-40: hsla(181, 100%, 27%, 0.4);
-  --brand-secondary-50: hsla(181, 100%, 27%, 0.5);
-  --brand-secondary-60: hsla(181, 100%, 27%, 0.6);
-  --brand-secondary-70: hsla(181, 100%, 27%, 0.7);
-  --brand-secondary-80: hsla(181, 100%, 27%, 0.8);
-  --brand-secondary-90: hsla(181, 100%, 27%, 0.9);
+  --tenka-color-secondary-100: hsl(181, 100%, 27%); /* #008689 */
+  --tenka-color-secondary-200: hsl(186, 100%, 26%); /* #007986 */
+  --tenka-color-secondary-300: hsl(182, 100%, 22%); /* #006c6f */
+  --tenka-color-secondary-10: hsla(181, 100%, 27%, 0.1);
+  --tenka-color-secondary-20: hsla(181, 100%, 27%, 0.2);
+  --tenka-color-secondary-30: hsla(181, 100%, 27%, 0.3);
+  --tenka-color-secondary-40: hsla(181, 100%, 27%, 0.4);
+  --tenka-color-secondary-50: hsla(181, 100%, 27%, 0.5);
+  --tenka-color-secondary-60: hsla(181, 100%, 27%, 0.6);
+  --tenka-color-secondary-70: hsla(181, 100%, 27%, 0.7);
+  --tenka-color-secondary-80: hsla(181, 100%, 27%, 0.8);
+  --tenka-color-secondary-90: hsla(181, 100%, 27%, 0.9);
 
   /* Maroon */
-  --brand-maroon-10: hsla(335, 70%, 38%, 0.1); /* #a41d55 */
-  --brand-maroon-100: hsl(343, 70%, 46%); /* #C72352 */
-  --brand-maroon-200: hsl(335, 70%, 38%); /* #a41d55 */
-  --brand-maroon-300: hsl(337, 71%, 32%); /* #8c1845 */
+  --tenka-color-maroon-10: hsla(335, 70%, 38%, 0.1); /* #a41d55 */
+  --tenka-color-maroon-100: hsl(343, 70%, 46%); /* #C72352 */
+  --tenka-color-maroon-200: hsl(335, 70%, 38%); /* #a41d55 */
+  --tenka-color-maroon-300: hsl(337, 71%, 32%); /* #8c1845 */
 
-  --accent-scarlet: #ff1623; /* #ff1623; */
-  --accent-navy: #0f083c; /* #0f083c; */
-  --accent-yellow: #ffdc4a; /* #ffdc4a; */
-  --accent-peach: #f7e0d0; /* #f7e0d0; */
-  --accent-rose: #ffa78f; /* #ffa78f; */
-  --accent-pink: #ff9e9f; /* #ff9e9f; */
-  --accent-sky: #b3d9da; /* #b3d9da; */
+  --tenka-color-accent-scarlet: #ff1623; /* #ff1623; */
+  --tenka-color-accent-navy: #0f083c; /* #0f083c; */
+  --tenka-color-accent-yellow: #ffdc4a; /* #ffdc4a; */
+  --tenka-color-accent-peach: #f7e0d0; /* #f7e0d0; */
+  --tenka-color-accent-rose: #ffa78f; /* #ffa78f; */
+  --tenka-color-accent-pink: #ff9e9f; /* #ff9e9f; */
+  --tenka-color-accent-sky: #b3d9da; /* #b3d9da; */
 
   /* DARK */
   /* ALPHA */
@@ -196,19 +197,19 @@
   --tenka-light-hex-70: #9c9c9c;
 
   /* Tone colors */
-  --tone-critical-10: rgba(255, 93, 61, 0.11);
-  --tone-critical-100: #ff603f;
-  --tone-critical-200: #e42700;
-  --tone-critical-300: #940d00;
+  --tenka-color-critical-10: rgba(255, 93, 61, 0.11);
+  --tenka-color-critical-100: #ff603f;
+  --tenka-color-critical-200: #e42700;
+  --tenka-color-critical-300: #940d00;
 
-  --tone-warning-10: hsl(40, 100%, 91%); /* #ffefcf */
-  --tone-warning-100: hsl(42, 100%, 50%); /* #ffb200 */
-  --tone-warning-200: hsl(40, 100%, 48%); /* #f5a300 */
-  --tone-warning-300: hsl(32, 100%, 32%); /* #A35700 */
+  --tenka-color-warning-10: hsl(40, 100%, 91%); /* #ffefcf */
+  --tenka-color-warning-100: hsl(42, 100%, 50%); /* #ffb200 */
+  --tenka-color-warning-200: hsl(40, 100%, 48%); /* #f5a300 */
+  --tenka-color-warning-300: hsl(32, 100%, 32%); /* #A35700 */
 
-  --tone-positive-100: #57d9a3;
-  --tone-positive-200: #00875a;
-  --tone-positive-300: #006644;
+  --tenka-color-positive-100: #57d9a3;
+  --tenka-color-positive-200: #00875a;
+  --tenka-color-positive-300: #006644;
 
   /* Background Colors */
   /* Only use this colors for background */

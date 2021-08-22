@@ -1,1 +1,1 @@
-export { SizePropTypes, sizes, withBoxPaddingProps } from "./withBoxSizeProps";
+export { SizePropTypes, sizes, withBoxPaddingProps } from './withBoxSizeProps'

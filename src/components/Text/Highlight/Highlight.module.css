@@ -5,9 +5,9 @@
 }
 
 .root::after {
-  content: " ";
+  content: ' ';
   position: absolute;
-  background-color: var(--brand-maroon-10, hsla(335, 70%, 38%, 0.1));
+  background-color: var(--tenka-maroon-10, hsla(335, 70%, 38%, 0.1));
   top: calc(var(--tenka-space-xxs, 2px) * -1);
   left: calc(var(--tenka-space-xxs, 2px) * -1);
   bottom: calc(var(--tenka-space-xxs, 2px) * -1);

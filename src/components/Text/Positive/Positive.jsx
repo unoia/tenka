@@ -1,6 +1,6 @@
-import styles from "./Positive.module.css";
-import React from "react";
-import cx from "classnames";
+import styles from './Positive.module.css'
+import React from 'react'
+import cx from 'clsx'
 
 const Positive = ({ children, className, ...restProps }) => {
   return (
@@ -10,7 +10,7 @@ const Positive = ({ children, className, ...restProps }) => {
     >
       {children}
     </span>
-  );
-};
+  )
+}
 
-export default Positive;
+export default Positive
