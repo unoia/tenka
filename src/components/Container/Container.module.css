@@ -1,0 +1,118 @@
+.root {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
+
+.bleed {
+  max-width: 100%;
+}
+
+/* Phone */
+@media screen and (max-width: 419px) {
+  .narrow {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-sphone, 16px);
+    padding-left: var(--tenka-gutter-sphone, 16px);
+  }
+  .normal {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-sphone, 16px);
+    padding-left: var(--tenka-gutter-sphone, 16px);
+  }
+  .post {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-sphone, 16px);
+    padding-left: var(--tenka-gutter-sphone, 16px);
+  }
+}
+@media screen and (min-width: 420px) {
+  .narrow {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-phone, 24px);
+    padding-left: var(--tenka-gutter-phone, 24px);
+  }
+  .normal {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-phone, 24px);
+    padding-left: var(--tenka-gutter-phone, 24px);
+  }
+  .post {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-phone, 24px);
+    padding-left: var(--tenka-gutter-phone, 24px);
+  }
+}
+/* Tablet */
+@media screen and (min-width: 720px) {
+  .narrow {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-tablet, 48px);
+    padding-left: var(--tenka-gutter-tablet, 48px);
+  }
+  .normal {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-tablet, 48px);
+    padding-left: var(--tenka-gutter-tablet, 48px);
+  }
+  .post {
+    max-width: calc(var(--tenka-page-post) - (var(--tenka-gutter-tablet) * 2));
+    padding-left: var(--tenka-gutter-tablet, 48px);
+    padding-left: var(--tenka-gutter-tablet, 48px);
+  }
+}
+/* Tablet Landscape */
+@media screen and (min-width: 840px) {
+  .narrow {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-tablet, 48px);
+    padding-left: var(--tenka-gutter-tablet, 48px);
+  }
+  .normal {
+    max-width: 100%;
+    padding-left: var(--tenka-gutter-tablet, 48px);
+    padding-left: var(--tenka-gutter-tablet, 48px);
+  }
+  .post {
+    max-width: calc(var(--tenka-page-post) - (var(--tenka-gutter-tablet) * 2));
+    padding-left: var(--tenka-gutter-tablet, 48px);
+    padding-left: var(--tenka-gutter-tablet, 48px);
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .narrow {
+    max-width: var(--tenka-page-small);
+    padding-left: var(--tenka-gutter-desktop);
+    padding-right: var(--tenka-gutter-desktop);
+  }
+  .normal {
+    max-width: var(--tenka-page-normal);
+    padding-left: var(--tenka-gutter-desktop);
+    padding-right: var(--tenka-gutter-desktop);
+  }
+  .post {
+    max-width: var(--tenka-page-xsmall);
+    padding-left: var(--tenka-gutter-desktop);
+    padding-right: var(--tenka-gutter-desktop);
+  }
+}
+/* Wide Screen */
+@media screen and (min-width: 1536px) {
+  .narrow {
+    max-width: var(--tenka-page-small);
+    padding-left: var(--tenka-gutter-wide);
+    padding-right: var(--tenka-gutter-wide);
+  }
+  .normal {
+    max-width: var(--tenka-page-normal);
+    padding-left: var(--tenka-gutter-wide);
+    padding-right: var(--tenka-gutter-wide);
+  }
+  .post {
+    max-width: var(--tenka-page-xsmall);
+    padding-left: var(--tenka-gutter-wide);
+    padding-right: var(--tenka-gutter-wide);
+  }
+}

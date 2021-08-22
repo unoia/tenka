@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, Flex } from './components'
+import Container from './components/Container/Container'
 
 import './styles/reset.css'
 import './styles/tenka.css'
@@ -14,6 +15,10 @@ const Box = ({ color }) => {
       }}
     />
   )
+}
+
+const Block = ({ color }) => {
+  return <div style={{ width: '100%', height: 48, backgroundColor: color }} />
 }
 
 const Homepage = () => {
@@ -39,6 +44,27 @@ const Homepage = () => {
         <Box color="salmon" />
         <Box color="navy" />
       </Flex>
+
+      <br />
+      <br />
+
+      <Container
+        area={{
+          '@desktop': 'post',
+          '@wide': 'narrow',
+        }}
+      >
+        <Block color="maroon" />
+      </Container>
+      <Container area="narrow">
+        <Block color="salmon" />
+      </Container>
+      <Container area="bleed">
+        <Block color="navy" />
+      </Container>
+      <Container>
+        <Block color="rebeccapurple" />
+      </Container>
     </div>
   )
 }

@@ -246,4 +246,16 @@
   --bg-banana-100: #fffddd;
   --bg-banana-200: #fffbbb;
   --bg-banana-300: #fffe95; */
+
+  --tenka-gutter-default: 24px;
+  --tenka-gutter-phone: var(--tenka-gutter-default);
+  --tenka-gutter-tablet: 32px;
+  --tenka-gutter-desktop: 64px;
+
+  --tenka-page-default: 1290px;
+  --tenka-page-small: 1128px;
+  --tenka-page-xsmall: 720px;
+  --tenka-page-limit: calc(
+    var(--tenka-page-default) + (var(--tenka-gutter-desktop) * 2)
+  );
 }

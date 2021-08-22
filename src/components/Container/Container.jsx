@@ -1,4 +1,3 @@
-// import styles from './Container.module.scss'
 import React from 'react'
 
 import { styled } from './../../stitches.config'
@@ -11,11 +10,84 @@ export const Container = styled(Box, {
   marginRight: 'auto',
   variants: {
     area: {
-      default: {},
-      narrow: {},
-      post: {},
-      bleed: {},
+      default: {
+        '@max-phone': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$phone',
+          paddingRight: '$gutter$phone',
+        },
+        '@phone': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$phone',
+          paddingRight: '$gutter$phone',
+        },
+        '@tablet': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$tablet',
+          paddingRight: '$gutter$tablet',
+        },
+        '@desktop': {
+          maxWidth: '$page-width$default',
+          paddingLeft: '$gutter$desktop',
+          paddingRight: '$gutter$desktop',
+        },
+      },
+      narrow: {
+        '@max-phone': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$phone',
+          paddingRight: '$gutter$phone',
+        },
+        '@phone': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$phone',
+          paddingRight: '$gutter$phone',
+        },
+        '@tablet': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$tablet',
+          paddingRight: '$gutter$tablet',
+        },
+        '@desktop': {
+          maxWidth: '$page-width$small',
+          paddingLeft: '$gutter$desktop',
+          paddingRight: '$gutter$desktop',
+        },
+      },
+      post: {
+        '@max-phone': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$phone',
+          paddingRight: '$gutter$phone',
+        },
+        '@phone': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$phone',
+          paddingRight: '$gutter$phone',
+        },
+        '@tablet': {
+          maxWidth: '100%',
+          paddingLeft: '$gutter$tablet',
+          paddingRight: '$gutter$tablet',
+        },
+        '@landscape-tablet': {
+          maxWidth: '$page-width$xsmall',
+          paddingLeft: '$gutter$tablet',
+          paddingRight: '$gutter$tablet',
+        },
+        '@desktop': {
+          maxWidth: '$page-width$xsmall',
+          paddingLeft: '$gutter$desktop',
+          paddingRight: '$gutter$desktop',
+        },
+      },
+      bleed: {
+        maxWidth: '100%',
+      },
     },
+  },
+  defaultVariants: {
+    area: 'default',
   },
 })
 
