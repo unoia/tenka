@@ -1,7 +1,7 @@
-import { createCss } from '@stitches/react'
+import { createStitches } from '@stitches/react'
 
 export const { styled, css, global, keyframes, getCssString, theme } =
-  createCss({
+  createStitches({
     prefix: 'tenka',
     theme: {
       zIndices: {},
