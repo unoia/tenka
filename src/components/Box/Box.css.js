@@ -1,34 +1,13 @@
 // import { recipe } from '@vanilla-extract/recipes'
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles'
-import {
-  breakpoints,
-  space,
-  display,
-  breakpointNames,
-} from '../../styles/tokens'
+import { responsiveProperties } from '../../styles/atoms/atomicProperties'
+import { breakpoints, breakpointNames } from '../../styles/tokens'
 
-const displayStyles = defineProperties({
+const boxProperties = defineProperties({
   conditions: breakpoints,
   defaultCondition: 'small-phone',
   responsiveArray: breakpointNames,
-  properties: {
-    display: display,
-  },
-})
-
-const marginStyles = defineProperties({
-  conditions: breakpoints,
-  defaultCondition: 'small-phone',
-  responsiveArray: breakpointNames,
-  properties: {
-    margin: space,
-    marginTop: space,
-    marginBottom: space,
-    marginLeft: space,
-    marginRight: space,
-    marginInline: space,
-    marginBlock: space,
-  },
+  properties: responsiveProperties,
   shorthands: {
     marginX: ['marginInline'],
     mX: ['marginInline'],
@@ -44,23 +23,6 @@ const marginStyles = defineProperties({
     mb: ['marginBottom'],
     mL: ['marginLeft'],
     ml: ['marginLeft'],
-  },
-})
-
-const paddingStyles = defineProperties({
-  conditions: breakpoints,
-  defaultCondition: 'small-phone',
-  responsiveArray: breakpointNames,
-  properties: {
-    padding: space,
-    paddingTop: space,
-    paddingBottom: space,
-    paddingLeft: space,
-    paddingRight: space,
-    paddingInline: space,
-    paddingBlock: space,
-  },
-  shorthands: {
     paddingX: ['paddingInline'],
     pX: ['paddingInline'],
     px: ['paddingInline'],
@@ -75,11 +37,9 @@ const paddingStyles = defineProperties({
     pb: ['paddingBottom'],
     pL: ['paddingLeft'],
     pl: ['paddingLeft'],
+    justify: ['justifyContent'],
+    align: ['alignItems'],
   },
 })
 
-export const boxStyles = createSprinkles(
-  displayStyles,
-  paddingStyles,
-  marginStyles
-)
+export const boxStyles = createSprinkles(boxProperties)

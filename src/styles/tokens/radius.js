@@ -14,6 +14,7 @@ export const radius = {
   xl: '24px',
   xxl: '40px',
   rounded: '9999999px',
+  full: '9999999px',
   field: '6px',
   card: '12px',
 }

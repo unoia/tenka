@@ -1,18 +1,13 @@
 import React from 'react'
-import { Text, Flex, Box } from './components'
-import Container from './components/Container/Container'
+import { Text, Box } from './components'
 
 import './styles/reset.css'
 import './styles/tenka.css'
 
-const Block = ({ color }) => {
-  return <div style={{ width: '100%', height: 48, backgroundColor: color }} />
-}
-
 const Homepage = () => {
   return (
     <div>
-      <Container
+      {/* <Container
         area={{
           '@desktop': 'post',
           '@wide': 'narrow',
@@ -31,7 +26,7 @@ const Homepage = () => {
       </Container>
 
       <br />
-      <br />
+      <br /> */}
 
       <section>
         <Box
@@ -52,17 +47,12 @@ const Homepage = () => {
           my={['xs', 'ml', 'xl']}
           px={['xs', 'xs', 'xl']}
           style={{ backgroundColor: 'salmon' }}
-          display={['block', 'block', 'block', 'flex']}
+          display="flex"
         >
-          <Text
-            as="p"
-            heading4
-            style={{ backgroundColor: 'rebeccapurple' }}
-            white
-          >
+          <Text heading4 style={{ backgroundColor: 'rebeccapurple' }} white>
             Bye World
           </Text>
-          <Text as="p" heading4 style={{ backgroundColor: 'coral' }} white>
+          <Text heading4 style={{ backgroundColor: 'coral' }} white>
             Bye World
           </Text>
         </Box>

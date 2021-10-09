@@ -18,15 +18,17 @@ import { size } from './size'
 import { space } from './space'
 import { weight } from './weight'
 import { zIndex, layer } from './zIndices'
-import { display } from './display'
+import { background } from './background'
+import { foreground } from './foreground'
 
 export {
-  display,
   accent,
   bg,
+  background,
   brand,
   dark,
   darkHex,
+  foreground,
   light,
   lightHex,
   tone,
@@ -48,11 +50,12 @@ export const variables = {
   'box-shadow': boxShadow,
   breakpoints,
   accent,
-  display,
   bg,
+  background,
   brand,
   dark,
   'dark-hex': darkHex,
+  foreground,
   light,
   'light-hex': lightHex,
   tone,
