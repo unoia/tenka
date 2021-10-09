@@ -5,7 +5,7 @@ import { breakpoints, breakpointNames } from '../../styles/tokens'
 
 const boxProperties = defineProperties({
   conditions: breakpoints,
-  defaultCondition: 'small-phone',
+  defaultCondition: 'phone',
   responsiveArray: breakpointNames,
   properties: responsiveProperties,
   shorthands: {

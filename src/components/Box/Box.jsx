@@ -1,7 +1,7 @@
 // import styles from './Box.module.css'
 import React from 'react'
 import cx from 'clsx'
-import { bool, node, object, string, oneOf, oneOfType } from 'prop-types'
+import { bool, node, object, string, oneOfType } from 'prop-types'
 import { boxStyles } from './Box.css'
 
 export const Box = ({ as, children, className, ...restProps }) => {
@@ -44,13 +44,6 @@ Box.propTypes = {
   className: oneOfType([string, object]),
   as: string,
   inline: bool,
-  // padding: oneOf(sizes),
-  // py: oneOf(sizes),
-  // px: oneOf(sizes),
-  // pt: oneOf(sizes),
-  // pr: oneOf(sizes),
-  // pb: oneOf(sizes),
-  // pl: oneOf(sizes),
 }
 
 export default Box
