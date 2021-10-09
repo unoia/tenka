@@ -47,7 +47,9 @@ const Homepage = () => {
           my={['xs', 'ml', 'xl']}
           px={['xs', 'xs', 'xl']}
           style={{ backgroundColor: 'salmon' }}
-          display="flex"
+          display="inline-flex"
+          radius={{ phone: 'full', desktop: 's' }}
+          maxWidth="full"
         >
           <Text heading4 style={{ backgroundColor: 'rebeccapurple' }} white>
             Bye World

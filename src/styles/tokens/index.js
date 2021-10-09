@@ -9,7 +9,7 @@ import {
   tone,
 } from './color'
 import { boxShadow } from './box-shadow'
-import { breakpoints, breakpointNames } from './breakpoints'
+import { breakpoints, breakpointNames, breakpointsAlt } from './breakpoints'
 import { fontFamily } from './font-family'
 import { gutter } from './gutter'
 import { width } from './layout'
@@ -36,6 +36,7 @@ export {
   layer,
   boxShadow,
   breakpoints,
+  breakpointsAlt,
   fontFamily,
   gutter,
   width,
@@ -48,7 +49,6 @@ export {
 
 export const variables = {
   'box-shadow': boxShadow,
-  breakpoints,
   accent,
   bg,
   background,

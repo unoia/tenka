@@ -40,3 +40,21 @@ export const breakpoints = {
   'max-wide': { '@media': `screen and (max-width: ${width.max[1536]})` },
   wide: { '@media': `screen and (min-width: ${width.min[1536]})` },
 }
+
+export const breakpointsAlt = {
+  'small-phone': '',
+  'only-phone': `screen and (min-width: ${width.min[420]}) and (max-width: ${width.max[720]})`,
+  'max-phone': `screen and (max-width: ${width.max[420]})`,
+  phone: `screen and (min-width: ${width.min[420]})`,
+  'only-tablet': `screen and (min-width: ${width.min[720]}) and (max-width:${width.max[1024]})`,
+  'max-tablet': `screen and (max-width: ${width.max[720]})`,
+  tablet: `screen and (min-width: ${width.min[720]})`,
+  'only-tablet-landscape': `screen and (min-width: ${width.min[840]}) and (max-width: ${width.max[1024]})`,
+  'max-tablet-landscape': `screen and (max-width: ${width.max[840]})`,
+  'tablet-landscape': `screen and (min-width: ${width.min[840]})`,
+  'only-desktop': `screen and (min-width: ${width.min[1024]}) and (max-width: ${width.max[1536]})`,
+  'max-desktop': `screen and (max-width: ${width.max[1024]})`,
+  desktop: `screen and (min-width: ${width.min[1024]})`,
+  'max-wide': `screen and (max-width: ${width.max[1536]})`,
+  wide: `screen and (min-width: ${width.min[1536]})`,
+}

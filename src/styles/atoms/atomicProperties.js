@@ -1,4 +1,6 @@
-import { radius, space, boxShadow, background } from '../tokens'
+import { tokens } from '../../styles.css'
+
+let { radius, space, boxShadow, background } = tokens
 
 export const unResponsiveProperties = {
   background,
@@ -7,6 +9,8 @@ export const unResponsiveProperties = {
   outline: ['none'],
   opacity: [0],
   zIndex: {
+    behind: -9,
+    reset: 'auto',
     0: 0,
     1: 1,
     2: 2,
@@ -16,6 +20,7 @@ export const unResponsiveProperties = {
     modalBackdrop: 290,
     modal: 300,
     notification: 400,
+    top: 99999,
   },
   boxShadow,
   cursor: ['default', 'pointer'],
@@ -24,11 +29,19 @@ export const unResponsiveProperties = {
   bottom: [0],
   left: [0],
   right: [0],
+  width: {
+    0: '0%',
+    fit: 'fit-content',
+    fitContent: 'fit-content',
+    'fit-content': 'fit-content',
+    full: '100%',
+  },
   minWidth: {
     0: '0%',
     fit: 'fit-content',
     fitContent: 'fit-content',
     'fit-content': 'fit-content',
+    full: '100%',
   },
   maxWidth: {
     xsmall: '400px',

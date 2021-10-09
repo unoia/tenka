@@ -39,6 +39,7 @@ const boxProperties = defineProperties({
     pl: ['paddingLeft'],
     justify: ['justifyContent'],
     align: ['alignItems'],
+    radius: ['borderRadius'],
   },
 })
 
