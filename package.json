@@ -7,6 +7,7 @@
     "src"
   ],
   "main": "./src/components/index.js",
+  "typings": "./src/components/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -56,7 +57,7 @@
     "jest-watch-typeahead": "^0.6.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "tenka": "^0.1.13",
+    "tenka": "^0.1.14",
     "ts-jest": "^27.0.4",
     "vite": "^2.9.9"
   },

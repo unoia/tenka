@@ -4965,12 +4965,13 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tenka@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/tenka/-/tenka-0.1.13.tgz#bc358e43d3c85d04156e5fbb134983947cdc3dd4"
-  integrity sha512-0LKsQ4Sj3FltlOwSQw708q3gkFsYBJcbt+soTH4Y6J6PWUzEslQw0ccbGCmwkwdn9z3IF5szWhw9MaO2BqMaiA==
+tenka@^0.1.14:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/tenka/-/tenka-0.1.14.tgz#2966a4a165a0977ad11d9b3388ce0a720b874c5d"
+  integrity sha512-qmP8GaE7nq1J6UWHpiYKKM0+ymm6IsvT/oPvTb7YIQ7nQ6qHFGTF+RwXlMs7DRgfkcI+0ksoUzGeMLdWrtpRxw==
   dependencies:
     clsx "^1.1.1"
+    lodash.foreach "^4.5.0"
     lodash.has "^4.5.2"
     lodash.includes "^4.3.0"
     lodash.mapvalues "^4.6.0"
