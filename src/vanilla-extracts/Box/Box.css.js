@@ -1,4 +1,3 @@
-// import { recipe } from '@vanilla-extract/recipes'
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles'
 import { responsiveProperties } from '../../styles/atoms/atomicProperties'
 import { breakpoints, breakpointNames } from '../../styles/tokens'
@@ -15,8 +14,8 @@ const boxProperties = defineProperties({
     marginY: ['marginBlock'],
     mY: ['marginBlock'],
     my: ['marginBlock'],
-    mT: ['marginTom'],
-    mt: ['marginTom'],
+    mT: ['marginTop'],
+    mt: ['marginTop'],
     mR: ['marginRight'],
     mr: ['marginRight'],
     mB: ['marginBottom'],

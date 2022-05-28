@@ -1,58 +1,31 @@
-import styles from './Inline.module.css'
-import React, { Children, useEffect } from 'react'
-import cx from 'clsx'
-import flattenChildren from 'react-keyed-flatten-children'
-import { Box } from './../Box/Box'
-import { withGapProps } from './libs'
+import React from 'react'
+import { styled } from '../../stitches.config'
+import { Box } from '../Box'
 
-const orderChildren = (children, reverse) => {
-  const childrenArray = Children.toArray(children)
-  return reverse ? childrenArray.reverse() : childrenArray
-}
-
-const InlineNoModifier = ({
-  as,
-  gap,
-  isList,
-  children,
-  reverse,
-  className,
-  ...restProps
-}) => {
-  const inlineItemComponent = isList ? 'li' : 'div'
-
-  useEffect(() => {
-    if (gap) {
-      document.documentElement.style.setProperty(
-        '--tenka-inline-space',
-        `var(--tenka-space-${gap})`
-      )
-    }
-  }, [gap])
-
-  return (
-    <Box
-      as={as}
-      className={cx(styles.root, {
-        [className]: className,
-      })}
-      {...restProps}
-    >
-      {Children.map(
-        orderChildren(flattenChildren(children, reverse)),
-        (child) =>
-          child !== null && child !== undefined ? (
-            <Box as={inlineItemComponent} inline>
-              {child}
-            </Box>
-          ) : null
-      )}
-    </Box>
-  )
-}
-
-InlineNoModifier.displayName = 'Inline'
-
-export const Inline = withGapProps(InlineNoModifier)
-
-export default Inline
+export const Inline = styled(Box, {
+  defaultVariants: {
+    display: {
+      display: 'flex',
+    },
+  },
+  variants: {
+    display: {
+      flex: { display: 'flex' },
+      'inline-flex': { display: 'inline-flex' },
+    },
+    space: {
+      xxs: { columnGap: '$space$xxs' },
+      xs: { columnGap: '$space$xs' },
+      s: { columnGap: '$space$s' },
+      sm: { columnGap: '$space$sm' },
+      m: { columnGap: '$space$m' },
+      ml: { columnGap: '$space$ml' },
+      l: { columnGap: '$space$l' },
+      xl: { columnGap: '$space$xl' },
+      xxl: { columnGap: '$space$xxl' },
+      xxxl: { columnGap: '$space$xxxl' },
+      huge: { columnGap: '$space$huge' },
+      field: { columnGap: '$space$field' },
+    },
+  },
+})

@@ -1,5 +1,6 @@
 import {
-  createGlobalTheme, createGlobalThemeContract
+  createGlobalTheme,
+  createGlobalThemeContract,
 } from '@vanilla-extract/css'
 
 import { variables } from './styles/tokens'

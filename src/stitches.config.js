@@ -5,23 +5,34 @@ export const { styled, css, global, keyframes, getCssString, theme } =
     prefix: 'tenka',
     theme: {
       zIndices: {},
-      radius: {},
+      radius: {
+        xxs: '2px',
+        xs: '3px',
+        s: '4px',
+        sm: '6px',
+        m: '8px',
+        ml: '12px',
+        l: '16px',
+        xl: '20px',
+        xxl: '24px',
+        xxxl: '32px',
+      },
       space: {
         base: '16px',
-        none: '0rem',
-        xxs: '0.125rem',
-        xs: '0.25rem',
-        s: '0.5rem',
-        sm: '0.75rem',
-        m: '1rem',
-        ml: '1.25rem',
-        l: '1.5rem',
-        xl: '2rem',
-        xxl: '3rem',
-        xxxl: '4rem',
-        huge: '6rem',
-        extra: '9rem',
-        field: '1.25rem',
+        none: '0',
+        xxs: '2px',
+        xs: '4px',
+        s: '8px',
+        sm: '12px',
+        m: '16px',
+        ml: '24px',
+        l: '32px',
+        xl: '48px',
+        xxl: '64px',
+        xxxl: '96px',
+        huge: '128px',
+        extra: '144px',
+        field: '16px',
       },
       primary: {
         // COLOR PRIMARY
@@ -152,6 +163,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         30: 'rgba(0, 0, 0, 0.12)',
         20: 'rgba(0, 0, 0, 0.08)',
         10: 'rgba(0, 0, 0, 0.04)',
+        '05': 'rgba(0, 0, 0, 0.02)',
       },
       'dark-hex': {
         100: '#000000' /* Heading */,
@@ -164,6 +176,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         30: '#e0e0e0',
         20: '#ebebeb',
         10: '#f5f5f5',
+        '05': '#fafafa',
       },
       light: {
         100: 'rgba(255, 255, 255, 1)',
@@ -176,6 +189,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         30: 'rgba(255, 255, 255, 0.1)',
         20: 'rgba(255, 255, 255, 0.06)',
         10: 'rgba(255, 255, 255, 0.02)',
+        '05': 'rgba(255, 255, 255, 0.01)',
       },
       'light-hex': {
         100: '#ffffff',
@@ -184,21 +198,21 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         70: '#9c9c9c',
       },
       size: {
-        'display-1': '128px',
-        'display-2': '96px',
-        'display-3': '64px',
-        'heading-1': '48px',
-        'heading-2': '32px',
-        'heading-3': '24px',
-        'heading-4': '19px',
-        'heading-5': '17px',
-        'heading-6': '15px',
-        xlarge: '22px',
-        large: '19px',
-        medium: '17px',
-        small: '15px',
-        'caption-1': '14px',
-        'caption-2': '12px',
+        'display-1': '8rem', // 128px
+        'display-2': '6rem', // 96px
+        'display-3': '4rem', // 64px
+        'heading-1': '3rem', // 48px
+        'heading-2': '2rem', // 32px
+        'heading-3': '1.5rem', // 24px
+        'heading-4': '1.1875rem', // 19px
+        'heading-5': '1.0625rem', // 17px
+        'heading-6': '0.9375rem', // 15px
+        xlarge: '22px', // 22px
+        large: '19px', // 19px
+        medium: '17px', // 17px
+        small: '0.9375rem', // 15px
+        'caption-1': '0.875rem', // 14px
+        'caption-2': '0.75rem', // 12px
       },
       weight: {
         100: 100,
@@ -212,6 +226,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         900: 900,
       },
       gutter: {
+        'small-phone': 24,
         phone: 24,
         tablet: 32,
         desktop: 64,

@@ -5,5 +5,5 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh(), vanillaExtractPlugin()],
+  plugins: [reactRefresh(), vanillaExtractPlugin({ identifiers: 'short' })],
 })

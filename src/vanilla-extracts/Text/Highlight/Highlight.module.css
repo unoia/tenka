@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+}
+
+.root::after {
+  content: ' ';
+  position: absolute;
+  background-color: var(--tenka-maroon-10, hsla(335, 70%, 38%, 0.1));
+  top: calc(var(--tenka-space-xxs, 2px) * -1);
+  left: calc(var(--tenka-space-xxs, 2px) * -1);
+  bottom: calc(var(--tenka-space-xxs, 2px) * -1);
+  right: calc(var(--tenka-space-xxs, 2px) * -1);
+  z-index: -1;
+}
