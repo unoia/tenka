@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Box, Stack } from 'tenka'
+import { Stack, Box } from 'tenka'
 
 import './styles/reset.css'
 import './styles/tenka.css'
@@ -14,9 +14,7 @@ const DecoratedBox = () => {
       }}
       style={{ backgroundColor: 'salmon' }}
     >
-      <Text heading4 as="p" style={{ backgroundColor: 'rebeccapurple' }} white>
-        Hello world
-      </Text>
+      <p>Hello world</p>
     </Box>
   )
 }

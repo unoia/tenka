@@ -1,6 +1,6 @@
 import { createStitches } from '@stitches/react'
 
-export const { styled, css, global, keyframes, getCssString, theme } =
+export const { styled, css, globalCss, keyframes, getCssText, theme } =
   createStitches({
     prefix: 'tenka',
     theme: {
@@ -241,17 +241,17 @@ export const { styled, css, global, keyframes, getCssString, theme } =
     media: {
       'only-phone': `(420px <= width < 720px)`,
       'max-phone': `(width < 420px)`,
-      phone: `(420px <= width)`,
+      'phone': `(420px <= width)`,
       'only-tablet': `(720px <= width < 1024px)`,
       'max-tablet': `(width < 720px)`,
-      tablet: `(720px <= width)`,
+      'tablet': `(720px <= width)`,
       'only-landscape-tablet': `(840px <= width < 1024px)`,
       'max-landscape-tablet': `(width < 840px)`,
       'landscape-tablet': `(840px <= width)`,
       'only-desktop': `(1024px <= width < 1536px)`,
       'max-desktop': `(width < 1024px)`,
-      desktop: `(1024px <= width)`,
+      'desktop': `(1024px <= width)`,
       'max-wide': `(width < 1536px)`,
-      wide: `(1536px <= width)`,
+      'wide': `(1536px <= width)`,
     },
   })

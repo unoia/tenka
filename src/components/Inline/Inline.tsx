@@ -1,12 +1,9 @@
-import React from 'react'
 import { styled } from '../../stitches.config'
 import { Box } from '../Box'
 
 export const Inline = styled(Box, {
   defaultVariants: {
-    display: {
-      display: 'flex',
-    },
+    display: 'flex',
   },
   variants: {
     display: {
@@ -29,3 +26,7 @@ export const Inline = styled(Box, {
     },
   },
 })
+
+Inline.displayName = 'Inline'
+
+export default Inline

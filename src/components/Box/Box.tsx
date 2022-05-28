@@ -1,11 +1,10 @@
-import React from 'react'
 import { styled } from '../../stitches.config'
 
 export const Box = styled('div', {
+  noWrap: {
+    flexWrap: 'nowrap',
+  },
   variants: {
-    noWrap: {
-      flexWrap: 'nowrap',
-    },
     display: {
       block: { display: 'block' },
       flex: { display: 'flex' },
@@ -230,15 +229,5 @@ export const Box = styled('div', {
 })
 
 Box.displayName = 'Box'
-Box.defaultProps = {
-  as: 'div',
-}
-
-// Box.propTypes = {
-//   children: node.isRequired,
-//   className: oneOfType([string, object]),
-//   as: string,
-//   inline: bool,
-// }
 
 export default Box
