@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Box, Stack, Inline } from './components'
+import { Text, Box, Stack } from 'tenka'
 
 import './styles/reset.css'
 import './styles/tenka.css'
