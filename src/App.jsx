@@ -1,5 +1,5 @@
 import React from 'react'
-import Box from './components/Box/Box'
+import { Box } from './../dist/index.es'
 
 import './styles/reset.css'
 import './styles/tenka.css'
