@@ -30,6 +30,7 @@ export default defineConfig([
       babel({
         exclude: 'node_modules/**',
         presets: ['@babel/preset-env', '@babel/preset-react'],
+        extensions: ['.js', '.ts', '.jsx', '.tsx'],
       }),
       commonjs(),
       external(),

@@ -2180,6 +2180,11 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
+"@haensl/rollup-plugin-local-resolve@^1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@haensl/rollup-plugin-local-resolve/-/rollup-plugin-local-resolve-1.1.8.tgz#0dd73c7416df8c54bf5e15eaf453705bc3c40c3b"
+  integrity sha512-zP/HhbTtGr6sNbmNtJeffCNSfDembuv/ZhNviIQ+ipp+LcHLrkwToMbQiGb/kNh3pRJTBkek8rQXZhaSSo1oRg==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
@@ -2729,11 +2734,6 @@
   integrity sha512-AU7kwFxreVd6OAXcAFlKSmZquiRUU0FvYm44k1Y1QbK7Co4m0aqfGMhjykIeQp/H6rcl+nFmj0zfdUcGVs9Dew==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
-
-"@stitches/react@^1.2.8":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-1.2.8.tgz#954f8008be8d9c65c4e58efa0937f32388ce3a38"
-  integrity sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==
 
 "@storybook/addon-actions@6.5.6", "@storybook/addon-actions@^6.5.6":
   version "6.5.6"
