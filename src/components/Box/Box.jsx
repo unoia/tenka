@@ -2,10 +2,10 @@
 import React from 'react'
 import cx from 'clsx'
 import { bool, node, object, string, oneOfType } from 'prop-types'
-import { boxStyles } from './Box.css'
+import { boxStyles } from './Box.css.js'
 
 export const Box = ({ as, children, className, ...restProps }) => {
-  const Component = as ? as : 'div'
+  const Wrapper = as
 
   const atomProps = {}
   const nativeProps = {}
@@ -19,18 +19,17 @@ export const Box = ({ as, children, className, ...restProps }) => {
   }
 
   const atomicClasses = boxStyles(atomProps)
-
-  console.log({ atomProps })
+  // console.log({ atomProps })
 
   return (
-    <Component
+    <Wrapper
       className={cx(atomicClasses, {
         [className]: className,
       })}
       {...nativeProps}
     >
       {children}
-    </Component>
+    </Wrapper>
   )
 }
 

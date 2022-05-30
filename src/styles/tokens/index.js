@@ -11,6 +11,7 @@ import {
 import { boxShadow } from './box-shadow'
 import { breakpoints, breakpointNames, breakpointsAlt } from './breakpoints'
 import { fontFamily } from './font-family'
+import { direction, justifyContent, alignItems } from './flex'
 import { gutter } from './gutter'
 import { width } from './layout'
 import { radius } from './radius'
@@ -50,12 +51,15 @@ export {
 export const variables = {
   'box-shadow': boxShadow,
   accent,
+  'align-items': alignItems,
   bg,
   background,
   brand,
   dark,
   'dark-hex': darkHex,
+  direction,
   foreground,
+  'justify-content': justifyContent,
   light,
   'light-hex': lightHex,
   tone,

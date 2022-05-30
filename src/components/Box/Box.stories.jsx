@@ -1,5 +1,5 @@
 import React from 'react'
-import Box from '../components/Box/Box'
+import { Box } from './Box'
 
 export default {
   component: Box,
@@ -37,16 +37,7 @@ export default {
 }
 
 export const BoxWithPadding = ({ padding, py, px, pt, pr, pb, pl }) => (
-  <Box
-    style={{ backgroundColor: 'rebeccapurple', color: '#ffffff' }}
-    padding={padding}
-    py={py}
-    px={px}
-    pt={pt}
-    pr={pr}
-    pb={pb}
-    pl={pl}
-  >
+  <Box padding={padding} py={py} px={px} pt={pt} pr={pr} pb={pb} pl={pl}>
     This box has padding
   </Box>
 )

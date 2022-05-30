@@ -1,10 +1,18 @@
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles'
-import { responsiveProperties } from '../../styles/atoms/atomicProperties'
+import {
+  responsiveProperties,
+  unResponsiveProperties,
+} from '../../styles/properties'
+
 import { breakpoints, breakpointNames } from '../../styles/tokens'
 
-const boxProperties = defineProperties({
+const staticProps = defineProperties({
+  properties: unResponsiveProperties,
+})
+
+const responsiveProps = defineProperties({
   conditions: breakpoints,
-  defaultCondition: 'phone',
+  defaultCondition: 'sphone',
   responsiveArray: breakpointNames,
   properties: responsiveProperties,
   shorthands: {
@@ -42,4 +50,4 @@ const boxProperties = defineProperties({
   },
 })
 
-export const boxStyles = createSprinkles(boxProperties)
+export const boxStyles = createSprinkles(staticProps, responsiveProps)

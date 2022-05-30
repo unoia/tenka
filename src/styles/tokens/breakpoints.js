@@ -5,21 +5,21 @@
 import { width } from './layout'
 
 export const breakpointNames = [
+  'sphone',
   'phone',
-  // 'phone',
   'tablet',
-  // 'tablet-landscape',
+  // 'ltablet',
   'desktop',
   'wide',
 ]
 
 export const breakpoints = {
-  phone: {},
+  sphone: {},
   // 'only-phone': {
   //   '@media': `screen and (min-width: ${width.min[420]}) and (max-width: ${width.max[720]})`,
   // },
   // 'max-phone': { '@media': `screen and (max-width: ${width.max[420]})` },
-  // phone: { '@media': `screen and (min-width: ${width.min[420]})` },
+  phone: { '@media': `screen and (min-width: ${width.min[375]})` },
   // 'only-tablet': {
   //   '@media': `screen and (min-width: ${width.min[720]}) and (max-width:${width.max[1024]})`,
   // },
@@ -42,10 +42,10 @@ export const breakpoints = {
 }
 
 export const breakpointsAlt = {
-  phone: '',
+  sphone: '',
   // 'only-phone': `screen and (min-width: ${width.min[420]}) and (max-width: ${width.max[720]})`,
   // 'max-phone': `screen and (max-width: ${width.max[420]})`,
-  // phone: `screen and (min-width: ${width.min[420]})`,
+  phone: `screen and (min-width: ${width.min[375]})`,
   // 'only-tablet': `screen and (min-width: ${width.min[720]}) and (max-width:${width.max[1024]})`,
   // 'max-tablet': `screen and (max-width: ${width.max[720]})`,
   tablet: `screen and (min-width: ${width.min[720]})`,
