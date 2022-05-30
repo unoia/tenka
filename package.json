@@ -1,6 +1,6 @@
 {
   "name": "tenka",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "author": "Ongki Herlambang <ongki@herlambang.design>",
   "license": "MIT",
   "main": "dist/index.js",
