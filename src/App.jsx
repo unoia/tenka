@@ -1,26 +1,42 @@
 import React from 'react'
-import { Box } from './../dist/index.es'
 
-import './styles/reset.css'
-import './styles/tenka.css'
+import { Stack, Box } from './../dist/tenka.es'
+import './../dist/reset.css'
+import './../dist/style.css'
+import './../dist/tenka.css'
+
+const DecoratedBox = ({ label = 'This is box component', ...restProps }) => {
+  return (
+    <Box
+      style={{ backgroundColor: 'rebeccapurple', color: 'white' }}
+      px="sm"
+      {...restProps}
+    >
+      {label}
+    </Box>
+  )
+}
 
 const Homepage = () => {
   return (
     <div>
-      <Box style={{ backgroundColor: 'salmon' }} padding="ml">
-        <Box
-          style={{ backgroundColor: 'rebeccapurple', color: 'white' }}
-          padding={{
-            sphone: 'sm',
-            phone: 'ml',
-            tablet: 'xl',
-            desktop: 'xxl',
-          }}
-          radius="ml"
-        >
-          This is box component
-        </Box>
-      </Box>
+      <Stack
+        style={{ backgroundColor: 'salmon' }}
+        space={{
+          sphone: 's',
+          phone: 'm',
+          tablet: 'xl',
+          desktop: 'xxxl',
+          wide: 'huge',
+        }}
+      >
+        <DecoratedBox />
+        <DecoratedBox />
+        <DecoratedBox />
+        <DecoratedBox />
+        <DecoratedBox />
+        <DecoratedBox />
+      </Stack>
     </div>
   )
 }

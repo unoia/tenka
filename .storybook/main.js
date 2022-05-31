@@ -1,5 +1,6 @@
 const { vanillaExtractPlugin } = require('@vanilla-extract/vite-plugin')
 const { mergeConfig } = require('vite')
+const react = require('@vitejs/plugin-react')
 
 module.exports = {
   stories: [
@@ -12,12 +13,12 @@ module.exports = {
     '@storybook/addon-interactions',
   ],
   framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite',
-  },
-  async viteFinal(config) {
-    return mergeConfig(config, {
-      plugins: [vanillaExtractPlugin({ identifiers: 'short' })],
-    })
-  },
+  // core: {
+  //   builder: '@storybook/builder-vite',
+  // },
+  // async viteFinal(config) {
+  //   return mergeConfig(config, {
+  //     plugins: [react(), vanillaExtractPlugin({ identifiers: 'short' })],
+  //   })
+  // },
 }

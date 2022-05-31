@@ -1,28 +1,34 @@
 import React from 'react'
-import { Box } from './../../../dist/index.es'
+import { Stack } from '../../../dist/index.es'
 
 export default {
-  component: Box,
-  title: 'Layout/Box',
+  component: Stack,
+  title: 'Layout/Stack',
 }
 
-export const BoxWithStyle = () => {
+export const StackWithSpace = () => {
   return (
-    <Box
+    <Stack
       style={{
         backgroundColor: 'salmon',
         color: 'white',
         fontWeight: 'bold',
       }}
       padding="sm"
-      display={{
-        phone: 'inline-flex',
-        tablet: 'block',
-      }}
-      radius="ml"
     >
-      <Box style={{ backgroundColor: 'rebeccapurple' }}>Something</Box>
-    </Box>
+      <Box padding="s" style={{ backgroundColor: 'rebeccapurple' }}>
+        Something
+      </Box>
+      <Box padding="s" style={{ backgroundColor: 'rebeccapurple' }}>
+        Something
+      </Box>
+      <Box padding="s" style={{ backgroundColor: 'rebeccapurple' }}>
+        Something
+      </Box>
+      <Box padding="s" style={{ backgroundColor: 'rebeccapurple' }}>
+        Something
+      </Box>
+    </Stack>
   )
 }
 

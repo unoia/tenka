@@ -1,0 +1,87 @@
+/* Webfont: Masbul-Light */
+@font-face {
+  font-family: "Masbul";
+  src: url("Masbul-Light.eot"); /* IE9 Compat Modes */
+  src: url("Masbul-Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("Masbul-Light.woff") format("woff"),
+    /* Modern Browsers */ url("Masbul-Light.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("Masbul-Light.svg#Masbul-Light")
+      format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Masbul-Book */
+@font-face {
+  font-family: "Masbul";
+  src: url("Masbul-Book.eot"); /* IE9 Compat Modes */
+  src: url("Masbul-Book.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("Masbul-Book.woff") format("woff"),
+    /* Modern Browsers */ url("Masbul-Book.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("Masbul-Book.svg#Masbul-Book") format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Masbul-Medium */
+@font-face {
+  font-family: "Masbul";
+  src: url("Masbul-Medium.eot"); /* IE9 Compat Modes */
+  src: url("Masbul-Medium.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("Masbul-Medium.woff") format("woff"),
+    /* Modern Browsers */ url("Masbul-Medium.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("Masbul-Medium.svg#Masbul-Medium")
+      format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Masbul-Bold */
+@font-face {
+  font-family: "Masbul";
+  src: url("Masbul-Bold.eot"); /* IE9 Compat Modes */
+  src: url("Masbul-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("Masbul-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("Masbul-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("Masbul-Bold.svg#Masbul-Bold") format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Masbul-ExtraBold */
+@font-face {
+  font-family: "Masbul";
+  src: url("Masbul-ExtraBold.eot"); /* IE9 Compat Modes */
+  src: url("Masbul-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("Masbul-ExtraBold.woff") format("woff"),
+    /* Modern Browsers */ url("Masbul-ExtraBold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("Masbul-ExtraBold.svg#Masbul-ExtraBold")
+      format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Masbul-Black */
+@font-face {
+  font-family: "Masbul";
+  src: url("Masbul-Black.eot"); /* IE9 Compat Modes */
+  src: url("Masbul-Black.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("Masbul-Black.woff") format("woff"),
+    /* Modern Browsers */ url("Masbul-Black.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("Masbul-Black.svg#Masbul-Black")
+      format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}

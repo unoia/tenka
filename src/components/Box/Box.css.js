@@ -16,6 +16,8 @@ const responsiveProps = defineProperties({
   responsiveArray: breakpointNames,
   properties: responsiveProperties,
   shorthands: {
+    spacex: ['columnGap'],
+    spacey: ['rowGap'],
     marginX: ['marginInline'],
     mX: ['marginInline'],
     mx: ['marginInline'],

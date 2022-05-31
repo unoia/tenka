@@ -1,0 +1,8 @@
+@import './assets/fonts/masbul/stylesheet.css';
+
+:root {
+  /* --brand-primary-200: rgba(255, 4, 50, 1); */
+  /* HOW TO MODIFY CSS CUSTOM PROPERTIES USING JAVASCRIPT */
+  /* document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR'); */
+  /* document.documentElement.style.getPropertyValue('--your-variable'); */
+}

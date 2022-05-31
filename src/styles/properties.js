@@ -29,6 +29,11 @@ export const unResponsiveProperties = {
   bottom: [0],
   left: [0],
   right: [0],
+  height: {
+    auto: 'auto',
+    full: '100%',
+    'fit-content': 'fit-content',
+  },
   width: {
     0: '0%',
     fit: 'fit-content',
@@ -68,6 +73,8 @@ export const responsiveProperties = {
     'inline-flex': 'inline-flex',
     'inline-grid': 'inline-grid',
   },
+  rowGap: space,
+  columnGap: space,
   position: ['static', 'relative', 'absolute', 'fixed'],
   borderRadius: radius,
   padding: space,

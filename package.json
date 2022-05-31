@@ -3,15 +3,22 @@
   "version": "0.1.20",
   "author": "Ongki Herlambang <ongki@herlambang.design>",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "dist/tenka.umd.js",
+  "module": "dist/tenka.es.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/tenka.es.js",
+      "require": "./dist/tenka.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "rollup -c",
+    "build": "vite build",
+    "preview": "vite preview",
+    "rollup-build": "rollup -c",
     "test": "jest src",
     "test-watch": "jest src --watch",
     "storybook": "start-storybook -p 6006",
@@ -83,13 +90,15 @@
     "react-dom": "^18.1.0",
     "rollup": "^2.75.1",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-copy-assets": "^2.0.3",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "tenka": "^0.1.18",
+    "sass": "^1.52.1",
+    "tenka": "^0.1.20",
     "ts-jest": "^27.0.4",
     "typescript": "^4.7.2",
     "vite": "^2.9.9"
