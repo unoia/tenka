@@ -13,8 +13,10 @@
       "import": "./dist/tenka.es.js",
       "require": "./dist/tenka.umd.js"
     },
-    "./dist/styles/reset.css": "./dist/styles/reset.css",
-    "./dist/styles/tenka.css": "./dist/styles/tenka.css"
+    "./style.css": "./dist/style.css",
+    "./reset.css": "./dist/styles/reset.css",
+    "./tenka.css": "./dist/styles/tenka.css",
+    "./masbul.css": "./dist/styles/tenka.css"
   },
   "scripts": {
     "dev": "vite",
