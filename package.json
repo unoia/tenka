@@ -100,10 +100,11 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.52.1",
-    "tenka": "^0.1.20",
+    "tenka": "^0.1.22",
     "ts-jest": "^27.0.4",
     "typescript": "^4.7.2",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vite-plugin-static-copy": "^0.5.0"
   },
   "peerDependencies": {
     "@react-aria/button": "^3.4.4",

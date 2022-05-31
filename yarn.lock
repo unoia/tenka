@@ -5689,7 +5689,7 @@ charcodes@^0.2.0:
   resolved "https://registry.yarnpkg.com/charcodes/-/charcodes-0.2.0.tgz#5208d327e6cc05f99eb80ffc814707572d1f14e4"
   integrity sha512-Y4kiDb+AM4Ecy58YkuZrrSRJBDQdQ2L+NyS1vHHFtNtUjgutcZfx3yp1dAONI/oPaPmyGfCLx5CxL+zauIMyKQ==
 
-"chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.1, chokidar@^3.4.2, chokidar@^3.5.0:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.1, chokidar@^3.4.2, chokidar@^3.5.0, chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -7516,7 +7516,7 @@ fast-glob@^2.2.6:
     merge2 "^1.2.3"
     micromatch "^3.1.10"
 
-fast-glob@^3.0.3, fast-glob@^3.2.9:
+fast-glob@^3.0.3, fast-glob@^3.2.11, fast-glob@^3.2.9:
   version "3.2.11"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
   integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
@@ -7810,7 +7810,7 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@^10.1.0:
+fs-extra@^10.0.1, fs-extra@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
   integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
@@ -13134,10 +13134,10 @@ telejson@^6.0.8:
     lodash "^4.17.21"
     memoizerific "^1.11.3"
 
-tenka@^0.1.20:
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/tenka/-/tenka-0.1.20.tgz#a025a27162a4b3db589c116d0d3e2051f0fe3c70"
-  integrity sha512-QzEKk8xzp/7PDlu87EGp+Lj/1thK1M8pcspD02o7QRGfbE3pPMM3ray4jCC4TUStCuGRygmo8iTNtkpmoNbrPQ==
+tenka@^0.1.22:
+  version "0.1.22"
+  resolved "https://registry.yarnpkg.com/tenka/-/tenka-0.1.22.tgz#28b97ad759d4c4228419dcb83260ea36467075de"
+  integrity sha512-S7Cof3nxYDzPhYZADsVf6TjLXAAfVT1a6R+B92ER8uJ1ZzL7D5KqV33j9C3ZaoiMxIrj6gxLDr0XwxccmvdQPw==
   dependencies:
     clsx "^1.1.1"
     lodash.foreach "^4.5.0"
@@ -13823,6 +13823,16 @@ vite-plugin-mdx@^3.5.6:
     esbuild "0.13.8"
     resolve "^1.20.0"
     unified "^9.2.1"
+
+vite-plugin-static-copy@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-static-copy/-/vite-plugin-static-copy-0.5.0.tgz#b707eab14f857ae4b3fd5beceefcc59f37d43c32"
+  integrity sha512-SqqG2MUfdMOLOiSL5iwQVq2aO8lAR/Xft6tODQFFrqijm3US0YPyshlTczP0KmzaUwwXgztw+iU3yVE3XCnXkQ==
+  dependencies:
+    chokidar "^3.5.3"
+    fast-glob "^3.2.11"
+    fs-extra "^10.0.1"
+    picocolors "^1.0.0"
 
 vite@^2.9.9:
   version "2.9.9"

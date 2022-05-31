@@ -2,6 +2,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   build: {
@@ -24,5 +25,21 @@ export default defineConfig({
       exclude: /\.stories\.(t|j)sx?$/,
     }),
     vanillaExtractPlugin({ identifiers: 'short' }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'src/styles/reset.css',
+          dest: 'styles',
+        },
+        {
+          src: 'src/styles/tenka.css',
+          dest: 'styles',
+        },
+        {
+          src: 'src/assets/fonts',
+          dest: 'assets',
+        },
+      ],
+    }),
   ],
 })

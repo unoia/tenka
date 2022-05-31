@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Stack, Box } from './../dist/tenka.es'
-import './../dist/styles/reset.css'
-import './../dist/styles/tenka.css'
+import { Box, Stack, Inline } from 'tenka'
+import 'tenka/dist/styles/reset.css'
+import 'tenka/dist/styles/tenka.css'
 
 const DecoratedBox = ({
   label = 'Hello, there! General kenobi. This one is masbul!',
@@ -14,7 +14,7 @@ const DecoratedBox = ({
       px="sm"
       {...restProps}
     >
-      <h1>{label}</h1>
+      <h3>{label}</h3>
     </Box>
   )
 }
