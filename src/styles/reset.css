@@ -20,7 +20,7 @@ html {
 body {
   position: relative;
   color: var(--tenka-dark-80, rgba(0, 0, 0, 0.87));
-  font-family: var(--font-primary, sans-serif);
+  font-family: var(--tenka-font-family-primary, sans-serif);
   background-color: var(--tenka-light-hex-100, #ffffff);
 }
 
@@ -30,7 +30,7 @@ main {
 }
 
 pre {
-  font-family: var(--font-monospace, monospace);
+  font-family: var(--tenka-font-family-monospace, monospace);
   font-size: inherit;
 }
 
@@ -66,7 +66,7 @@ iframe {
 code,
 kbd,
 samp {
-  font-family: var(--font-monospace, monospace);
+  font-family: var(--tenka-font-family-monospace, monospace);
   padding: 2px 4px;
   margin: 0;
   font-size: 85%;
@@ -78,7 +78,7 @@ samp {
 a {
   background-color: transparent;
   text-decoration: none;
-  color: var(--brand-primary-100);
+  color: var(--tenka-brand-primary-100);
 }
 
 ul,
@@ -100,7 +100,7 @@ ol ol ol {
 
 b,
 strong {
-  font-weight: var(--tenka-font-weight-600, 600);
+  font-weight: var(--tenka-weight-600, 600);
 }
 
 /* Horizontal lines */
@@ -194,7 +194,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: var(--font-primary, sans-serif);
+  font-family: var(--tenka-font-family-primary, sans-serif);
   vertical-align: middle;
   background: transparent;
   border: 0;

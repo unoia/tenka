@@ -1,18 +1,20 @@
 import React from 'react'
 
 import { Stack, Box } from './../dist/tenka.es'
-import './../dist/reset.css'
-import './../dist/style.css'
-import './../dist/tenka.css'
+import './../dist/styles/reset.css'
+import './../dist/styles/tenka.css'
 
-const DecoratedBox = ({ label = 'This is box component', ...restProps }) => {
+const DecoratedBox = ({
+  label = 'Hello, there! General kenobi. This one is masbul!',
+  ...restProps
+}) => {
   return (
     <Box
       style={{ backgroundColor: 'rebeccapurple', color: 'white' }}
       px="sm"
       {...restProps}
     >
-      {label}
+      <h1>{label}</h1>
     </Box>
   )
 }

@@ -34,7 +34,7 @@ export default defineConfig([
         extensions: ['.js', '.ts', '.jsx', '.tsx'],
       }),
       copy({
-        assets: ['styles/reset.css', 'styles/tenka.css', 'assets/fonts'],
+        assets: ['styles/reset.css', 'styles/tenka.css', 'assets'],
       }),
       commonjs(),
       external(),

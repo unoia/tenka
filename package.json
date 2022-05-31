@@ -12,13 +12,15 @@
     ".": {
       "import": "./dist/tenka.es.js",
       "require": "./dist/tenka.umd.js"
-    }
+    },
+    "./dist/styles/reset.css": "./dist/styles/reset.css",
+    "./dist/styles/tenka.css": "./dist/styles/tenka.css"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "rollup-build": "rollup -c",
+    "rollup-build": "rm -rf dist && rollup -c",
     "test": "jest src",
     "test-watch": "jest src --watch",
     "storybook": "start-storybook -p 6006",
