@@ -1,7 +1,7 @@
 import React from 'react'
 import cx, { ClassValue } from 'clsx'
 import { tokens } from '../../styles.css'
-import { textStyles } from './Text.css'
+import { TextColor, textStyles } from './Text.css'
 
 export type TextProps = {
   children: React.ReactNode
@@ -9,7 +9,8 @@ export type TextProps = {
   className?: ClassValue
   weight?: keyof typeof tokens.weight
   size?: keyof typeof tokens.size
-  lineHeight?: keyof typeof tokens.lineHeight
+  lineHeight?: keyof typeof tokens['line-height']
+  color?: TextColor
 }
 
 export const Text: React.FC<TextProps> = React.forwardRef(
@@ -21,6 +22,7 @@ export const Text: React.FC<TextProps> = React.forwardRef(
       weight = '400',
       size = 'body-2',
       lineHeight,
+      color,
       ...props
     },
     ref
@@ -34,8 +36,10 @@ export const Text: React.FC<TextProps> = React.forwardRef(
             fontWeight: weight,
             fontSize: size,
             lineHeight,
+            color,
           })
         )}
+        {...props}
       >
         {children}
       </Component>

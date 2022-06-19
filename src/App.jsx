@@ -20,7 +20,7 @@ const DecoratedBox = ({
       <Text as="p" var="body4" weight="900" size="large" lineHeight="compact">
         Hello world!
       </Text>
-      <Text as="span" weight="700" size="heading-2">
+      <Text as="span" weight="700" size="heading-2" color="critical-300">
         Hello world!
       </Text>
     </Box>
