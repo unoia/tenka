@@ -4,6 +4,8 @@ import { Box, Stack, Inline } from 'tenka'
 import 'tenka/dist/styles/reset.css'
 import 'tenka/dist/styles/tenka.css'
 
+import { Text } from './components/Text'
+
 const DecoratedBox = ({
   label = 'Hello, there! General kenobi. This one is masbul!',
   ...restProps
@@ -15,6 +17,12 @@ const DecoratedBox = ({
       {...restProps}
     >
       <h3>{label}</h3>
+      <Text as="p" var="body4" weight="900" size="large" lineHeight="compact">
+        Hello world!
+      </Text>
+      <Text as="span" weight="700" size="heading-2">
+        Hello world!
+      </Text>
     </Box>
   )
 }

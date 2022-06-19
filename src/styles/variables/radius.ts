@@ -18,4 +18,4 @@ export const radius = {
   full: '9999999px',
   field: '6px',
   card: '12px',
-}
+} as const

@@ -15,11 +15,12 @@ import { fontFamily } from './font-family'
 import { direction, justifyContent, alignItems, flexWrap } from './flex'
 import { gutter } from './gutter'
 import { width } from './layout'
+import { lineHeight } from './line-height'
 import { radius } from './radius'
 import { size } from './size'
 import { space } from './space'
 import { weight } from './weight'
-import { zIndex, layer } from './zIndices'
+import { zIndex, layer } from './z-indices'
 import { background } from './background'
 import { foreground } from './foreground'
 
@@ -52,29 +53,30 @@ export {
 }
 
 export const variables = {
-  'box-shadow': boxShadow,
-  accent,
-  'align-items': alignItems,
-  bg,
-  background,
-  brand,
-  dark,
-  'dark-hex': darkHex,
-  direction,
-  display,
-  'flex-wrap': flexWrap,
-  foreground,
-  'justify-content': justifyContent,
-  light,
-  'light-hex': lightHex,
-  tone,
-  'font-family': fontFamily,
-  gutter,
-  width,
-  radius,
-  size,
-  space,
-  weight,
-  layer,
-  'z-index': zIndex,
+  // boxShadow,
+  // accent,
+  // alignItems,
+  // bg,
+  // background,
+  // brand,
+  // dark,
+  // darkHex,
+  // direction,
+  // display,
+  // flexWrap,
+  // foreground,
+  // justifyContent,
+  // light,
+  // lightHex,
+  "line-height": lineHeight,
+  // tone,
+  // fontFamily,
+  // gutter,
+  // width,
+  // radius,
+  "size": size,
+  "space": space,
+  "weight": weight,
+  // layer,
+  // zIndex,
 }
