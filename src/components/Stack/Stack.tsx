@@ -1,11 +1,11 @@
 import React from 'react'
 import { tokens } from '../../styles.css'
 
-import { Box } from '../Box'
+import { Box, BoxSprinkles } from '../Box'
 
-export type StackProps = {
+export interface StackProps extends Omit<BoxSprinkles, 'children' | 'display'> {
   children?: React.ReactNode
-  space?: keyof typeof tokens.space
+  space: keyof typeof tokens.space
   display?: keyof typeof tokens.display
 }
 

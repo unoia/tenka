@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { Box, Stack, Inline } from 'tenka'
-import 'tenka/dist/styles/reset.css'
-import 'tenka/dist/styles/tenka.css'
+// import { Stack, Text, Box } from '../dist/tenka.es'
+import '../dist/styles/reset.css'
+import '../dist/styles/tenka.css'
+// import '../dist/style.css'
 
-import { Text } from './components/Text'
+import { Box, Text, Stack, Inline } from './components'
 
 const DecoratedBox = ({
   label = 'Hello, there! General kenobi. This one honestly is masbul and this is a freaking great font!',
