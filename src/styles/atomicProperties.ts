@@ -6,9 +6,9 @@ import { variables as vars } from "./variables";
 //   touchable: vars.touchableSize,
 // };
 
-// export const alignItems = {
-//   ...vars["align-items"]
-// } as const
+export const alignItems = {
+  ...vars["align-items"]
+} as const
 
 // export const display = {
 //   ...vars.display
