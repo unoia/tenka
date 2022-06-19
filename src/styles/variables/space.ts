@@ -3,8 +3,6 @@
 */
 
 export const space = {
-  base: '16px',
-  none: 0,
   xxs: '2px',
   xs: '4px',
   s: '8px',
@@ -18,4 +16,4 @@ export const space = {
   huge: '128px',
   extra: '144px',
   field: '20px',
-}
+} as const

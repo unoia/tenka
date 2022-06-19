@@ -16,6 +16,6 @@ export const layer = {
   notification: 400,
   navbar: 999999999,
   top: 9999999999,
-}
+} as const
 
 export const zIndex = layer
