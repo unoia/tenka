@@ -13312,10 +13312,10 @@ telejson@^6.0.8:
     lodash "^4.17.21"
     memoizerific "^1.11.3"
 
-tenka@^0.1.22:
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/tenka/-/tenka-0.1.22.tgz#28b97ad759d4c4228419dcb83260ea36467075de"
-  integrity sha512-S7Cof3nxYDzPhYZADsVf6TjLXAAfVT1a6R+B92ER8uJ1ZzL7D5KqV33j9C3ZaoiMxIrj6gxLDr0XwxccmvdQPw==
+tenka@^0.1.25:
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/tenka/-/tenka-0.1.25.tgz#67fa836e3531a0e8a6e3b45096bdcaaeb7fd508e"
+  integrity sha512-XGkoTR1bOcjRKYsEF03UpyEefqGoQfd5R6sUdLLltgRMQn4xDV+dpCZixqxE3wOgGxZbnepBio6nY3uVrUs9kA==
   dependencies:
     clsx "^1.1.1"
     lodash.foreach "^4.5.0"
