@@ -7,7 +7,7 @@ import 'tenka/dist/styles/tenka.css'
 import { Text } from './components/Text'
 
 const DecoratedBox = ({
-  label = 'Hello, there! General kenobi. This one is masbul!',
+  label = 'Hello, there! General kenobi. This one honestly is masbul and this is a freaking great font!',
   ...restProps
 }) => {
   return (
@@ -16,12 +16,18 @@ const DecoratedBox = ({
       px="sm"
       {...restProps}
     >
-      <h3>{label}</h3>
-      <Text as="p" var="body4" weight="900" size="large" lineHeight="compact">
-        Hello world!
-      </Text>
-      <Text as="span" weight="700" size="heading-2" color="critical-300">
-        Hello world!
+      <Text
+        as="p"
+        color="light"
+        variant={{
+          sphone: 'caption-1',
+          phone: 'small',
+          tablet: 'heading-3',
+          desktop: 'heading-1',
+          wide: 'display-1',
+        }}
+      >
+        {label}
       </Text>
     </Box>
   )

@@ -9,7 +9,7 @@ import {
   tone,
 } from './color'
 import { boxShadow } from './box-shadow'
-import { breakpoints, breakpointNames, breakpointsAlt } from './breakpoints'
+import { breakpoints, breakpointNames } from './breakpoints'
 import { display } from './display'
 import { fontFamily } from './font-family'
 import { direction, justifyContent, alignItems, flexWrap } from './flex'
@@ -40,7 +40,6 @@ export {
   layer,
   boxShadow,
   breakpoints,
-  breakpointsAlt,
   fontFamily,
   gutter,
   width,

@@ -12,3 +12,5 @@ export const fontFamily = {
   monospace: `"Roboto Mono", "Operator Mono", monospace`,
   display: `"Masbul"`,
 } as const
+
+export type FontFamily = keyof typeof fontFamily
