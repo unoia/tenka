@@ -2,20 +2,23 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
+import dts from 'vite-plugin-dts';
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.js'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'tenka',
+      formats: ['es', 'umd'],
       fileName: (format) => `tenka.${format}.js`,
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
+          'react-dom': 'ReactDOM',
         },
       },
     },
@@ -25,6 +28,9 @@ export default defineConfig({
       exclude: /\.stories\.(t|j)sx?$/,
     }),
     vanillaExtractPlugin({ identifiers: 'short' }),
+    dts({
+      insertTypesEntry: true,
+    }),
     viteStaticCopy({
       targets: [
         {

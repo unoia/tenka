@@ -1,15 +1,11 @@
 import React from 'react'
 import cx, { ClassValue } from 'clsx'
 import { BoxSprinkles, boxStyles } from './Box.css'
-import { tokens } from '../../styles.css'
 
-export type BoxProps = {
+export interface BoxProps extends BoxSprinkles {
   children: React.ReactNode
-  as?: React.ElementType<any>
+  as?: React.ElementType
   className?: ClassValue
-  display?: keyof typeof tokens.display
-  columnGap?: keyof typeof tokens.space
-  rowGap?: keyof typeof tokens.space
 }
 
 export const Box: React.FC<BoxProps> = React.forwardRef(

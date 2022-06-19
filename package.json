@@ -16,6 +16,7 @@
     "./dist/styles/reset.css": "./dist/styles/reset.css",
     "./dist/styles/tenka.css": "./dist/styles/tenka.css"
   },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -61,6 +62,7 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
+    "@types/node": "^18.0.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
@@ -104,6 +106,7 @@
     "ts-jest": "^27.0.4",
     "typescript": "^4.7.2",
     "vite": "^2.9.9",
+    "vite-plugin-dts": "^1.2.0",
     "vite-plugin-static-copy": "^0.5.0"
   },
   "peerDependencies": {

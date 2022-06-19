@@ -1,10 +1,5 @@
 import { variables as vars } from "./variables";
 
-// const sizes = {
-//   full: '100%',
-//   touchable: vars.touchableSize,
-// };
-
 export const alignItems = {
   ...vars["align-items"]
 } as const
