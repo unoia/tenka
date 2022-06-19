@@ -1,50 +1,38 @@
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles'
 import {
   responsiveProperties,
-  unResponsiveProperties,
-} from '../../styles/properties'
+  unresponsiveProperties,
+} from '../../styles/atomicProperties'
 
-import { breakpoints, breakpointNames } from '../../styles/tokens'
+import { breakpoints, breakpointNames } from '../../styles/variables'
 
 const staticProps = defineProperties({
-  properties: unResponsiveProperties,
+  properties: unresponsiveProperties,
 })
 
-const responsiveProps = defineProperties({
-  conditions: breakpoints,
+const responsiveAtomicProperties = defineProperties({
   defaultCondition: 'sphone',
+  conditions: breakpoints,
   responsiveArray: breakpointNames,
   properties: responsiveProperties,
   shorthands: {
     spacex: ['columnGap'],
     spacey: ['rowGap'],
     marginX: ['marginInline'],
-    mX: ['marginInline'],
-    mx: ['marginInline'],
     marginY: ['marginBlock'],
-    mY: ['marginBlock'],
+    mx: ['marginInline'],
     my: ['marginBlock'],
-    mT: ['marginTop'],
     mt: ['marginTop'],
-    mR: ['marginRight'],
     mr: ['marginRight'],
-    mB: ['marginBottom'],
     mb: ['marginBottom'],
-    mL: ['marginLeft'],
     ml: ['marginLeft'],
     paddingX: ['paddingInline'],
-    pX: ['paddingInline'],
     px: ['paddingInline'],
     paddingY: ['paddingBlock'],
-    pY: ['paddingBlock'],
     py: ['paddingBlock'],
-    pT: ['paddingTop'],
     pt: ['paddingTop'],
-    pR: ['paddingRight'],
     pr: ['paddingRight'],
-    pB: ['paddingBottom'],
     pb: ['paddingBottom'],
-    pL: ['paddingLeft'],
     pl: ['paddingLeft'],
     justify: ['justifyContent'],
     align: ['alignItems'],
@@ -52,4 +40,6 @@ const responsiveProps = defineProperties({
   },
 })
 
-export const boxStyles = createSprinkles(staticProps, responsiveProps)
+export const boxStyles = createSprinkles(staticProps, responsiveAtomicProperties)
+
+export type BoxSprinkles = Parameters<typeof boxStyles>[0];

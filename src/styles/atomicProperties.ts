@@ -1,4 +1,3 @@
-// import { vars } from '../../themes/vars.css';
 import { variables as vars } from "./variables";
 
 // const sizes = {
@@ -10,25 +9,25 @@ export const alignItems = {
   ...vars["align-items"]
 } as const
 
-// export const display = {
-//   ...vars.display
-// } as const
+export const display = {
+  ...vars.display
+} as const
 
-// export const flexDirection = {
-//   ...vars.direction
-// } as const
+export const flexDirection = {
+  ...vars.direction
+} as const
 
-// export const flexWrap = {
-//   ...vars["flex-wrap"]
-// } as const
+export const flexWrap = {
+  ...vars["flex-wrap"]
+} as const
 
-// export const justifyContent = {
-//   ...vars["justify-content"]
-// } as const
+export const justifyContent = {
+  ...vars["justify-content"]
+} as const
 
-// export const radius = {
-//   ...vars.radius
-// } as const
+export const radius = {
+  ...vars.radius
+} as const
 
 export const space = {
   ...vars.space,
@@ -38,9 +37,9 @@ export const textSizes = {
   ...vars.size
 } as const
 
-// export const zIndex = {
-//   ...vars["z-index"]
-// } as const
+export const zIndex = {
+  ...vars["z-index"]
+} as const
 
 // const boxShadow = {
 //   ...vars.shadow,
@@ -84,7 +83,7 @@ export const unresponsiveProperties = {
   userSelect: ['none'],
   outline: ['none'],
   opacity: [0],
-  // zIndex: zIndex,
+  zIndex: zIndex,
   cursor: ['default', 'pointer'],
   pointerEvents: ['none'],
   top: [0],
@@ -112,21 +111,27 @@ export const colorProperties = {
 export type ColorProperties = keyof typeof colorProperties;
 
 export const responsiveProperties = {
-  // display: display,
+  display: display,
   position: ['relative', 'absolute', 'fixed'],
-  // borderRadius: radius,
+  columnGap: space,
+  rowGap: space,
+  borderRadius: radius,
+  paddingBlock: space,
+  paddingInline: space,
   paddingTop: space,
   paddingBottom: space,
   paddingRight: space,
   paddingLeft: space,
+  marginBlock: space,
+  marginInline: space,
   marginTop: space,
   marginBottom: space,
   marginRight: space,
   marginLeft: space,
-  // alignItems: alignItems,
-  // justifyContent: justifyContent,
-  // flexDirection: flexDirection,
-  // flexWrap: flexWrap,
+  alignItems: alignItems,
+  justifyContent: justifyContent,
+  flexDirection: flexDirection,
+  flexWrap: flexWrap,
   flexShrink: [0],
   flexGrow: [0, 1],
   textAlign: ['left', 'center', 'right'],
