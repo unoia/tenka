@@ -17,3 +17,5 @@ export const space = {
   extra: '144px',
   field: '20px',
 } as const
+
+export type Space = keyof typeof space

@@ -8,3 +8,5 @@ export const display = {
   'inline-flex': 'inline-flex',
   'inline-grid': 'inline-grid',
 } as const
+
+export type Display = keyof typeof display

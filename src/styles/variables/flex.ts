@@ -10,10 +10,14 @@ export const direction = {
   "column-reverse": 'column-reverse',
 } as const
 
+export type FlexDirection = keyof typeof direction
+
 export const flexWrap = {
   wrap: 'wrap',
   nowrap: 'nowrap',
 } as const
+
+export type FlexWrap = keyof typeof flexWrap
 
 export const justifyContent = {
   start: 'flex-start',
@@ -24,6 +28,8 @@ export const justifyContent = {
   evenly: 'space-evenly',
 } as const
 
+export type JustifyContent = keyof typeof justifyContent
+
 export const alignItems = {
   start: 'flex-start',
   center: 'center',
@@ -31,3 +37,5 @@ export const alignItems = {
   baseline: 'baseline',
   strecth: 'strecth',
 } as const
+
+export type AlignItems = keyof typeof alignItems

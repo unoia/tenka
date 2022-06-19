@@ -9,16 +9,15 @@ import {
   tone,
 } from './color'
 import { boxShadow } from './box-shadow'
-import { breakpoints, breakpointNames, breakpointsAlt } from './breakpoints'
+import { breakpoints, breakpointNames, breakpointsValue } from './breakpoints'
 import { display } from './display'
 import { fontFamily } from './font-family'
 import { direction, justifyContent, alignItems, flexWrap } from './flex'
 import { width, gutter } from './layout'
-import { lineHeight, fontSize, fontWeight } from './typography'
+import { lineHeight, fontSize, fontWeight, } from './typography'
 import { radius } from './radius'
 import { space } from './space'
-import { zIndex, layer } from './z-indices'
-import { foreground } from './foreground'
+import { zIndex } from './z-indices'
 
 export {
   accent,
@@ -28,19 +27,16 @@ export {
   darkHex,
   display,
   flexWrap,
-  foreground,
   light,
   lightHex,
   tone,
-  breakpointNames,
-  layer,
   boxShadow,
   breakpoints,
-  breakpointsAlt,
+  breakpointNames,
+  breakpointsValue,
   fontFamily,
   gutter,
   width,
-  radius,
   fontSize,
   lineHeight,
   space,
@@ -49,7 +45,7 @@ export {
 }
 
 export const variables = {
-  // boxShadow,
+  "box-shadow": boxShadow,
   accent,
   "align-items": alignItems,
   bg,
@@ -59,7 +55,6 @@ export const variables = {
   direction,
   display,
   "flex-wrap": flexWrap,
-  // foreground,
   "justify-content": justifyContent,
   light,
   "light-hex": lightHex,
@@ -67,11 +62,10 @@ export const variables = {
   "line-height": lineHeight,
   "weight": fontWeight,
   tone,
-  // fontFamily,
+  "font-family": fontFamily,
   gutter,
   width,
-  // radius,
+  radius,
   "space": space,
-  // layer,
-  // zIndex,
+  "z-index": zIndex,
 }

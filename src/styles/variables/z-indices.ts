@@ -2,12 +2,16 @@
   z-index
 */
 
-export const layer = {
+export const zIndex: { [key: string | number]: any } = {
   behind: -9,
   reset: 'auto',
   0: 0,
   1: 1,
   2: 2,
+  3: 3,
+  s: 1,
+  m: 2,
+  l: 3,
   dropdownBackdrop: 90,
   dropdown: 100,
   sticky: 200,
@@ -18,4 +22,4 @@ export const layer = {
   top: 9999999999,
 } as const
 
-export const zIndex = layer
+export type ZIndex = keyof typeof zIndex

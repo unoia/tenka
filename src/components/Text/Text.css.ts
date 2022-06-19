@@ -1,5 +1,7 @@
+
 import { defineProperties, createSprinkles, } from '@vanilla-extract/sprinkles'
 import { tokens } from '../../styles.css'
+import { breakpoints, breakpointNames } from '../../styles/variables'
 
 const textColors = {
   primary: tokens.dark[70],
@@ -12,6 +14,9 @@ const textColors = {
 export type TextColor = keyof typeof textColors
 
 export const responsiveProps = defineProperties({
+  conditions: breakpoints,
+  defaultCondition: 'sphone',
+  responsiveArray: breakpointNames,
   properties: {
     fontWeight: tokens.weight,
     fontSize: tokens.size,

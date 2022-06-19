@@ -21,28 +21,31 @@ export const fontSize = {
   "caption-2": '0.75rem', //12px
 } as const
 
+export type FontSize = keyof typeof fontSize
+
 export const lineHeight = {
-  "compact": "1.25",
-  "cozy": "1.125",
-  "comfortable": "1.5",
-  "reset": "1",
+  "display-1": '1.125',
+  "display-2": '1.125',
+  "display-3": '1.125',
   "heading-1": '3.5rem',
   "heading-2": '2.5rem',
   "heading-3": '2rem',
   "heading-4": '1.625rem', // 26px
   "heading-5": '1.375rem', // 22px
   "heading-6": '1.25rem', // 20px
-  "xlarge": '1.75rem', // 22/28
-  "large": '1.625rem', // 17/26
-  "medium": '1.0625rem', //
-  "small": '0.9375rem', //
-  "body-1": '1.375rem',
-  "body-2": '1.1875rem',
-  "body-3": '1.0625rem',
-  "body-4": '0.9375rem',
-  "caption-1": '0.875rem', // 14/16
+  "xlarge": '2rem', // 22/32
+  "large": '1.75rem', // 19/28
+  "medium": '1.625rem', // 17/26
+  "small": '1.375rem', // 15/22
+  "body-1": '2rem',
+  "body-2": '1.75rem',
+  "body-3": '1.625rem',
+  "body-4": '1.375rem',
+  "caption-1": '1rem', // 14/16
   "caption-2": '0.75rem', // 12/12
 } as const
+
+export type LineHeight = keyof typeof lineHeight
 
 export const fontWeight = {
   "100": "100",
@@ -55,6 +58,8 @@ export const fontWeight = {
   "800": "800",
   "900": "900",
 } as const
+
+export type FontWeight = keyof typeof fontWeight
 
 
 /*

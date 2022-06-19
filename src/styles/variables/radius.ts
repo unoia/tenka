@@ -4,7 +4,7 @@
 */
 
 export const radius = {
-  none: 0,
+  none: "0px",
   xxs: '2px',
   xs: '3px',
   s: '6px',
@@ -19,3 +19,5 @@ export const radius = {
   field: '6px',
   card: '12px',
 } as const
+
+export type Radius = keyof typeof radius
