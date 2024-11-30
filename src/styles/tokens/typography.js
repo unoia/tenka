@@ -11,62 +11,62 @@ export const weight = {
   medium: 500,
   semibold: 600,
   bold: 700,
-  extranbold: 800,
+  extrabold: 800,
   black: 900,
 }
 
 export const size = {
-  11: '0.6875rem',
-  12: '0.75rem',
-  13: '0.8125rem',
-  14: '0.875rem',
-  15: '0.9375rem',
-  16: '1rem',
-  17: '1.0625rem',
-  18: '1.5rem',
-  19: '1.1875rem',
-  22: '1.375rem',
-  24: '1.5rem',
-  26: '1.1625rem',
-  28: '1.75rem',
-  32: '2rem',
-  36: '2.25rem',
-  40: '2.5rem',
-  48: '3rem',
-  64: '4rem',
-  80: '5rem',
-  96: '6rem',
-  112: '7rem',
+  11: "0.6875rem",
+  12: "0.75rem",
+  13: "0.8125rem",
+  14: "0.875rem",
+  15: "0.9375rem",
+  16: "1rem",
+  17: "1.0625rem",
+  18: "1.5rem",
+  19: "1.1875rem",
+  22: "1.375rem",
+  24: "1.5rem",
+  26: "1.1625rem",
+  28: "1.75rem",
+  32: "2rem",
+  36: "2.25rem",
+  40: "2.5rem",
+  48: "3rem",
+  64: "4rem",
+  80: "5rem",
+  96: "6rem",
+  112: "7rem",
   display: {
-    1: '7rem', // 112px
-    2: '6rem', // 96px
-    3: '5rem', // 80px
+    1: "7rem", // 112px
+    2: "6rem", // 96px
+    3: "5rem", // 80px
   },
   heading: {
-    1: '2rem', // 32px
-    '2a': '1.625rem', // 26px/1.625rem • 30px/1.875rem
-    2: '1.5rem', // 24px
-    3: '1.375rem', // 22px/1.375rem • 26px/1.625rem
-    4: '1.1875rem', // 19px
-    5: '1.0625rem', // 17px
-    6: '0.9375rem', // 15px
+    1: "2rem", // 32px
+    "2a": "1.625rem", // 26px/1.625rem • 30px/1.875rem
+    2: "1.5rem", // 24px
+    3: "1.375rem", // 22px/1.375rem • 26px/1.625rem
+    4: "1.1875rem", // 19px
+    5: "1.0625rem", // 17px
+    6: "0.9375rem", // 15px
   },
   body: {
-    xl: '1.375rem', // 22px
-    l: '1.1875rem', // 19px
-    base: '1.0625rem', // 17px
-    s: '0.9375rem', // 15px
-    xs: '0.8125rem', // 13px
+    xl: "1.375rem", // 22px
+    l: "1.1875rem", // 19px
+    base: "1.0625rem", // 17px
+    s: "0.9375rem", // 15px
+    xs: "0.8125rem", // 13px
   },
   label: {
-    l: '1rem', // 16px
-    base: '0.875rem', // 14px
-    s: '0.75rem', // 12px
+    l: "1rem", // 16px
+    base: "0.875rem", // 14px
+    s: "0.75rem", // 12px
   },
   caption: {
-    xl: '0.875rem', // 14px • 18px/1.125rem
-    l: '0.8125rem', // 13px
-    base: '0.75rem', // 12px • 16px/1rem
+    xl: "0.875rem", // 14px • 18px/1.125rem
+    l: "0.8125rem", // 13px
+    base: "0.75rem", // 12px • 16px/1rem
   },
 }
 
@@ -76,19 +76,19 @@ export const lineHeight = {
   cozy: 1.25,
   generous: 2,
   comfortable: 1.5,
-  auto: 'auto',
+  auto: "auto",
   display: {
     1: 1,
     2: 1,
     3: 1.125,
   },
   heading: {
-    1: '',
-    2: '',
-    3: '',
-    4: '',
-    5: '', // 15px/0.9375rem 19px/1.1875rem
-    6: '',
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "", // 15px/0.9375rem 19px/1.1875rem
+    6: "",
   },
 }
 

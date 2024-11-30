@@ -5,9 +5,9 @@ import {
 
 import { variables } from './styles/variables'
 
-export const tokens = createGlobalThemeContract(
+export const vars = createGlobalThemeContract(
   variables,
   (_value, path) => `tenka-${path.join('-')}`
 )
 
-createGlobalTheme(':root', tokens, variables)
+createGlobalTheme(':root', vars, variables)

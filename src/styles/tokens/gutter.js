@@ -3,7 +3,7 @@
 */
 
 export const gutter = {
-  phone: '24px',
-  tablet: '32px',
-  desktop: '64px',
+  phone: { value: "24px" },
+  tablet: { value: "32px" },
+  desktop: { value: "64px" },
 }

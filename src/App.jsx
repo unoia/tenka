@@ -1,58 +1,24 @@
-import React from 'react'
+import React from "react"
 
-import { Box, Text, Stack, Inline } from 'tenka'
-import 'tenka/style.css'
-import 'tenka/tenka.css'
-import 'tenka/reset.css'
+import "./styles/index.css"
 
-const DecoratedBox = ({
-  label = 'Hello, there! General kenobi. This one honestly is masbul and this is a freaking great font!',
-  ...restProps
-}) => {
-  return (
-    <Box
-      style={{ backgroundColor: 'rebeccapurple', color: 'white' }}
-      px="sm"
-      {...restProps}
-    >
-      <Text
-        as="p"
-        color="light"
-        variant={{
-          sphone: 'caption-1',
-          phone: 'small',
-          tablet: 'heading-3',
-          desktop: 'heading-1',
-          wide: 'display-1',
-        }}
-      >
-        {label}
-      </Text>
-    </Box>
-  )
-}
+import { Box } from "./components/Box"
+
+// import 'tenka/style.css'
+// import 'tenka/tenka.css'
+// import 'tenka/reset.css'
 
 const Homepage = () => {
   return (
-    <div>
-      <Stack
-        style={{ backgroundColor: 'salmon' }}
-        space={{
-          sphone: 's',
-          phone: 'm',
-          tablet: 'xl',
-          desktop: 'xxxl',
-          wide: 'huge',
-        }}
+    <>
+      <Box
+        padding="sm"
+        backgroundColor={{ mobile: "primary", desktop: "secondary" }}
+        color="secondary"
       >
-        <DecoratedBox />
-        <DecoratedBox />
-        <DecoratedBox />
-        <DecoratedBox />
-        <DecoratedBox />
-        <DecoratedBox />
-      </Stack>
-    </div>
+        Hello world
+      </Box>
+    </>
   )
 }
 

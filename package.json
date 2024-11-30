@@ -18,8 +18,10 @@
     "./tenka.css": "./dist/styles/tenka.css",
     "./masbul.css": "./dist/styles/tenka.css"
   },
+  "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "prepare": "panda codegen",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -30,7 +32,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@dessert-box/react": "^0.7.5",
     "clsx": "^1.1.1",
+    "dedent": "^1.5.3",
     "lodash.foreach": "^4.5.0",
     "lodash.has": "^4.5.2",
     "lodash.includes": "^4.3.0",
@@ -46,6 +50,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@haensl/rollup-plugin-local-resolve": "^1.1.8",
+    "@pandacss/dev": "^0.41.0",
     "@react-aria/button": "^3.4.4",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -92,8 +97,8 @@
     "jest-scss-transform": "^1.0.1",
     "jest-stitches": "^1.0.4",
     "jest-watch-typeahead": "^0.6.4",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rollup": "^2.75.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy-assets": "^2.0.3",
@@ -107,7 +112,7 @@
     "tenka": "^0.1.25",
     "ts-jest": "^27.0.4",
     "typescript": "^4.7.2",
-    "vite": "^2.9.9",
+    "vite": "^5.3.1",
     "vite-plugin-dts": "^1.2.0",
     "vite-plugin-static-copy": "^0.5.0"
   },
