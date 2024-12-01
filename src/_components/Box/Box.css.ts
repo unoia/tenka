@@ -11,7 +11,7 @@ const staticProps = defineProperties({
 })
 
 const responsiveAtomicProperties = defineProperties({
-  defaultCondition: 'sphone',
+  defaultCondition: 'phone',
   conditions: breakpoints,
   responsiveArray: breakpointNames,
   properties: responsiveProperties,

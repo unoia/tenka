@@ -1,66 +1,148 @@
 
-export const fontSize = {
-  "display-1": '8rem',
-  "display-2": '6rem',
-  "display-3": '4rem',
-  "heading-1": '3rem',
-  "heading-2": '2rem',
-  "heading-3": '1.5rem', // 24px
-  "heading-4": '1.1875rem', // 19px
-  "heading-5": '1.0625rem', // 17px
-  "heading-6": '0.9375rem', // 15px
-  "xlarge": '1.375rem', // 22px
-  "large": '1.1875rem', //  19px
-  "medium": '1.0625rem', // 17px
-  "small": '0.9375rem', // 15px
-  "body-1": '1.375rem',  // 22px
-  "body-2": '1.1875rem', //  19px
-  "body-3": '1.0625rem', // 17px
-  "body-4": '0.9375rem', // 15px
-  "caption-1": '0.875rem', //14px
-  "caption-2": '0.75rem', //12px
+/**
+ * DISPLAY
+ * The largest text on the screen is reserved for short, important text or numerals.
+ */
+export const displays = {
+  "xs": '2.25rem',
+  "s": '2.75rem',
+  "m": '3.25rem',
+  "l": '6rem',
+}
+export const lineDisplays = {
+  "xs": '2.75rem',
+  "s": '3.25rem',
+  "m": '4rem',
+  "l": '7rem',
+}
+export type TextDisplay = keyof typeof displays
+export type LineDisplay = keyof typeof lineDisplays
+
+/**
+ * HEADING
+ * Used to break up content into sections and provide a clear hierarchy of information.
+ */
+export const headings = {
+  "xs": '1.25rem',
+  "s": '1.5rem',
+  "m": '1.75rem',
+  "l": '2rem',
+  "xl": '2.25rem',
+  "xxl": '2.5rem',
 } as const
-
-export type FontSize = keyof typeof fontSize
-
-export const lineHeight = {
-  "display-1": '1.125',
-  "display-2": '1.125',
-  "display-3": '1.125',
-  "heading-1": '3.5rem',
-  "heading-2": '2.5rem',
-  "heading-3": '2rem',
-  "heading-4": '1.625rem', // 26px
-  "heading-5": '1.375rem', // 22px
-  "heading-6": '1.25rem', // 20px
-  "xlarge": '2rem', // 22/32
-  "large": '1.75rem', // 19/28
-  "medium": '1.625rem', // 17/26
-  "small": '1.375rem', // 15/22
-  "body-1": '2rem',
-  "body-2": '1.75rem',
-  "body-3": '1.625rem',
-  "body-4": '1.375rem',
-  "caption-1": '1rem', // 14/16
-  "caption-2": '0.75rem', // 12/12
+export const lineHeadings = {
+  "xs": '1.75rem',
+  "s": '2rem',
+  "m": '2.25rem',
+  "l": '2.5rem',
+  "xl": '2.75rem',
+  "xxl": '3.25rem',
 } as const
+export type TextHeading = keyof typeof headings
+export type LineHeading = keyof typeof lineHeadings
 
-export type LineHeight = keyof typeof lineHeight
+/**
+ * LABEL
+ *  A short phrase or sentence that provides context or information about a specific block of text.
+ */
+export const labels = {
+  "xs": '0.75rem',
+  "s": '0.875rem',
+  "m": '1rem',
+  "l": '1.125rem',
+  "xl": '1.25rem',
+  "xxl": '1.5rem',
+} as const
+export const lineLabels = {
+  "xs": '1rem',
+  "s": '1rem',
+  "m": '1.25rem',
+  "l": '1.5rem',
+  "xl": '1.75rem',
+  "xxl": '2.25rem',
+} as const
+export type TextLabel = keyof typeof labels
+export type LineLabel = keyof typeof lineLabels
+
+/**
+ * PARAGRAPH
+ * Longer blocks of text, used for mostly text-based content.
+ */
+export const paragraphs = {
+  "xs": '0.75rem',
+  "s": '0.875rem',
+  "m": '1rem',
+  "l": '1.125rem',
+  "xl": '1.25rem',
+} as const
+export const lineParagraphs = {
+  "xs": '1.25rem',
+  "s": '1.25rem',
+  "m": '1.5rem',
+  "l": '1.75rem',
+  "xl": '2.25rem',
+} as const
+export type TextParagraph = keyof typeof paragraphs
+export type LineParagraph = keyof typeof lineParagraphs
 
 export const fontWeight = {
-  "100": "100",
-  "200": "200",
-  "300": "300",
-  "400": "400",
-  "500": "500",
-  "600": "600",
-  "700": "700",
-  "800": "800",
-  "900": "900",
+  "thin": "100",
+  "xlight": "200",
+  "light": "300",
+  "regular": "400",
+  "medium": "500",
+  "semibold": "600",
+  "bold": "700",
+  "xbold": "800",
+  "xxbold": "900",
 } as const
 
 export type FontWeight = keyof typeof fontWeight
 
+// export const fontSize = {
+//   "heading-1": '3rem',
+//   "heading-2": '2rem',
+//   "heading-3": '1.5rem', // 24px
+//   "heading-4": '1.1875rem', // 19px
+//   "heading-5": '1.0625rem', // 17px
+//   "heading-6": '0.9375rem', // 15px
+//   "xlarge": '1.375rem', // 22px
+//   "large": '1.1875rem', //  19px
+//   "medium": '1.0625rem', // 17px
+//   "small": '0.9375rem', // 15px
+//   "body-1": '1.375rem',  // 22px
+//   "body-2": '1.1875rem', //  19px
+//   "body-3": '1.0625rem', // 17px
+//   "body-4": '0.9375rem', // 15px
+//   "caption-1": '0.875rem', //14px
+//   "caption-2": '0.75rem', //12px
+// } as const
+
+// export type FontSize = keyof typeof fontSize
+
+// export const lineHeight = {
+//   "display-1": '1.125',
+//   "display-2": '1.125',
+//   "display-3": '1.125',
+//   "heading-1": '3.5rem',
+//   "heading-2": '2.5rem',
+//   "heading-3": '2rem',
+//   "heading-4": '1.625rem', // 26px
+//   "heading-5": '1.375rem', // 22px
+//   "heading-6": '1.25rem', // 20px
+//   "xlarge": '2rem', // 22/32
+//   "large": '1.75rem', // 19/28
+//   "medium": '1.625rem', // 17/26
+//   "small": '1.375rem', // 15/22
+//   "body-1": '2rem',
+//   "body-2": '1.75rem',
+//   "body-3": '1.625rem',
+//   "body-4": '1.375rem',
+//   "caption-1": '1rem', // 14/16
+//   "caption-2": '0.75rem', // 12/12
+// } as const
+
+// export type LineHeight = keyof typeof lineHeight
 
 /*
   Klitrip

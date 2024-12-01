@@ -5,12 +5,9 @@
 import { width } from './layout'
 
 export const breakpointNames = [
-  'sphone',
   'phone',
   'tablet',
-  'ltablet',
   'desktop',
-  'wide',
 ] as const
 
 export const breakpointsValue = {
@@ -32,10 +29,7 @@ export const breakpointsValue = {
 }
 
 export const breakpoints = {
-  sphone: {},
-  phone: { '@media': `screen and (min-width: ${width['min-375']})` },
-  tablet: { '@media': `screen and (min-width: ${width['min-744']})` },
-  ltablet: { '@media': `screen and (min-width: ${width['min-950']})` },
-  desktop: { '@media': `screen and (min-width: ${width['min-1128']})` },
-  wide: { '@media': `screen and (min-width: ${width['min-1440']})` },
+  phone: {},
+  tablet: { '@media': `screen and (min-width: 600px)` },
+  desktop: { '@media': `screen and (min-width: 1136px)` },
 } as const

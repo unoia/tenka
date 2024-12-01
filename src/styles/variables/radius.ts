@@ -1,19 +1,13 @@
 /*
-  TextSize tokens
-  Base: 1rem == 16px
+  Border Radiuse tokens
 */
 
 export const radius = {
   none: "0px",
-  xxs: '2px',
-  xs: '3px',
-  s: '6px',
-  sm: '8px',
-  m: '12px',
-  ml: '16px',
-  l: '20px',
-  xl: '24px',
-  xxl: '40px',
+  xs: '4px', // small components, e.g. badges, tags
+  s: '8px', // for components inside other, e.g. buttons
+  m: '12px', // most common used, medium sized components e.g. cards, banners
+  l: '16px', // large container components, e.g. dialog, sheet
   rounded: '9999999px',
   full: '9999999px',
   field: '6px',

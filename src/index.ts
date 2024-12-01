@@ -1,2 +1,2 @@
-export * from './_components'
+export * from './components'
 export * from './styles.css'

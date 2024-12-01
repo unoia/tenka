@@ -29,7 +29,17 @@ export const space = {
 } as const;
 
 export const textSizes = {
-  ...vars.size
+  ...vars["text-size-display"],
+  ...vars["text-size-heading"],
+  ...vars["text-size-label"],
+  ...vars["text-size-paragraph"]
+} as const
+
+export const textLineHeight = {
+  ...vars["text-line-display"],
+  ...vars["text-line-heading"],
+  ...vars["text-line-label"],
+  ...vars["text-line-paragraph"]
 } as const
 
 export const zIndex = {
