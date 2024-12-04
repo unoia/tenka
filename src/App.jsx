@@ -1,27 +1,53 @@
 import React from "react"
 
-import "./styles/index.css"
 // import "./../dist/style.css"
 
 // import { Box } from "../dist/tenka.es"
-import { Box } from "./components/Box"
+import "./styles/index.css"
 
-// import 'tenka/style.css'
-// import 'tenka/tenka.css'
-// import 'tenka/reset.css'
+import { Box } from "./components/Box"
+// import * as styles from "./scoped.module.css"
 
 const Homepage = () => {
   return (
-    <>
+    <Box display="grid" gap="xxl" padding="xl">
       <Box
-        padding={{ tablet: "sm", desktop: "xl" }}
-        display="block"
-        backgroundColor={{ mobile: "primary-plus", desktop: "primary-luxe" }}
-        color="primary-inverse"
+        as="section"
+        borderRadius="m"
+        padding={{ phone: "ml", desktop: "xl" }}
+        display={{ phone: "block", desktop: "flex" }}
+        alignItems="center"
+        justifyContent="center"
+        background={{
+          phone: "primary-brand",
+          tablet: "primary-inverse",
+          desktop: "primary",
+        }}
+        color={{ phone: "primary-inverse", desktop: "primary" }}
+        boxShadow="shallow-below"
+        fontWeight="medium"
       >
-        Hello world
+        Versatile Box Component
       </Box>
-    </>
+      <Box
+        as="section"
+        borderRadius="m"
+        padding={{ phone: "ml", desktop: "xl" }}
+        display={{ phone: "block", desktop: "flex" }}
+        alignItems="center"
+        justifyContent="center"
+        background={{
+          phone: "primary-brand",
+          tablet: "primary-inverse",
+          desktop: "primary",
+        }}
+        color={{ phone: "primary-inverse", desktop: "primary" }}
+        boxShadow="medium-below"
+        fontWeight="medium"
+      >
+        Versatile Box Component
+      </Box>
+    </Box>
   )
 }
 

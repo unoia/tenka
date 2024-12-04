@@ -2,20 +2,15 @@ import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
 import { vars } from '../../styles.css';
 import { display } from './../../styles/variables'
 
-const colors = {
-  primary: 'blue',
-  secondary: "rebeccapurple"
-  // ...
-};
-
 const atomicStyles = defineProperties({
-  defaultCondition: 'mobile',
+  defaultCondition: 'phone',
   conditions: {
-    mobile: {},
+    phone: {},
     tablet: { '@media': 'screen and (min-width: 600px)' },
     desktop: { '@media': 'screen and (min-width: 1136px)' },
   },
   properties: {
+    fontWeight: vars['text-weight'],
     display,
     flexDirection: ['row', 'row-reverse', 'column', 'column-reverse'],
     justifyContent: [
@@ -33,6 +28,7 @@ const atomicStyles = defineProperties({
       'flex-end',
       'baseline',
     ],
+    boxShadow: vars.shadow,
     columnGap: vars.space,
     rowGap: vars.space,
     padding: vars.space,
@@ -50,6 +46,7 @@ const atomicStyles = defineProperties({
     marginBlock: vars.space,
     marginInline: vars.space,
     borderRadius: vars.radius,
+    background: vars.bg,
     backgroundColor: vars.bg,
     borderColor: vars.border,
     color: vars.text,

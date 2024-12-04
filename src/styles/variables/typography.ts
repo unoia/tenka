@@ -87,8 +87,8 @@ export type LineParagraph = keyof typeof lineParagraphs
 
 export const fontWeight = {
   "thin": "100",
-  "xlight": "200",
-  "light": "300",
+  "light": "200",
+  "book": "300",
   "regular": "400",
   "medium": "500",
   "semibold": "600",

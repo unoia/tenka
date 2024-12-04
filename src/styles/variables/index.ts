@@ -9,10 +9,10 @@ import {
   darkHex,
   light,
   lightHex,
-  tone,
   textColors,
   iconColors,
   borderColors,
+  pallete,
 } from './color'
 import { boxShadow } from './box-shadow'
 import { breakpoints, breakpointNames, breakpointsValue } from './breakpoints'
@@ -24,6 +24,7 @@ import { fontWeight, displays, headings, labels, paragraphs, lineDisplays, lineH
 import { radius } from './radius'
 import { space } from './space'
 import { zIndex } from './z-indices'
+import { timing, easing } from './animation'
 
 export {
   accent,
@@ -38,7 +39,6 @@ export {
   flexWrap,
   light,
   lightHex,
-  tone,
   boxShadow,
   breakpoints,
   breakpointNames,
@@ -53,10 +53,13 @@ export {
   headings,
   labels,
   paragraphs,
+  timing,
+  easing,
+  pallete
 }
 
 export const variables = {
-  "box-shadow": boxShadow,
+  "shadow": boxShadow,
   accent,
   "align-items": alignItems,
   bg: { ...bgPrimary, ...bgSecondary, ...bgTertiary, ...bgQuartenary },
@@ -81,10 +84,12 @@ export const variables = {
   "text-size-paragraph": paragraphs,
   "text-line-paragraph": lineParagraphs,
   "text-weight": fontWeight,
-  tone,
+  pallete,
   "font-family": fontFamily,
   gutter,
   radius,
   "space": space,
   "z-index": zIndex,
+  timing,
+  easing,
 }
