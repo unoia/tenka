@@ -2,6 +2,14 @@
 
 The foundation for your system
 
+## Installation
+
+```bash
+npm install tenka
+// or
+yarn add tenka
+```
+
 ## Tokens
 
 ```css
