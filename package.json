@@ -1,6 +1,6 @@
 {
   "name": "tenka",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "author": "Ongki Herlambang <ongki@herlambang.design>",
   "license": "MIT",
   "main": "dist/tenka.umd.js",
