@@ -1,1 +1,2 @@
-export { Inline } from './Inline.js'
+export { Inline } from './Inline'
+export type { InlineProps } from './Inline'
