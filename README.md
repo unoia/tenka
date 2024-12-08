@@ -13,27 +13,35 @@ yarn add tenka
 ## Tokens
 
 ```css
+// Text Primary
 --tenka-text-primary: #222222;
 --tenka-text-primary-inverse: #ffffff;
 --tenka-text-primary-hover: #000000;
 --tenka-text-primary-disabled: #a6a6a6;
+
+// Text Secondary
+--tenka-text-secondary: #6a6a6a;
+--tenka-text-secondary-disabled: #dddddd;
+
+// Background Primary
 --tenka-bg-primary: #ffffff;
 --tenka-bg-primary-inverse: #000000;
 --tenka-bg-primary-inverse-hover: #222222;
 --tenka-bg-primary-inverse-pressed: #4b4b4b;
 --tenka-bg-primary-inverse-disabled: #f3f3f3;
 
---tenka-field-border-primary: #e0e0e0;
---tenka-field-border-active: #272727;
-
---tenka-text-secondary: #6a6a6a;
---tenka-text-secondary-disabled: #dddddd;
+// Background Secondary
 --tenka-bg-secondary: #f3f3f3;
 --tenka-bg-secondary-inverse: #000000;
 --tenka-bg-secondary-inverse-hover: #dddddd;
 --tenka-bg-secondary-inverse-pressed: #c6c6c6;
 --tenka-bg-secondary-inverse-disabled: #f3f3f3;
 
+// Border
+--tenka-field-border-primary: #e0e0e0;
+--tenka-field-border-active: #272727;
+
+// Error
 --tenka-text-error: #d40029;
 --tenka-text-error-hover: #b80024;
 --tenka-text-error-inverse: #fff8f6;
@@ -48,6 +56,7 @@ yarn add tenka
 --tenka-icon-error: #d40029;
 --tenka-icon-error-hover: #b80024;
 
+// Success
 --tenka-text-success: #008384;
 --tenka-text-success-hover: #006266;
 --tenka-text-success-inverse: #f5ffff;
@@ -62,6 +71,7 @@ yarn add tenka
 --tenka-icon-success: #60b6b5;
 --tenka-icon-success-hover: #008384;
 
+// Warning
 --tenka-text-warning: #b86200;
 --tenka-text-warning-hover: #944f00;
 --tenka-text-warning-inverse: #fffbf6;
@@ -76,6 +86,7 @@ yarn add tenka
 --tenka-icon-warning: #e07912;
 --tenka-icon-warning-hover: #b86200;
 
+// Info
 --tenka-text-info: #460479;
 --tenka-text-info-hover: #390363;
 --tenka-text-info-inverse: #fbf5ff;
@@ -90,6 +101,7 @@ yarn add tenka
 --tenka-icon-info: #5e05a3;
 --tenka-icon-info-hover: #460479;
 
+// Color Pallete
 --tenka-pallete-dark-100: #000000;
 --tenka-pallete-dark-90: #000100;
 --tenka-pallete-dark-80: #222222;
@@ -101,6 +113,35 @@ yarn add tenka
 --tenka-pallete-dark-20: #ebebeb;
 --tenka-pallete-dark-10: #f5f5f5;
 --tenka-pallete-dark-05: #f8f8f8;
+```
+
+### Border Radius
+
+```css
+--tenka-radius-none: 0px;
+--tenka-radius-xs: 4px; // small components, e.g. badges, tags
+--tenka-radius-s: 8px; // for components nested inside other container, e.g. buttons, input field
+--tenka-radius-m: 12px; // most common used, medium sized components e.g. cards, banners
+--tenka-radius-l: 16px; // large container components, e.g. dialog, sheet
+
+// Semantic Token
+--tenka-radius-rounded: 9999999px;
+--tenka-radius-full: 9999999px;
+--tenka-radius-field: 8px;
+--tenka-radius-card: 12px;
+```
+
+### Box Shadow
+
+```css
+--tenka-shadow-shallow-above: 0px -4px 16px 0px rgba(0, 0, 0, 0.12);
+--tenka-shadow-shallow-below: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+--tenka-shadow-medium-above: 0px -6px 20px 0px rgba(0, 0, 0, 0.2);
+--tenka-shadow-medium-below: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+--tenka-shadow-deep-above: 0px -16px 48px 0px rgba(0, 0, 0, 0.22);
+--tenka-shadow-deep-below: 0px 16px 48px 0px rgba(0, 0, 0, 0.22);
+--tenka-shadow-card: 0px 4px 4px rgba(0, 0, 0, 0.25);
+--tenka-shadow-drop-shadow: 0px 1px 10px #bfbfbf;
 ```
 
 ## Acknowledgements

@@ -1,9 +1,9 @@
-import React from 'react'
-import { render, fireEvent } from './../test-utils'
+import React from "react"
+import { render, fireEvent } from "./../test-utils"
 
-import { Box } from './Box'
+import { Box } from "../../_components/Box/Box"
 
-test('renders as any HTML element', async () => {
+test("renders as any HTML element", async () => {
   const { getByTestId } = render(
     <>
       <Box as="main" data-testid="main">
@@ -15,6 +15,6 @@ test('renders as any HTML element', async () => {
     </>
   )
 
-  expect(getByTestId('main').tagName).toBe('MAIN')
-  expect(getByTestId('section').tagName).toBe('SECTION')
+  expect(getByTestId("main").tagName).toBe("MAIN")
+  expect(getByTestId("section").tagName).toBe("SECTION")
 })

@@ -88,7 +88,7 @@ export const variables = {
   "font-family": fontFamily,
   gutter,
   radius,
-  "space": space,
+  space,
   "z-index": zIndex,
   timing,
   easing,

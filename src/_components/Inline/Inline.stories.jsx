@@ -1,28 +1,50 @@
-import React from "react"
-import { Box } from "./../../../dist/index.es"
+import React from 'react'
+import { Inline } from '../../../dist/index.es'
 
 export default {
-  component: Box,
-  title: "Layout/Box",
+  component: Inline,
+  title: 'Layout/Inline',
 }
 
-export const BoxWithStyle = () => {
+export const StackWithSpace = () => {
   return (
-    <Box
+    <Inline
       style={{
-        backgroundColor: "salmon",
-        color: "white",
-        fontWeight: "bold",
+        backgroundColor: 'salmon',
+        color: 'white',
+        fontWeight: 'bold',
       }}
       padding="sm"
-      display={{
-        phone: "inline-flex",
-        tablet: "block",
-      }}
-      radius="ml"
     >
-      <Box style={{ backgroundColor: "rebeccapurple" }}>Something</Box>
-    </Box>
+      <Box
+        width="fit-content"
+        padding="s"
+        style={{ backgroundColor: 'rebeccapurple' }}
+      >
+        Something
+      </Box>
+      <Box
+        width="fit-content"
+        padding="s"
+        style={{ backgroundColor: 'rebeccapurple' }}
+      >
+        Something
+      </Box>
+      <Box
+        width="fit-content"
+        padding="s"
+        style={{ backgroundColor: 'rebeccapurple' }}
+      >
+        Something
+      </Box>
+      <Box
+        width="fit-content"
+        padding="s"
+        style={{ backgroundColor: 'rebeccapurple' }}
+      >
+        Something
+      </Box>
+    </Inline>
   )
 }
 

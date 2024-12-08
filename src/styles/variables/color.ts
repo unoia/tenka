@@ -143,12 +143,27 @@ export const bgQuartenary = {
 } as const
 
 export const borderColor = {
-  "primary": "#e0e0e0",
+  "primary-field": "#e0e0e0",
   "active": "#272727",
   "success": "#008384",
   "warning": "#b86200",
   "error": "#d40029",
   "info": "#460479",
+  "primary": "#222222",
+  "primary-hover": "#000000",
+  "primary-disabled": "#DDDDDD",
+  "primary-inverse": "#FFFFFF",
+  "secondary": "#B0B0B0",
+  "secondary-hover": "#222222",
+  "secondary-selected": "#222222",
+  "secondary-disabled": "#EBEBEB",
+  "secondary-error": "#C13515",
+  "tertiary": "#DDDDDD",
+  "tertiary-hover": "#000000",
+  "tertiary-selected": "#222222",
+  "tertiary-error": "#C13515",
+  "tertiary-error-hover": "#B32505",
+  "quarternary": "#8C8C8C",
 } as const
 
 export const iconColors = {
@@ -182,21 +197,33 @@ export const textColors = {
   "primary-disabled": "#a6a6a6",
   "secondary": "#6a6a6a",
   "secondary-disabled": "#dddddd",
+  /**
+   * Success
+   */
   "success": "#008384",
   "success-hover": "#006266",
   "success-inverse": "#f5ffff",
   "success-inverse-hover": "#ffffff",
   "success-secondary": "#006266",
+  /**
+   * Warning
+   */
   "warning": "#b86200",
   "warning-hover": "#944f00",
   "warning-inverse": "#fffbf6",
   "warning-inverse-hover": "#ffffff",
   "warning-secondary": "#944f00",
+  /**
+   * Error
+   */
   "error": "#d40029",
   "error-hover": "#b80024",
   "error-inverse": "#fff8f6",
   "error-inverse-hover": "#ffffff",
   "error-secondary": "#b80024",
+  /**
+   * Info
+   */
   "info": "#460479",
   "info-hover": "#390363",
   "info-inverse": "#fbf5ff",

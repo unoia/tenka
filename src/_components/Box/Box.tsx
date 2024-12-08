@@ -1,6 +1,6 @@
-import React from "react"
-import cx, { ClassValue } from "clsx"
-import { BoxSprinkles, boxAtoms } from "./Box.css"
+import React from 'react'
+import cx, { ClassValue } from 'clsx'
+import { BoxSprinkles, boxStyles } from './Box.css'
 
 export interface BoxProps extends BoxSprinkles {
   children: React.ReactNode
@@ -9,21 +9,21 @@ export interface BoxProps extends BoxSprinkles {
 }
 
 export const Box: React.FC<BoxProps> = React.forwardRef(
-  ({ as = "div", children, className, ...props }, ref) => {
+  ({ as = 'div', children, className, ...props }, ref) => {
     const Wrapper = as
 
     const atomProps: Record<string, unknown> = {}
     const nativeProps: Record<string, unknown> = {}
 
     for (const key in props) {
-      if (boxAtoms.properties.has(key as keyof BoxSprinkles)) {
+      if (boxStyles.properties.has(key as keyof BoxSprinkles)) {
         atomProps[key] = props[key as keyof typeof props]
       } else {
         nativeProps[key] = props[key as keyof typeof props]
       }
     }
 
-    const atomicClasses = boxAtoms(atomProps)
+    const atomicClasses = boxStyles(atomProps)
 
     return (
       <Wrapper
@@ -37,6 +37,6 @@ export const Box: React.FC<BoxProps> = React.forwardRef(
   }
 )
 
-Box.displayName = "Box"
+Box.displayName = 'Box'
 
 export default Box
