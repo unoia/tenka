@@ -13,6 +13,7 @@ import {
   iconColors,
   borderColors,
   palette,
+  bgError
 } from './color'
 import { boxShadow } from './box-shadow'
 import { breakpoints, breakpointNames, breakpointsValue } from './breakpoints'
@@ -32,6 +33,7 @@ export {
   bgSecondary,
   bgTertiary,
   bgQuartenary,
+  bgError,
   brand,
   dark,
   darkHex,
@@ -62,7 +64,7 @@ export const variables = {
   "shadow": boxShadow,
   accent,
   "align-items": alignItems,
-  bg: { ...bgPrimary, ...bgSecondary, ...bgTertiary, ...bgQuartenary },
+  bg: { ...bgPrimary, ...bgSecondary, ...bgTertiary, ...bgQuartenary, ...bgError },
   text: textColors,
   icon: iconColors,
   border: borderColors,

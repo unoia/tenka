@@ -51,7 +51,6 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@haensl/rollup-plugin-local-resolve": "^1.1.8",
-    "@react-aria/button": "^3.4.4",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
@@ -117,7 +116,6 @@
     "vite-plugin-static-copy": "^0.5.0"
   },
   "peerDependencies": {
-    "@react-aria/button": "^3.4.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

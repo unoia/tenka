@@ -118,11 +118,16 @@ export const bgWarning = {
 } as const
 
 export const bgError = {
-  "error": "#fff8f6",
-  "error-inverse": "#d40029",
-  "error-inverse-hover": "#b80024",
-  "error-inverse-pressed": "#94001d",
+  // "error": "#fff8f6",
+  "error": "#fff0ee",
+  // "error-inverse": "#d40029",
+  // "error-inverse-hover": "#b80024",
+  // "error-inverse-pressed": "#94001d",
+  "error-inverse": "#de1135",
+  "error-inverse-hover": "#bb032a",
+  "error-inverse-pressed": "#950f22",
   "error-secondary": "#ffdfd9",
+  "error-tertiary": "#fc7f79",
 } as const
 
 export const bgInfo = {

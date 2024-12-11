@@ -15,7 +15,9 @@ export interface ButtonProps extends ButtonSprinkles {
   as?: React.ElementType
   className?: ClassValue
   isLoading?: Boolean
+  overlap?: Boolean
   isActive?: Boolean
+  title?: String
   shape?: "rect" | "square" | "circle" | "pill"
   size?: "compact" | "small" | "medium" | "large"
   width?: "hug" | "full"
@@ -46,6 +48,7 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
       trailingIcon,
       icon,
       title,
+      overlap,
     } = props
 
     const Wrapper = as
@@ -76,6 +79,7 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
             recipeClasses,
             isActive && "active",
             isPressed && "pressed",
+            { [`overlap-${overlap}`]: overlap },
             className
           )}
           {...buttonProps}
@@ -84,11 +88,16 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
           <span
             className={cx(styles.children, {
               [styles.loading]: isLoading,
-              [styles["has-trailing"]]: trailingIcon,
             })}
           >
-            {leadingIcon && <div className={styles.leading}>{leadingIcon}</div>}
-            {children}
+            {(leadingIcon || children) && (
+              <span className={styles.wrapper}>
+                {leadingIcon && (
+                  <div className={styles.leading}>{leadingIcon}</div>
+                )}
+                {children}
+              </span>
+            )}
             {icon && <div className={styles.icon}>{icon}</div>}
             {trailingIcon && (
               <div className={styles.trailing}>{trailingIcon}</div>

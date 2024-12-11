@@ -2202,7 +2202,7 @@
     "@react-types/shared" "^3.26.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/button@^3.11.0", "@react-aria/button@^3.4.4":
+"@react-aria/button@^3.11.0":
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/@react-aria/button/-/button-3.11.0.tgz#cb7790db23949ec9c1e698fa531ee5471cf2b515"
   integrity sha512-b37eIV6IW11KmNIAm65F3SEl2/mgj5BrHIysW6smZX3KoKWTGYsYfcQkmtNgY0GOSFfDxMCoolsZ6mxC00nSDA==
