@@ -25,7 +25,7 @@ export const accent = {
   "ruby-300": "#861453",
 } as const
 
-export const pallete = {
+export const palette = {
   "crimson-10": "#FFF8F6",
   "crimson-50": "#FFDFD9",
   "crimson-100": "#D40029",
@@ -83,10 +83,13 @@ export const bgSecondary = {
   // "secondary": "#f7f7f7",
   "secondary-brand": "#E61E4D",
   "secondary": "#f3f3f3",
+  "secondary-hover": "#dddddd",
+  "secondary-pressed": "#c6c6c6",
+  "secondary-disabled": "#f3f3f3",
   "secondary-inverse": "#000000",
-  "secondary-inverse-hover": "#dddddd",
-  "secondary-inverse-pressed": "#c6c6c6",
-  "secondary-inverse-disabled": "#f3f3f3",
+  "secondary-inverse-hover": "#222222",
+  "secondary-inverse-pressed": "#4b4b4b",
+  "secondary-inverse-disabled": "#f7f7f7",
   // "secondary-brand": `linear-gradient(to right,#e61e4d 0%,#e31c5f 50%,#d70466 100%)`,
   // "secondary-brand-rtl": `linear-gradient(to left,#e61e4d 0%,#e31c5f 50%,#d70466 100%)`,
   // "secondary-brand-hover": `radial-gradient(circle at center,#ff385c 0%,#e61e4d 27.5%,#e31c5f 40%,#d70466 57.5%,#bd1e59 75%,#bd1e59 100%)`,

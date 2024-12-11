@@ -12,7 +12,7 @@ import {
   textColors,
   iconColors,
   borderColors,
-  pallete,
+  palette,
 } from './color'
 import { boxShadow } from './box-shadow'
 import { breakpoints, breakpointNames, breakpointsValue } from './breakpoints'
@@ -55,7 +55,7 @@ export {
   paragraphs,
   timing,
   easing,
-  pallete
+  palette
 }
 
 export const variables = {
@@ -84,7 +84,7 @@ export const variables = {
   "text-size-paragraph": paragraphs,
   "text-line-paragraph": lineParagraphs,
   "text-weight": fontWeight,
-  pallete,
+  palette,
   "font-family": fontFamily,
   gutter,
   radius,

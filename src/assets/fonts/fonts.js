@@ -1,1 +1,1 @@
-import "./masbul/new/stylesheet.css";
+import "./masbul/new/stylesheet.css"

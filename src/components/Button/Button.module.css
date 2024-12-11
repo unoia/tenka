@@ -1,0 +1,54 @@
+.children {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.loading {
+  opacity: 0;
+}
+
+.has-trailing {
+  padding-right: var(--tenka-space-ml);
+}
+
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 100%;
+  display: block;
+}
+
+.leading {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--tenka-space-s);
+}
+
+.trailing {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: var(--tenka-space-s);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  height: fit-content;
+}

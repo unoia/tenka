@@ -15,6 +15,8 @@ export const boxShadow = {
   "deep-below": "0px 16px 48px 0px rgba(0, 0, 0, 0.22)",
   "card": '0px 4px 4px rgba(0,0,0,.25)',
   "drop-shadow": '0px 1px 10px #bfbfbf',
+  "button-focus": "0px 0px 0px 1.5px var(--tenka-bg-primary), 0px 0px 0px 4px var(--tenka-text-primary)",
+  "button-critical-focus": "0px 0px 0px 1.5px var(--tenka-bg-primary), 0px 0px 0px 4px var(--tenka-text-error)",
 } as const
 
 export type BoxShadow = keyof typeof boxShadow
