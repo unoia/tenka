@@ -7,8 +7,8 @@ import "./../dist/style.css"
 // import { Box } from "../dist/tenka.es"
 // import "./styles/index.css"
 
-import { Box, Inline, Button } from "./../dist/tenka.es"
-// import { Button } from "./components"
+import { Box, Inline } from "./../dist/tenka.es"
+import { Button } from "./components"
 // import * as styles from "./scoped.module.css"
 
 const ClockIcon = () => {
@@ -76,7 +76,7 @@ const ChevronRightIcon = () => {
 
 const Homepage = () => {
   return (
-    <Box display="grid" gap="xxl" padding="xl">
+    <Box display="grid" gap="ml" padding="xl">
       <Button color="primary" size="large" width={["full", "hug", "full"]}>
         Primary large button
       </Button>
@@ -94,12 +94,14 @@ const Homepage = () => {
           shape="circle"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
         />
         <Button
           color="primary"
           shape="circle"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
           isLoading
         />
         <Button
@@ -108,6 +110,7 @@ const Homepage = () => {
           size="small"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
         />
         <Button
           color="primary"
@@ -115,6 +118,7 @@ const Homepage = () => {
           size="small"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
           isDisabled
         />
         <Button
@@ -122,6 +126,7 @@ const Homepage = () => {
           shape="circle"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
         />
         <Button
           color="secondary"
@@ -129,6 +134,7 @@ const Homepage = () => {
           size="small"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
         />
         <Button
           color="secondary"
@@ -136,6 +142,7 @@ const Homepage = () => {
           size="small"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
           isDisabled
         />
         <Button
@@ -143,6 +150,7 @@ const Homepage = () => {
           shape="circle"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
           isLoading
         />
         <Button
@@ -150,6 +158,7 @@ const Homepage = () => {
           shape="circle"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
         />
         <Button
           color="tertiary"
@@ -157,6 +166,7 @@ const Homepage = () => {
           size="small"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
         />
         <Button
           color="tertiary"
@@ -164,6 +174,7 @@ const Homepage = () => {
           size="small"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
           isDisabled
         />
         <Button
@@ -171,6 +182,105 @@ const Homepage = () => {
           shape="circle"
           aria-label="Set alarm"
           icon={<ClockIcon />}
+          title="Set reminder"
+          isLoading
+        />
+      </Inline>
+      <Inline space="ml" alignItems="center" flexWrap="wrap">
+        <Button
+          color="primary"
+          shape="square"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+        />
+        <Button
+          color="primary"
+          shape="square"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+          isLoading
+        />
+        <Button
+          color="primary"
+          shape="square"
+          size="small"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+        />
+        <Button
+          color="primary"
+          shape="square"
+          size="small"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+          isDisabled
+        />
+        <Button
+          color="secondary"
+          shape="square"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+        />
+        <Button
+          color="secondary"
+          shape="square"
+          size="small"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+        />
+        <Button
+          color="secondary"
+          shape="square"
+          size="small"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+          isDisabled
+        />
+        <Button
+          color="secondary"
+          shape="square"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+          isLoading
+        />
+        <Button
+          color="tertiary"
+          shape="square"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+        />
+        <Button
+          color="tertiary"
+          shape="square"
+          size="small"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+        />
+        <Button
+          color="tertiary"
+          shape="square"
+          size="small"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
+          isDisabled
+        />
+        <Button
+          color="tertiary"
+          shape="square"
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          title="Set reminder"
           isLoading
         />
       </Inline>
@@ -178,6 +288,7 @@ const Homepage = () => {
         color="secondary"
         width="full"
         leadingIcon={<ClockIcon />}
+        title="Set reminder"
         trailingIcon={<ChevronDownSmall />}
       >
         Secondary button

@@ -45,6 +45,7 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
       leadingIcon,
       trailingIcon,
       icon,
+      title,
     } = props
 
     const Wrapper = as
@@ -78,6 +79,7 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
             className
           )}
           {...buttonProps}
+          title={title}
         >
           <span
             className={cx(styles.children, {
