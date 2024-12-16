@@ -4,18 +4,16 @@ import "./../dist/styles/reset.css"
 import "./../dist/styles/tenka.css"
 import "./../dist/style.css"
 
-// import { Box } from "../dist/tenka.es"
-// import "./styles/index.css"
-
 import { Box, Inline } from "./../dist/tenka.es"
 import { Button } from "./components"
+import { display } from "./styles/variables"
 // import * as styles from "./scoped.module.css"
 
-const ClockIcon = ({ large }) => {
+const ClockIcon = ({ large, small }) => {
   return (
     <svg
-      width={large ? "24px" : "20px"}
-      height={large ? "24px" : "20px"}
+      width={large ? "24px" : small ? "16px" : "20px"}
+      height={large ? "24px" : small ? "16px" : "20px"}
       viewBox="0 0 24 24"
       fill="none"
       style={{ display: "block" }}
@@ -42,12 +40,12 @@ const ChevronDownSmall = () => {
   )
 }
 
-const PersonIcon = () => {
+const PersonIcon = ({ style }) => {
   return (
-    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+    <svg viewBox="0 0 24 24" fill="none" style={style}>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M17.5 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0ZM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3H3v-3Z"
         fill="currentColor"
       ></path>
@@ -117,12 +115,18 @@ const MinusIcon = () => {
   )
 }
 
-const CameraIcon = () => {
+const CameraIcon = ({ style }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
-      style="display: block; height: 24px; width: 24px; fill: var(--linaria-theme_palette-hof);"
+      style={{
+        display: "block",
+        height: 24,
+        width: 24,
+        fill: "currentcolor",
+        ...style,
+      }}
       aria-hidden="true"
       role="presentation"
       focusable="false"
@@ -138,322 +142,402 @@ const Homepage = () => {
       <div>
         <h2>Hierarchy</h2>
         <Inline pt="ml" space="sm" alignItems="center">
-          <Button color="primary">Primary button</Button>
-          <Button color="secondary">Secondary button</Button>
-          <Button color="tertiary">Tertiary button</Button>
-          <Button color="critical">Critical button</Button>
-          <Button color="critical" isDisabled>
-            Critical button
-          </Button>
+          <Button primary>Primary</Button>
+          <Button secondary>Secondary</Button>
+          <Button tertiary>Tertiary</Button>
+          <Button critical>Critical</Button>
         </Inline>
       </div>
       <div>
         <h2>Shapes</h2>
         <Inline pt="ml" space="sm" alignItems="center">
-          <Button>Rect button</Button>
-          <Button color="secondary" shape="pill">
-            Pill button
+          <Button primary>Primary</Button>
+          <Button secondary>Secondary</Button>
+          <Button tertiary>Tertiary</Button>
+          <Button primary>Rect</Button>
+          <Button primary pill>
+            Pill
           </Button>
           <Button
-            color="secondary"
-            shape="square"
+            square
+            primary
             icon={
-              <span style={{ display: "block", fontSize: 24, lineHeight: 24 }}>
-                🟥
-              </span>
+              <ClockIcon style={{ width: 24, height: 24, display: "block" }} />
             }
             aria-label="Square button"
-            title="Square button"
+            tooltip="Square button"
+            delay={500}
           />
           <Button
-            color="secondary"
-            shape="circle"
+            circle
+            primary
             icon={
-              <span style={{ display: "block", fontSize: 24, lineHeight: 24 }}>
-                ⭕️
-              </span>
+              <PersonIcon style={{ width: 20, height: 20, display: "block" }} />
             }
             aria-label="Circle button"
-            title="Circle button"
+            tooltip="Circle button"
+            delay={500}
           />
         </Inline>
       </div>
       <div>
         <h2>Sizes</h2>
         <Inline pt="ml" space="sm" alignItems="center">
-          <Button color="primary" size="large">
+          <Button primary large>
             Large button
           </Button>
-          <Button color="primary" size="medium">
+          <Button primary medium>
             Medium button
           </Button>
-          <Button color="primary" size="small">
+          <Button primary small>
             Small button
           </Button>
-          <Button color="primary" size="compact">
-            Compact button
+          <Button primary xsmall rect>
+            xsmall button
           </Button>
         </Inline>
         <Inline pt="ml" space="sm" alignItems="center">
-          <Button color="secondary" size="large">
+          <Button secondary pill large>
             Large button
           </Button>
-          <Button color="secondary" size="medium">
+          <Button secondary pill medium>
             Medium button
           </Button>
-          <Button color="secondary" size="small">
+          <Button secondary pill small>
             Small button
           </Button>
-          <Button color="secondary" size="compact">
-            Compact button
+          <Button secondary pill xsmall>
+            label
           </Button>
         </Inline>
         <Inline pt="ml" space="sm" alignItems="center">
-          <Button color="tertiary" size="large">
-            Large button
+          <Button secondary pill large leadingIcon={<ClockIcon large />}>
+            Set alarm
           </Button>
-          <Button color="tertiary" size="medium">
-            Medium button
+          <Button secondary pill medium leadingIcon={<ClockIcon />}>
+            Set alarm
           </Button>
-          <Button color="tertiary" size="small">
-            Small button
+          <Button secondary pill small leadingIcon={<ClockIcon />}>
+            Set alarm
           </Button>
-          <Button color="tertiary" size="compact">
-            Compact button
+          <Button secondary pill xsmall leadingIcon={<ClockIcon small />}>
+            Set alarm
           </Button>
         </Inline>
       </div>
-      <Button color="primary">Primary button</Button>
+      <Button primary>Primary button</Button>
       <Button>Default button</Button>
       <Button width={["full", "hug"]} isDisabled>
         Default disabled button
       </Button>
-      <Button color="secondary" shape="pill" width={["full", "hug"]}>
+      <Button secondary pill width={["full", "hug"]}>
         Secondary pill button
       </Button>
-      <Inline space="ml" alignItems="center" flexWrap="wrap">
+      <Inline space="ml" alignItems="center">
         <Button
-          color="primary"
-          shape="circle"
-          size="large"
+          primary
+          circle
+          large
           aria-label="Set alarm"
           icon={<ClockIcon large />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="primary"
-          shape="circle"
+          primary
+          circle
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="primary"
-          shape="circle"
+          primary
+          circle
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isLoading
         />
         <Button
-          color="primary"
-          shape="circle"
-          size="small"
+          primary
+          circle
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="primary"
-          shape="circle"
-          size="small"
+          primary
+          circle
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isDisabled
         />
         <Button
-          color="secondary"
-          shape="circle"
+          primary
+          circle
+          xsmall
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="secondary"
-          shape="circle"
-          size="small"
+          secondary
+          circle
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="secondary"
-          shape="circle"
-          size="small"
+          secondary
+          circle
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
+        />
+        <Button
+          secondary
+          circle
+          small
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
           isDisabled
         />
         <Button
-          color="secondary"
-          shape="circle"
+          secondary
+          circle
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isLoading
         />
         <Button
-          color="tertiary"
-          shape="circle"
+          tertiary
+          circle
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="tertiary"
-          shape="circle"
-          size="small"
+          tertiary
+          circle
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="tertiary"
-          shape="circle"
-          size="small"
+          tertiary
+          circle
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isDisabled
         />
         <Button
-          color="tertiary"
-          shape="circle"
+          tertiary
+          circle
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isLoading
         />
       </Inline>
-      <Inline space="ml" alignItems="center" flexWrap="wrap">
+      <Inline space="ml" alignItems="center">
         <Button
-          color="primary"
-          shape="square"
+          primary
+          square
           aria-label="Set alarm"
-          size="large"
+          large
           icon={<ClockIcon large />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="primary"
-          shape="square"
+          primary
+          square
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="primary"
-          shape="square"
+          primary
+          square
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isLoading
         />
         <Button
-          color="primary"
-          shape="square"
-          size="small"
+          primary
+          square
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="primary"
-          shape="square"
-          size="small"
+          primary
+          square
+          small
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isDisabled
         />
         <Button
-          color="secondary"
-          shape="square"
+          primary
+          square
+          xsmall
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="secondary"
-          shape="square"
-          size="small"
+          primary
+          square
+          xsmall
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
-        />
-        <Button
-          color="secondary"
-          shape="square"
-          size="small"
-          aria-label="Set alarm"
-          icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isDisabled
         />
         <Button
-          color="secondary"
-          shape="square"
+          primary
+          square
+          xsmall
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
           isLoading
         />
         <Button
-          color="tertiary"
-          shape="square"
+          square
+          xsmall
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="tertiary"
-          shape="square"
-          size="small"
+          tertiary
+          square
+          xsmall
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
         />
         <Button
-          color="tertiary"
-          shape="square"
-          size="small"
+          secondary
+          square
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
+        />
+        <Button
+          secondary
+          square
+          small
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
+        />
+        <Button
+          secondary
+          square
+          small
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
           isDisabled
         />
         <Button
-          color="tertiary"
-          shape="square"
+          secondary
+          square
           aria-label="Set alarm"
           icon={<ClockIcon />}
-          title="Set reminder"
+          tooltip="Set reminder"
+          delay={500}
+          isLoading
+        />
+        <Button
+          tertiary
+          square
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
+        />
+        <Button
+          tertiary
+          square
+          small
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
+        />
+        <Button
+          tertiary
+          square
+          small
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
+          isDisabled
+        />
+        <Button
+          tertiary
+          square
+          aria-label="Set alarm"
+          icon={<ClockIcon />}
+          tooltip="Set reminder"
+          delay={500}
           isLoading
         />
       </Inline>
       <Button
-        color="secondary"
+        secondary
         width="full"
         leadingIcon={<ClockIcon />}
-        title="Set reminder"
+        tooltip="Set reminder"
+        delay={500}
         trailingIcon={<ChevronDownSmall />}
       >
         Secondary button
       </Button>
       <Button
-        color="secondary"
+        secondary
         width="full"
         leadingIcon={<PersonIcon />}
         trailingIcon={<ChevronRightIcon />}
@@ -461,42 +545,21 @@ const Homepage = () => {
         Secondary button
       </Button>
       <Inline space="ml" py="ml" alignItems="center">
-        <Button
-          color="secondary"
-          size="small"
-          width={["full", "hug"]}
-          isDisabled
-        >
+        <Button secondary small width={["full", "hug"]} isDisabled>
           Disabled secondary button
         </Button>
-        <Button color="secondary" size="small" width={["full", "hug"]} isActive>
+        <Button secondary small width={["full", "hug"]} isActive>
           Active secondary button
         </Button>
-        <Button
-          color="secondary"
-          size="small"
-          width={["full", "hug"]}
-          isActive
-          isDisabled
-        >
+        <Button secondary small width={["full", "hug"]} isActive isDisabled>
           Disabled active secondary button
         </Button>
-        <Button
-          color="secondary"
-          size="small"
-          width={["full", "hug"]}
-          isLoading
-        >
+        <Button secondary small width={["full", "hug"]} isLoading>
           Small button
         </Button>
       </Inline>
-      <Button
-        color="secondary"
-        size="compact"
-        width={["full", "hug"]}
-        isLoading
-      >
-        Compact button
+      <Button secondary xsmall width={["full", "hug"]} isLoading>
+        xsmall button
       </Button>
       {/* <Box
         as="section"
@@ -510,7 +573,7 @@ const Homepage = () => {
           tablet: "primary-inverse",
           desktop: "primary",
         }}
-        color={{ phone: "primary-inverse", desktop: "primary" }}
+        variant={{ phone: "primary-inverse", desktop: "primary" }}
         boxShadow="shallow-below"
         fontWeight="medium"
       >
@@ -528,7 +591,7 @@ const Homepage = () => {
           tablet: "primary-inverse",
           desktop: "primary",
         }}
-        color={{ phone: "primary-inverse", desktop: "primary" }}
+        variant={{ phone: "primary-inverse", desktop: "primary" }}
         boxShadow="medium-below"
         fontWeight="medium"
       >

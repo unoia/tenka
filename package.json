@@ -32,6 +32,9 @@
   },
   "dependencies": {
     "@dessert-box/react": "^0.7.5",
+    "@floating-ui/react": "^0.27.1",
+    "@react-types/shared": "^3.26.0",
+    "@react-types/tooltip": "^3.4.13",
     "@vanilla-extract/recipes": "^0.5.5",
     "clsx": "^1.1.1",
     "dedent": "^1.5.3",
@@ -97,6 +100,7 @@
     "jest-stitches": "^1.0.4",
     "jest-watch-typeahead": "^0.6.4",
     "react": "^18.3.1",
+    "react-aria-components": "^1.5.0",
     "react-dom": "^18.3.1",
     "rollup": "^2.75.1",
     "rollup-plugin-babel": "^4.4.0",

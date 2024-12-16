@@ -1,6 +1,6 @@
-import styles from './Wrapper.module.scss'
-import React from 'react'
-import cx from 'clsx'
+import styles from "./Wrapper.module.scss"
+import React from "react"
+import cx from "clsx"
 
 const Wrapper = ({ children, className, ...restProps }) => {
   return (

@@ -1,3 +1,5 @@
+/* @import "@react-aria/example-theme"; */
+
 .children {
   display: inline-flex;
   align-items: center;
@@ -46,10 +48,26 @@
   left: 50%;
   transform: translate(-50%, -50%);
   will-change: transform;
-  height: fit-content;
 }
 
-.wrapper {
+.leading-wrapper {
   margin-left: auto;
   margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: var(--tenka-radius-card);
+  background: var(--tenka-bg-primary-inverse);
+  color: var(--tenka-text-primary-inverse);
+  forced-color-adjust: none;
+  outline: none;
+  font-size: var(--tenka-text-size-s, 14px);
+  line-height: var(--tenka-text-line-s, 20px);
+  font-weight: var(--tenka-weight-400);
+  padding: var(--tenka-space-s);
+  max-width: 192px;
+  z-index: 1;
 }

@@ -38,7 +38,7 @@ export const buttonRecipe = recipe({
       full: buttonAtoms({ width: "full" }),
     },
     size: {
-      compact: {
+      xsmall: {
         fontSize: vars['text-size-label'].s,
         lineHeight: vars['text-line-label'].m
       },
@@ -57,11 +57,11 @@ export const buttonRecipe = recipe({
     },
     shape: {
       rect: { borderRadius: vars.radius.field },
+      square: { borderRadius: vars.radius.field },
       circle: { borderRadius: vars.radius.rounded },
-      square: { borderRadius: vars.radius.s },
       pill: { borderRadius: vars.radius.rounded },
     },
-    color: {
+    variant: {
       primary: {
         color: vars.text['primary-inverse'],
         backgroundColor: vars.bg['primary-inverse'],
@@ -276,39 +276,43 @@ export const buttonRecipe = recipe({
      * Rect + Size
      */
     {
-      variants: { size: 'compact', shape: 'rect' },
+      variants: { size: 'xsmall', shape: 'rect' },
       style: {
-        padding: "7px 11px",
+        padding: "3px 7px",
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: "calc(100% + 2px)",
-            height: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '50%',
-            left: "50%",
-            transform: 'translateX(-50%) translateY(-50%)',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: "calc(100% + 2px)",
+                height: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: '50%',
+                left: "50%",
+                transform: 'translateX(-50%) translateY(-50%)',
+              }
+            }
           },
           "&.overlap-left": {
-            marginLeft: '-12px',
+            marginLeft: '-8px',
           },
           "&.overlap-right": {
-            marginRight: '-12px',
+            marginRight: '-8px',
           },
           "&.overlap-top": {
-            marginTop: '-8px',
+            marginTop: '-4px',
           },
           "&.overlap-bottom": {
-            marginBottom: '-8px',
+            marginBottom: '-4px',
           },
           "&.overlap-x": {
-            marginLeft: '-12px',
-            marginRight: '-12px'
+            marginLeft: '-8px',
+            marginRight: '-8px'
           },
           "&.overlap-y": {
-            marginTop: '-8px',
-            marginBottom: '-8px'
+            marginTop: '-4px',
+            marginBottom: '-4px'
           },
         }
       }
@@ -319,14 +323,18 @@ export const buttonRecipe = recipe({
         padding: "7px 11px",
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: "calc(100% + 2px)",
-            height: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '50%',
-            left: "50%",
-            transform: 'translateX(-50%) translateY(-50%)',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: "calc(100% + 2px)",
+                height: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: '50%',
+                left: "50%",
+                transform: 'translateX(-50%) translateY(-50%)',
+              }
+            }
           },
           "&.overlap-left": {
             marginLeft: '-12px',
@@ -354,13 +362,13 @@ export const buttonRecipe = recipe({
     {
       variants: { size: 'medium', shape: 'rect' },
       style: {
-        padding: "11px 19px",
+        padding: "11px 15px",
         selectors: {
           "&.overlap-left": {
-            marginLeft: '-20px',
+            marginLeft: '-16px',
           },
           "&.overlap-right": {
-            marginRight: '-20px',
+            marginRight: '-16px',
           },
           "&.overlap-top": {
             marginTop: '-12px',
@@ -369,8 +377,8 @@ export const buttonRecipe = recipe({
             marginBottom: '-12px',
           },
           "&.overlap-x": {
-            marginLeft: '-20px',
-            marginRight: '-20px'
+            marginLeft: '-16px',
+            marginRight: '-16px'
           },
           "&.overlap-y": {
             marginTop: '-12px',
@@ -382,7 +390,7 @@ export const buttonRecipe = recipe({
     {
       variants: { size: 'large', shape: 'rect' },
       style: {
-        padding: "15px 23px",
+        padding: "15px 19px",
         selectors: {
           "&.overlap-left": {
             marginLeft: '-24px',
@@ -412,39 +420,43 @@ export const buttonRecipe = recipe({
      * Pill + Size
      */
     {
-      variants: { size: 'compact', shape: 'pill' },
+      variants: { size: 'xsmall', shape: 'pill' },
       style: {
-        padding: "7px 11px",
+        padding: "3px 7px",
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: "calc(100% + 2px)",
-            height: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '50%',
-            left: "50%",
-            transform: 'translateX(-50%) translateY(-50%)',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: "calc(100% + 2px)",
+                height: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: '50%',
+                left: "50%",
+                transform: 'translateX(-50%) translateY(-50%)',
+              }
+            },
           },
           "&.overlap-left": {
-            marginLeft: '-12px',
+            marginLeft: '-8px',
           },
           "&.overlap-right": {
-            marginRight: '-12px',
+            marginRight: '-8px',
           },
           "&.overlap-top": {
-            marginTop: '-8px',
+            marginTop: '-4px',
           },
           "&.overlap-bottom": {
-            marginBottom: '-8px',
+            marginBottom: '-4px',
           },
           "&.overlap-x": {
-            marginLeft: '-12px',
-            marginRight: '-12px'
+            marginLeft: '-8px',
+            marginRight: '-8px'
           },
           "&.overlap-y": {
-            marginTop: '-8px',
-            marginBottom: '-8px'
+            marginTop: '-4px',
+            marginBottom: '-4px'
           },
         }
       }
@@ -455,14 +467,18 @@ export const buttonRecipe = recipe({
         padding: "7px 11px",
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: "calc(100% + 2px)",
-            height: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '50%',
-            left: "50%",
-            transform: 'translateX(-50%) translateY(-50%)',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: "calc(100% + 2px)",
+                height: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: '50%',
+                left: "50%",
+                transform: 'translateX(-50%) translateY(-50%)',
+              }
+            }
           },
           "&.overlap-left": {
             marginLeft: '-12px',
@@ -490,13 +506,13 @@ export const buttonRecipe = recipe({
     {
       variants: { size: 'medium', shape: 'pill' },
       style: {
-        padding: "11px 19px",
+        padding: "11px 15px",
         selectors: {
           "&.overlap-left": {
-            marginLeft: '-20px',
+            marginLeft: '-16px',
           },
           "&.overlap-right": {
-            marginRight: '-20px',
+            marginRight: '-16px',
           },
           "&.overlap-top": {
             marginTop: '-12px',
@@ -505,8 +521,8 @@ export const buttonRecipe = recipe({
             marginBottom: '-12px',
           },
           "&.overlap-x": {
-            marginLeft: '-20px',
-            marginRight: '-20px'
+            marginLeft: '-16px',
+            marginRight: '-16px'
           },
           "&.overlap-y": {
             marginTop: '-12px',
@@ -518,7 +534,7 @@ export const buttonRecipe = recipe({
     {
       variants: { size: 'large', shape: 'pill' },
       style: {
-        padding: "15px 23px",
+        padding: "15px 19px",
         selectors: {
           "&.overlap-left": {
             marginLeft: '-24px',
@@ -548,43 +564,44 @@ export const buttonRecipe = recipe({
      * Square + Size
      */
     {
-      variants: { size: 'compact', shape: 'square' },
+      variants: { size: 'xsmall', shape: 'square' },
       style: {
-        borderRadius: vars.radius.field,
-        width: '36px',
-        height: '36px',
-        minWidth: '36px',
-        minHeight: '36px',
+        width: '28px',
+        height: '28px',
+        minWidth: '28px',
+        minHeight: '28px',
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: vars.space.xl,
-            height: vars.space.xl,
-            minWidth: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '-7px',
-            left: '-7px',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: vars.space.xl,
+                height: vars.space.xl,
+                top: "-11px",
+                left: "-11px",
+              }
+            }
           },
           "&.overlap-left": {
-            marginLeft: '-8px',
+            marginLeft: '-6px',
           },
           "&.overlap-right": {
-            marginRight: '-8px',
+            marginRight: '-6px',
           },
           "&.overlap-top": {
-            marginTop: '-8px',
+            marginTop: '-6px',
           },
           "&.overlap-bottom": {
-            marginBottom: '-8px',
+            marginBottom: '-6px',
           },
           "&.overlap-x": {
-            marginLeft: '-8px',
-            marginRight: '-8px'
+            marginLeft: '-6px',
+            marginRight: '-6px'
           },
           "&.overlap-y": {
-            marginTop: '-8px',
-            marginBottom: '-8px'
+            marginTop: '-6px',
+            marginBottom: '-6px'
           },
         }
       }
@@ -599,14 +616,18 @@ export const buttonRecipe = recipe({
         minHeight: '36px',
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: vars.space.xl,
-            height: vars.space.xl,
-            minWidth: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '-7px',
-            left: '-7px',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: vars.space.xl,
+                height: vars.space.xl,
+                minWidth: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: "-7px",
+                left: "-7px",
+              }
+            }
           },
           "&.overlap-left": {
             marginLeft: '-8px',
@@ -700,43 +721,47 @@ export const buttonRecipe = recipe({
      * Circle + Size
      */
     {
-      variants: { size: 'compact', shape: 'circle' },
+      variants: { size: 'xsmall', shape: 'circle' },
       style: {
         borderRadius: vars.radius.rounded,
-        width: '36px',
-        height: '36px',
-        minWidth: '36px',
-        minHeight: '36px',
+        width: '28px',
+        height: '28px',
+        minWidth: '28px',
+        minHeight: '28px',
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: vars.space.xl,
-            height: vars.space.xl,
-            minWidth: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '-7px',
-            left: '-7px',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: vars.space.xl,
+                height: vars.space.xl,
+                minWidth: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: '-11px',
+                left: '-11px',
+              }
+            }
           },
           "&.overlap-left": {
-            marginLeft: '-8px',
+            marginLeft: '-6px',
           },
           "&.overlap-right": {
-            marginRight: '-8px',
+            marginRight: '-6px',
           },
           "&.overlap-top": {
-            marginTop: '-8px',
+            marginTop: '-6px',
           },
           "&.overlap-bottom": {
-            marginBottom: '-8px',
+            marginBottom: '-6px',
           },
           "&.overlap-x": {
-            marginLeft: '-8px',
-            marginRight: '-8px'
+            marginLeft: '-6px',
+            marginRight: '-6px'
           },
           "&.overlap-y": {
-            marginTop: '-8px',
-            marginBottom: '-8px'
+            marginTop: '-6px',
+            marginBottom: '-6px'
           },
         }
       }
@@ -751,14 +776,18 @@ export const buttonRecipe = recipe({
         minHeight: '36px',
         selectors: {
           "&:before": {
-            content: " ",
-            position: "absolute",
-            width: vars.space.xl,
-            height: vars.space.xl,
-            minWidth: vars.space.xl,
-            minHeight: vars.space.xl,
-            top: '-7px',
-            left: '-7px',
+            "@media": {
+              "screen and (max-width: 599px)": {
+                content: " ",
+                position: "absolute",
+                width: vars.space.xl,
+                height: vars.space.xl,
+                minWidth: vars.space.xl,
+                minHeight: vars.space.xl,
+                top: '-7px',
+                left: '-7px',
+              }
+            }
           },
           "&.overlap-left": {
             marginLeft: '-8px',
@@ -850,7 +879,7 @@ export const buttonRecipe = recipe({
   ],
   defaultVariants: {
     size: 'medium',
-    color: 'secondary',
+    variant: 'secondary',
     shape: 'rect',
     width: 'hug'
   }

@@ -1,55 +1,96 @@
 import styles from "./Button.module.css"
-import React, { RefObject } from "react"
-import cx, { ClassValue } from "clsx"
+import React, { ForwardedRef, RefObject, useRef } from "react"
+import cx from "clsx"
 import { useButton, FocusRing } from "react-aria"
-import { useObjectRef } from "@react-aria/utils"
+import { useObjectRef, mergeRefs } from "@react-aria/utils"
+import { useTooltipTrigger, useTooltip, mergeProps } from "react-aria"
+import { useTooltipTriggerState } from "react-stately"
+import type { TooltipProps } from "@react-types/tooltip"
+import { omit } from "lodash"
+import {
+  useFloating,
+  offset,
+  useMergeRefs,
+  arrow,
+  FloatingArrow,
+  flip,
+  autoUpdate,
+} from "@floating-ui/react"
 
 import { ButtonSprinkles, buttonAtoms, buttonRecipe } from "./Button.css"
 import LoaderIcon from "./LoaderIcon"
-
-export interface ButtonProps extends ButtonSprinkles {
+import { ButtonProps } from "./buttonTypes"
+import {
+  parseButtonProps,
+  shapes,
+  sizes,
+  variants,
+} from "./lib/parseButtonProps"
+interface Tooltip extends TooltipProps {
   children?: React.ReactNode
-  leadingIcon?: React.ReactNode
-  trailingIcon?: React.ReactNode
-  icon?: React.ReactNode
-  as?: React.ElementType
-  className?: ClassValue
-  isLoading?: Boolean
-  overlap?: Boolean
-  isActive?: Boolean
-  title?: String
-  shape?: "rect" | "square" | "circle" | "pill"
-  size?: "compact" | "small" | "medium" | "large"
-  width?: "hug" | "full"
-  color?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "ghost"
-    | "light"
-    | "brand"
-    | "critical"
-    | "danger"
+  placement?: "top" | "bottom" | "left" | "right"
+  state?: any
+  context?: any
 }
 
-export const Button: React.FC<ButtonProps> = React.forwardRef(
-  (props, forwardedRef) => {
+const Tooltip = React.forwardRef(
+  (
+    { state, placement, ...props }: Tooltip,
+    forwardedRef: React.ForwardedRef<HTMLElement>
+  ) => {
+    let { tooltipProps } = useTooltip(props, state)
+
+    return (
+      <span
+        ref={forwardedRef}
+        className={styles.tooltip}
+        data-placement={placement ?? "top"}
+        {...mergeProps(props, tooltipProps)}
+      >
+        {props?.children}
+      </span>
+    )
+  }
+)
+
+export const Button = React.forwardRef(
+  (props: ButtonProps, forwardedRef: React.ForwardedRef<any>) => {
+    const booleanProps = parseButtonProps(props)
+    const newProps = {
+      ...omit(props, [...sizes, ...shapes, ...variants]),
+      ...booleanProps,
+    }
+
     const {
       as = "button",
       children,
       className,
       width,
-      color,
+      variant,
       size,
       isActive,
       isLoading,
+      isDisabled,
       shape,
       leadingIcon,
       trailingIcon,
       icon,
-      title,
       overlap,
-    } = props
+      tooltip,
+      tooltipArrow,
+      tooltipPlacement = "top",
+    } = newProps
+
+    const arrowRef = useRef(null)
+    const { refs, floatingStyles, context } = useFloating({
+      placement: tooltipPlacement,
+      whileElementsMounted: autoUpdate,
+      middleware: [
+        flip(),
+        offset(8),
+        tooltipArrow && arrow({ element: arrowRef }),
+      ],
+    })
 
     const Wrapper = as
     const objRef: RefObject<any> = useObjectRef(forwardedRef)
@@ -57,23 +98,32 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
     const atomProps: Record<string, unknown> = {}
     const nativeProps: Record<string, unknown> = {}
 
-    for (const key in props) {
+    for (const key in newProps) {
       if (buttonAtoms.properties.has(key as keyof ButtonSprinkles)) {
-        atomProps[key] = props[key as keyof typeof props]
+        atomProps[key] = newProps[key as keyof typeof newProps]
       } else {
-        nativeProps[key] = props[key as keyof typeof props]
+        nativeProps[key] = newProps[key as keyof typeof newProps]
       }
     }
 
     const { buttonProps, isPressed } = useButton(nativeProps, objRef)
+    let state = useTooltipTriggerState(nativeProps)
+
+    let { triggerProps, tooltipProps } = useTooltipTrigger(
+      nativeProps,
+      state,
+      objRef
+    )
 
     const sprinklesClasses = buttonAtoms(atomProps)
-    const recipeClasses = buttonRecipe({ width, color, size, shape })
+    const recipeClasses = buttonRecipe({ width, variant, size, shape })
+
+    const mergedRef = useMergeRefs([objRef, refs.setReference])
 
     return (
       <FocusRing focusClass="focus" focusRingClass="focus-visible">
         <Wrapper
-          ref={objRef}
+          ref={mergedRef}
           className={cx(
             sprinklesClasses,
             recipeClasses,
@@ -82,16 +132,15 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
             { [`overlap-${overlap}`]: overlap },
             className
           )}
-          {...buttonProps}
-          title={title}
+          {...mergeProps(buttonProps, triggerProps)}
         >
-          <span
+          <div
             className={cx(styles.children, {
               [styles.loading]: isLoading,
             })}
           >
             {(leadingIcon || children) && (
-              <span className={styles.wrapper}>
+              <span className={styles["leading-wrapper"]}>
                 {leadingIcon && (
                   <div className={styles.leading}>{leadingIcon}</div>
                 )}
@@ -102,10 +151,26 @@ export const Button: React.FC<ButtonProps> = React.forwardRef(
             {trailingIcon && (
               <div className={styles.trailing}>{trailingIcon}</div>
             )}
-          </span>
+          </div>
           {isLoading && (
             <div className={styles["loader-wrapper"]}>
               <LoaderIcon className={styles.loader} />
+            </div>
+          )}
+          {state?.isOpen && tooltip && !isLoading && !isDisabled && (
+            <div
+              className={styles.tooltip}
+              ref={refs.setFloating}
+              style={floatingStyles}
+              {...tooltipProps}
+              // {...mergeProps(tooltipProps, {
+              //   placement: props?.tooltipPlacement,
+              // })}
+            >
+              {tooltipArrow && (
+                <FloatingArrow ref={arrowRef} context={context} />
+              )}
+              {tooltip}
             </div>
           )}
         </Wrapper>
