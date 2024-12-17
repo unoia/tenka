@@ -4,9 +4,9 @@ import "./../dist/styles/reset.css"
 import "./../dist/styles/tenka.css"
 import "./../dist/style.css"
 
-import { Box, Inline } from "./../dist/tenka.es"
-import { Button } from "./components"
-import { display } from "./styles/variables"
+import { Box, Inline, Button } from "./../dist/tenka.es"
+// import { Button } from "./components"
+// import { display } from "./styles/variables"
 // import * as styles from "./scoped.module.css"
 
 const ClockIcon = ({ large, small }) => {
